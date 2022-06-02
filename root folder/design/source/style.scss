@@ -1,0 +1,375 @@
+@import 'variables.scss';
+@mixin flex-space {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-center_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin link-black {
+    font-family: 'Gordita';
+    font-size: $fs_link_btn;
+    font-style: normal;
+    font-weight: $fw_med;
+    color: $text_main;
+}
+
+@mixin link-white {
+    font-family: 'Gordita';
+    font-size: $fs_link_btn;
+    font-style: normal;
+    font-weight: $fw_med;
+    color: $text_white;
+    text-decoration: none;
+}
+
+@mixin button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    border-radius: $radius_btn;
+}
+
+@mixin text-grey1 {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: $fw_reg;
+    font-size: $fs_body1;
+    color: $text_grey;
+    line-height: $lh2;
+}
+
+@mixin text-white {
+    font-family: 'Gordita';
+    font-size: $fs_link_btn;
+    font-style: normal;
+    font-weight: $fw_med;
+    color: $text_white;
+    line-height: $lh2;
+}
+
+@mixin title-1 {
+    font-family: 'Gordita';
+    font-size: $fs_body3;
+    color: $text_main;
+    line-height: $lh2;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+@mixin h2-title {
+    font-family: "Gordita";
+    font-size: $h2_fs;
+    font-style: normal;
+    font-weight: $fw_med;
+    line-height: $lh2;
+    color: $text_main;
+}
+
+main {
+    width: $width_main;
+}
+
+.conteiner {
+    @include flex-space;
+    width: $wraper;
+    margin: $margin_main;
+}
+
+.conteiner2 {
+    width: $wraper;
+    margin: $margin_main;
+}
+
+.header-page {
+    width: $width_main;
+    background-color: $bg_menu;
+}
+
+.header-logo img {
+    width: 93px;
+    height: 30px;
+}
+
+.header-menu {
+    @include flex-center_row;
+    justify-content: start;
+}
+
+.header-menu_items {
+    @include flex-center_row;
+    .header-menu_item {
+        @include link-black;
+        list-style: none;
+        margin-right: 40px;
+        &:hover {
+            color: $color_link_hov;
+        }
+    }
+}
+
+.header-menu_button {
+    width: 140px;
+    height: 44px;
+    .general-btn {
+        @include flex-center_row;
+        @include button;
+        @include link-white;
+        background-color: $bg_btn_blue;
+        padding: 11px 24px;
+        cursor: pointer;
+        &:hover {
+            background-color: $bg_btn_blue_hov;
+        }
+    }
+}
+
+.page-top {
+    display: flex;
+    width: $wraper;
+    height: 672px;
+    margin: 0 285px 0 312px;
+    .page-top_left {
+        width: 407px;
+        height: 692px;
+        margin: 90px 196px 0 0;
+    }
+    .page-top_right {
+        width: 712px;
+        .page-top_slider {
+            width: 712px;
+            height: 692px;
+            img {
+                width: 712px;
+                height: 594px;
+            }
+        }
+    }
+}
+
+.page-top_title {
+    h1 {
+        font-family: 'Gordita';
+        font-style: normal;
+        font-weight: $fw_reg;
+        font-size: $h1_fs;
+        line-height: $lh_h1;
+        color: $text_main;
+    }
+}
+
+.page-top_text {
+    p {
+        @include text-grey1;
+    }
+    width: 407px;
+    margin-bottom: 30px;
+}
+
+.page-top_button {
+    width: 140px;
+    height: 48px;
+    a {
+        @include flex-center_row;
+        @include button;
+        @include link-white;
+        background-color: $bg_btn_blue;
+        padding: 11px 24px;
+        cursor: pointer;
+        &:hover {
+            background-color: $bg_btn_blue_hov;
+        }
+    }
+}
+
+.why-vr {
+    width: $width_main;
+    height: 318px;
+    background-color: $bg_block_blue;
+}
+
+.why-vr_title {
+    h3 {
+        @include text-white;
+        font-size: $h3_fs;
+        padding-top: 63px;
+        margin-bottom: 30px;
+    }
+}
+
+.why-vr_columns {
+    display: flex;
+}
+
+.why-vr_column {
+    width: 296px;
+    min-height: 81px;
+    margin-right: 141px;
+    &:last-child {
+        margin-right: 0;
+    }
+    span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        text-align: left;
+        margin-bottom: 30px;
+        background-color: $bg_btn_white;
+    }
+    p {
+        @include text-white;
+        font-size: $fs_body2;
+    }
+}
+
+.solutions {
+    margin-top: 100px;
+}
+
+.solutions-top {
+    width: 854px;
+    margin: $margin_main;
+    margin-bottom: 46px;
+}
+
+.solutions-top_title {
+    margin-bottom: 20px;
+    h3 {
+        @include title-1;
+    }
+}
+
+.solutions-top_subtitle {
+    margin-bottom: 20px;
+    h2 {
+        @include h2-title;
+    }
+}
+
+.solutions-top_text {
+    width: 652px;
+    p {
+        @include text-grey1;
+    }
+}
+
+.solutions-content {
+    margin: $margin_main;
+}
+
+.content_block {
+    display: flex;
+    height: 350px;
+    margin-bottom: 74px;
+}
+
+.content-block_right {}
+
+.content-block_left {}
+
+.content-block_title {}
+
+.content-block_text {}
+
+.content-block_link {}
+
+.tarif {}
+
+.tarif-top {}
+
+.tarif-title {}
+
+.tarif-text {}
+
+.tarif-plans {}
+
+.tarif-plan {}
+
+.tarif-plan_title {}
+
+.tarif-plan_description {}
+
+.tarif-plan_price {}
+
+.tarif-plan_term {}
+
+.tarif-plan_button {}
+
+.btn-white {}
+
+.tarif-plan_about {}
+
+.tarif-plan_benefits {}
+
+.clients {}
+
+.clients-title {}
+
+.clients-items {}
+
+.clients-item {}
+
+.products {}
+
+.products-title {}
+
+.products-subtitle {}
+
+.products-items {}
+
+.products-item {}
+
+.products-item_logo {}
+
+.producs-item_title {}
+
+.products-item_description {}
+
+.products-item_period {}
+
+.products-item_link {}
+
+.cta {}
+
+.cta-text1 {}
+
+.cta-text2 {}
+
+.cta-buttons {}
+
+.cta-button {}
+
+.footer-left {}
+
+.footer-left_copyright {}
+
+.footer-left_links {}
+
+.footer-left_privacy {}
+
+.footer-left_terms {}
+
+.footer-right {}
+
+.footer-menu_columns {}
+
+.footer-menu_column {}
+
+.footer-menu_column-title {}
+
+.footer-menu_items {}
+
+.footer-menu_item {}
