@@ -45,9 +45,18 @@
         @mixin button {
             display: flex;
             flex-direction: row;
+            justify-content: center;
             align-items: center;
             gap: 8px;
             border-radius: $radius_4;
+        }
+        
+        @mixin text-footer {
+            font-family: 'Gordita';
+            font-size: $fs_body3;
+            font-style: normal;
+            font-weight: $fw_reg;
+            color: $text_main;
         }
         
         @mixin text-grey1 {
@@ -139,8 +148,18 @@
             color: $text_main;
         }
         
+        @mixin h6-title {
+            font-family: "Gordita";
+            font-size: $h6_fs;
+            font-style: normal;
+            font-weight: $fw_bold;
+            line-height: $lh2;
+            color: $text_main;
+        }
+        
         main {
             max-width: $width_main;
+            margin: 0 auto;
         }
         
         .container {
@@ -157,27 +176,36 @@
         // header
         .header-page {
             width: $width_main;
+            height: 60px;
             background-color: $bg_menu;
         }
         
-        .header-logo img {
+        .header-logo {
+            @include flex-center_column;
             width: 93px;
-            height: 30px;
+            height: 60px;
+            img {
+                width: 93px;
+                height: 30px;
+            }
         }
         
         .header-menu {
             @include flex-center_row;
             justify-content: start;
+            height: 60px;
         }
         
         .header-menu_items {
             @include flex-center_row;
             .header-menu_item {
-                @include link-black;
-                list-style: none;
-                margin-right: 40px;
-                &:hover {
-                    color: $color_link_hov;
+                a {
+                    @include link-black;
+                    list-style: none;
+                    margin-right: 40px;
+                    &:hover {
+                        color: $color_link_hov;
+                    }
                 }
             }
         }
@@ -185,8 +213,8 @@
         .header-menu_button {
             width: 140px;
             height: 44px;
+            @include flex-center_column;
             .general-btn {
-                @include flex-center_row;
                 @include button;
                 @include link-white;
                 background-color: $bg_btn_blue;
@@ -640,7 +668,7 @@
         .products {
             width: $width_main;
             min-height: 680px;
-            margin-bottom: 138px;
+            margin-bottom: 74px;
             @include flex-center_column;
         }
         
@@ -662,6 +690,7 @@
         
         .products-items {
             width: $width_main;
+            height: 470px;
             background-color: $bg_white;
         }
         
@@ -752,34 +781,126 @@
             }
         }
         
-        .cta {}
+        .cta {
+            @include flex-center_column;
+            width: $width_main;
+            height: 521px;
+            background: $bg_block_gradient;
+        }
         
-        .cta-text1 {}
+        .cta-text {
+            text-align: center;
+            h2 {
+                @include h2-title;
+                margin-bottom: 20px;
+            }
+            p {
+                @include text-grey1;
+                margin-bottom: 40px;
+            }
+        }
         
-        .cta-text2 {}
+        .cta-buttons {
+            @include flex-center_row;
+        }
         
-        .cta-buttons {}
+        .cta-button {
+            a {
+                @include button;
+                width: 140px;
+                height: 48px;
+                font-size: 15px;
+                font-weight: $fw_med;
+                color: $color_link_hov;
+                border: $border_blue;
+                border-radius: $radius_4;
+            }
+            &:first-child a {
+                @include button;
+                width: 140px;
+                height: 48px;
+                margin-right: 20px;
+                @include link-white;
+                background-color: $bg_btn_blue;
+                border-radius: $radius_4;
+                &:hover {
+                    background-color: $bg_btn_blue_hov;
+                }
+                img {
+                    width: 18.33px;
+                    height: 9.17px;
+                    margin-left: 10px;
+                }
+            }
+        }
         
-        .cta-button {}
+        .footer {
+            @include flex-column;
+            width: $width_footer;
+            margin: $margin_footer;
+            span {
+                width: inherit;
+                height: 1px;
+                background-color: $bg_grey;
+                margin-bottom: 50px;
+            }
+        }
         
-        .footer-left {}
+        .footer-container {
+            display: flex;
+            width: $width_footer;
+        }
         
-        .footer-left_copyright {}
+        .footer-left {
+            min-width: 236px;
+            margin-right: 201px;
+        }
         
-        .footer-left_links {}
+        .footer-left_copyright {
+            @include text-footer;
+            margin-bottom: 10px;
+        }
         
-        .footer-left_privacy {}
-        
-        .footer-left_terms {}
+        .footer-left_links {
+            @include flex-center_row;
+            justify-content: start;
+            width: 236px;
+            height: 24px;
+            a {
+                @include text-footer;
+                &:first-child {
+                    padding-right: 8px;
+                    margin-right: 8px;
+                    border-right: 1px solid $text_main;
+                }
+            }
+        }
         
         .footer-right {}
         
-        .footer-menu_columns {}
+        .footer-menu_columns {
+            display: flex;
+        }
         
-        .footer-menu_column {}
+        .footer-menu_column {
+            &:first-child {
+                margin-right: 146px;
+            }
+            &:last-child {
+                margin-left: 142px;
+            }
+        }
         
-        .footer-menu_column-title {}
+        .footer-menu_column-title {
+            margin-bottom: 8px;
+        }
         
         .footer-menu_items {}
         
-        .footer-menu_item {}
+        .footer-menu_item {
+            @include text-footer;
+            margin-bottom: 8px;
+            a {
+                @include text-footer;
+            }
+        }
