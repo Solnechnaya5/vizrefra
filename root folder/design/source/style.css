@@ -1,6 +1,126 @@
-main {
-  max-width: 1920px;
+.page-wrapper {
+  width: 1920px;
+  background-color: #FFFFFF;
   margin: 0 auto;
+  overflow: hidden;
+}
+
+.burger-menu {
+  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #ECEEF8;
+  width: 320px;
+  height: 579px;
+  right: -100%;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  z-index: 70;
+}
+
+.burger-menu__items {
+  margin: 15px 0 0 41px;
+}
+
+.burger-menu_container {
+  margin-left: 30px;
+}
+
+.burger-menu__item {
+  margin-bottom: 32px;
+}
+.burger-menu__item a {
+  font-family: "Gordita";
+  font-family: "Gordita";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  color: #18181B;
+}
+.burger-menu__item a:hover {
+  color: #3F51B5;
+}
+
+.burger-menu-icon {
+  position: absolute;
+  top: 23px;
+  right: 35px;
+  width: 20px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 35px;
+  display: none;
+}
+
+.burger-menu-icon span,
+.burger-menu-icon:after,
+.burger-menu-icon:before {
+  height: 2px;
+  width: 18px;
+  position: absolute;
+  background: #18181B;
+  margin: 0 auto;
+}
+
+.burger-menu-icon span {
+  top: 10px;
+}
+
+.burger-menu-icon:after,
+.burger-menu-icon:before {
+  content: "";
+}
+
+.burger-menu-icon:after {
+  bottom: 3px;
+  text-align: right;
+}
+
+.burger-menu-icon:before {
+  top: 5px;
+}
+
+.burger-menu-icon.open-menu span {
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.burger-menu-icon.open-menu:before {
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+  top: 13px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.burger-menu-icon.open-menu:after {
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+  bottom: 5px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.burger-menu.open-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0;
+}
+
+body.fixed-page {
+  overflow: hidden;
 }
 
 .container {
@@ -30,6 +150,7 @@ main {
   width: 1920px;
   height: 60px;
   background-color: #ECEEF8;
+  position: relative;
 }
 
 .header-logo {
@@ -177,7 +298,7 @@ main {
 .page-top_title h1 {
   font-family: "Gordita";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 65px;
   line-height: 93px;
   color: #18181B;
@@ -300,7 +421,9 @@ main {
 }
 .solutions-top_title h3 {
   font-family: "Gordita";
+  font-style: normal;
   font-size: 14px;
+  font-weight: 500;
   color: #18181B;
   line-height: 170%;
   letter-spacing: 0.15em;
@@ -802,7 +925,9 @@ main {
 }
 .products-title h3 {
   font-family: "Gordita";
+  font-style: normal;
   font-size: 14px;
+  font-weight: 500;
   color: #18181B;
   line-height: 170%;
   letter-spacing: 0.15em;
@@ -1179,4 +1304,268 @@ main {
   font-style: normal;
   font-weight: 400;
   color: #18181B;
+}
+
+.about-vr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1280px;
+  min-height: 554px;
+  margin: 0 320px;
+}
+
+.about-vr_left {
+  width: 516px;
+  margin: 90px 30px 0 0;
+}
+.about-vr_left h6 {
+  font-family: "Gordita";
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 500;
+  color: #18181B;
+  line-height: 170%;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.about-vr_left h1 {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 65px;
+  line-height: 93px;
+  color: #18181B;
+}
+
+.about-vr_middle {
+  width: 406px;
+  height: 554px;
+  position: relative;
+}
+.about-vr_middle img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 20;
+}
+.about-vr_middle span {
+  display: block;
+  position: absolute;
+  width: 641.77px;
+  height: 444.06px;
+  top: 100px;
+  right: 0;
+  z-index: 5;
+  background: linear-gradient(242.33deg, #FFAB90 -7.67%, rgba(94, 102, 250, 0.1) 99.98%);
+  opacity: 0.5;
+  -webkit-filter: blur(180px);
+          filter: blur(180px);
+  border-radius: 20px;
+  -webkit-transform: rotate(28deg);
+          transform: rotate(28deg);
+}
+
+.about-vr_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 298px;
+  margin-left: 31px;
+}
+.about-vr_right h5 {
+  font-family: "Gordita";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 170%;
+  color: #6876CA;
+  margin-bottom: 24px;
+}
+.about-vr_right p {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #60606C;
+  line-height: 170%;
+}
+
+.mission {
+  width: 843px;
+  margin: 250px 320px 0 320px;
+}
+.mission h6 {
+  font-family: "Gordita";
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 500;
+  color: #18181B;
+  line-height: 170%;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.mission p {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  color: #18181B;
+  line-height: 170%;
+}
+
+.values {
+  width: 1280px;
+  margin: 250px 320px 200px 320px;
+}
+.values h6 {
+  font-family: "Gordita";
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 500;
+  color: #18181B;
+  line-height: 170%;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.values h2 {
+  font-family: "Gordita";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 170%;
+  color: #18181B;
+  width: 656px;
+  margin-bottom: 20px;
+}
+.values p {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #60606C;
+  line-height: 170%;
+  width: 534px;
+}
+
+.values-block1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1280px;
+  margin-top: 100px;
+  min-height: 416px;
+}
+
+.values-block1_left {
+  position: relative;
+  width: 640px;
+}
+.values-block1_left img {
+  display: block;
+  width: 625px;
+  height: 416px;
+  position: relative;
+  bottom: 24px;
+  right: 0;
+  z-index: 10;
+}
+.values-block1_left span {
+  display: block;
+  width: 836px;
+  height: 416px;
+  background: #ECEEF8;
+  position: absolute;
+  top: 0;
+  right: 125px;
+  z-index: 5;
+}
+
+.values-block1_right {
+  width: 640px;
+}
+.values-block1_right h3 {
+  font-family: "Gordita";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 170%;
+  color: #18181B;
+  margin: 0 0 20px 124px;
+}
+.values-block1_right p {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #60606C;
+  line-height: 170%;
+  width: 328px;
+  margin-left: 124px;
+}
+
+.values-block2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1280px;
+  margin-top: 150px;
+  min-height: 416px;
+}
+
+.values-block2_left {
+  width: 640px;
+}
+.values-block2_left h3 {
+  font-family: "Gordita";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 170%;
+  color: #18181B;
+  margin-bottom: 20px;
+  width: 407px;
+}
+.values-block2_left p {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #60606C;
+  line-height: 170%;
+  width: 328px;
+}
+
+.values-block2_right {
+  position: relative;
+  width: 640px;
+}
+.values-block2_right img {
+  display: block;
+  width: 625px;
+  height: 416px;
+  position: relative;
+  bottom: 24px;
+  left: 0;
+  z-index: 10;
+}
+.values-block2_right span {
+  display: block;
+  width: 836px;
+  height: 416px;
+  background: #ECEEF8;
+  position: absolute;
+  top: 0;
+  left: 120px;
+  z-index: 5;
 }

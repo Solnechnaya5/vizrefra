@@ -59,6 +59,15 @@
             color: $text_main;
         }
         
+        @mixin text-big {
+            font-family: 'Gordita';
+            font-style: normal;
+            font-weight: $fw_reg;
+            font-size: $fs_big_34;
+            color: $text_main;
+            line-height: $lh2;
+        }
+        
         @mixin text-grey1 {
             font-family: 'Gordita';
             font-style: normal;
@@ -97,7 +106,9 @@
         
         @mixin title-1 {
             font-family: 'Gordita';
+            font-style: normal;
             font-size: $fs_body3;
+            font-weight: $fw_med;
             color: $text_main;
             line-height: $lh2;
             letter-spacing: 0.15em;
@@ -110,6 +121,15 @@
             color: $text_main;
             line-height: $lh2;
             text-transform: uppercase;
+        }
+        
+        @mixin h1-title {
+            font-family: 'Gordita';
+            font-style: normal;
+            font-weight: $fw_med;
+            font-size: $h1_fs;
+            line-height: $lh_h1;
+            color: $text_main;
         }
         
         @mixin h2-title {
@@ -148,6 +168,15 @@
             color: $text_main;
         }
         
+        @mixin h5-title_blue {
+            font-family: "Gordita";
+            font-size: $h5_fs;
+            font-style: normal;
+            font-weight: $fw_bold;
+            line-height: $lh2;
+            color: $text_blue;
+        }
+        
         @mixin h6-title {
             font-family: "Gordita";
             font-size: $h6_fs;
@@ -157,9 +186,110 @@
             color: $text_main;
         }
         
-        main {
-            max-width: $width_main;
+        .page-wrapper {
+            width: $width_main;
+            background-color: #FFFFFF;
+            margin: $margin_0-auto;
+            overflow: hidden;
+        }
+        
+        // burger-menu
+        .burger-menu {
+            display: none;
+            @include flex-column;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background-color: $bg_menu;
+            width: 320px;
+            height: 579px;
+            right: -100%;
+            transition: all 0.7s ease;
+            z-index: 70;
+        }
+        
+        .burger-menu__items {
+            margin: 15px 0 0 41px;
+        }
+        
+        .burger-menu_container {
+            margin-left: 30px;
+        }
+        
+        .burger-menu__item {
+            margin-bottom: 32px;
+            a {
+                font-family: 'Gordita';
+                @include link-black;
+                &:hover {
+                    color: $color_link_hov;
+                }
+            }
+        }
+        
+        .burger-menu-icon {
+            position: absolute;
+            top: 23px;
+            right: 35px;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            padding-right: 35px;
+            display: none;
+        }
+        
+        .burger-menu-icon span,
+        .burger-menu-icon:after,
+        .burger-menu-icon:before {
+            height: 2px;
+            width: 18px;
+            position: absolute;
+            background: $text_main;
             margin: 0 auto;
+        }
+        
+        .burger-menu-icon span {
+            top: 10px;
+        }
+        
+        .burger-menu-icon:after,
+        .burger-menu-icon:before {
+            content: '';
+        }
+        
+        .burger-menu-icon:after {
+            bottom: 3px;
+            text-align: right;
+        }
+        
+        .burger-menu-icon:before {
+            top: 5px;
+        }
+        
+        .burger-menu-icon.open-menu span {
+            opacity: 0;
+            transition: 0.5s;
+        }
+        
+        .burger-menu-icon.open-menu:before {
+            transform: rotate(40deg);
+            top: 13px;
+            transition: 0.4s;
+        }
+        
+        .burger-menu-icon.open-menu:after {
+            transform: rotate(-40deg);
+            bottom: 5px;
+            transition: 0.4s;
+        }
+        
+        .burger-menu.open-menu {
+            display: flex;
+            right: 0;
+        }
+        
+        body.fixed-page {
+            overflow: hidden;
         }
         
         .container {
@@ -178,6 +308,7 @@
             width: $width_main;
             height: 60px;
             background-color: $bg_menu;
+            position: relative;
         }
         
         .header-logo {
@@ -251,12 +382,7 @@
         
         .page-top_title {
             h1 {
-                font-family: 'Gordita';
-                font-style: normal;
-                font-weight: $fw_reg;
-                font-size: $h1_fs;
-                line-height: $lh_h1;
-                color: $text_main;
+                @include h1-title;
             }
         }
         
@@ -473,7 +599,7 @@
             height: 386px;
             margin: 0;
             transform: rotate(-10deg);
-            background: linear-gradient(242.33deg, #FFAB90 -7.67%, rgba(94, 102, 250, 0.1) 99.98%);
+            background: $bg_gradient_rose;
             opacity: 0.5;
             filter: blur(400px);
             border-radius: 200px;
@@ -785,7 +911,7 @@
             @include flex-center_column;
             width: $width_main;
             height: 521px;
-            background: $bg_block_gradient;
+            background: $bg_gradient_grey;
         }
         
         .cta-text {
@@ -837,7 +963,7 @@
         .footer {
             @include flex-column;
             width: $width_footer;
-            margin: $margin_footer;
+            margin: $margin_0_320;
             span {
                 width: inherit;
                 height: 1px;
@@ -902,5 +1028,184 @@
             margin-bottom: 8px;
             a {
                 @include text-footer;
+            }
+        }
+        
+        // about VR
+        .about-vr {
+            display: flex;
+            width: $width_footer;
+            min-height: 554px;
+            margin: $margin_0_320
+        }
+        
+        .about-vr_left {
+            width: 516px;
+            margin: 90px 30px 0 0;
+            h6 {
+                @include title-1;
+                margin-bottom: 24px;
+            }
+            h1 {
+                @include h1-title
+            }
+        }
+        
+        .about-vr_middle {
+            width: 406px;
+            height: 554px;
+            position: relative;
+            img {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                z-index: 20;
+            }
+            span {
+                display: block;
+                position: absolute;
+                width: 641.77px;
+                height: 444.06px;
+                top: 100px;
+                right: 0;
+                z-index: 5;
+                background: $bg_gradient_rose;
+                opacity: 0.5;
+                filter: blur(180px);
+                border-radius: 20px;
+                transform: rotate(28deg);
+            }
+        }
+        
+        .about-vr_right {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            width: 298px;
+            margin-left: 31px;
+            h5 {
+                @include h5-title_blue;
+                margin-bottom: 24px;
+            }
+            p {
+                @include text-grey3;
+            }
+        }
+        
+        .mission {
+            width: 843px;
+            margin: 250px 320px 0 320px;
+            h6 {
+                @include title-1;
+                margin-bottom: 24px;
+            }
+            p {
+                @include text-big;
+            }
+        }
+        
+        .values {
+            width: $width_footer;
+            margin: 250px 320px 200px 320px;
+            h6 {
+                @include title-1;
+                margin-bottom: 20px;
+            }
+            h2 {
+                @include h2-title;
+                width: 656px;
+                margin-bottom: 20px;
+            }
+            p {
+                @include text-grey2;
+                width: 534px;
+            }
+        }
+        
+        .values-block1 {
+            display: flex;
+            width: $width_footer;
+            margin-top: 100px;
+            min-height: 416px;
+        }
+        
+        .values-block1_left {
+            position: relative;
+            width: 640px;
+            img {
+                display: block;
+                width: 625px;
+                height: 416px;
+                position: relative;
+                bottom: 24px;
+                right: 0;
+                z-index: 10;
+            }
+            span {
+                display: block;
+                width: 836px;
+                height: 416px;
+                background: $bg_menu;
+                position: absolute;
+                top: 0;
+                right: 125px;
+                z-index: 5;
+            }
+        }
+        
+        .values-block1_right {
+            width: 640px;
+            h3 {
+                @include h3-title;
+                margin: 0 0 20px 124px;
+            }
+            p {
+                @include text-grey2;
+                width: 328px;
+                margin-left: 124px;
+            }
+        }
+        
+        .values-block2 {
+            display: flex;
+            width: $width_footer;
+            margin-top: 150px;
+            min-height: 416px;
+        }
+        
+        .values-block2_left {
+            width: 640px;
+            h3 {
+                @include h3-title;
+                margin-bottom: 20px;
+                width: 407px;
+            }
+            p {
+                @include text-grey2;
+                width: 328px;
+            }
+        }
+        
+        .values-block2_right {
+            position: relative;
+            width: 640px;
+            img {
+                display: block;
+                width: 625px;
+                height: 416px;
+                position: relative;
+                bottom: 24px;
+                left: 0;
+                z-index: 10;
+            }
+            span {
+                display: block;
+                width: 836px;
+                height: 416px;
+                background: $bg_menu;
+                position: absolute;
+                top: 0;
+                left: 120px;
+                z-index: 5;
             }
         }

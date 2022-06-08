@@ -2,6 +2,7 @@
 // for btn,h 
 $text_main: #18181B;
 $text_grey:#60606C;
+$text_blue: #6876CA;
 $color_price1: #009688;
 $color_price2: #6876CA;
 $color_link_hov: #3F51B5;
@@ -16,7 +17,8 @@ $bg_menu:#ECEEF8;
 $bg_block_blue: #6876CA;
 $bg_block_grey: rgba(236, 238, 248, 1);
 $bg_block_dark: #0D1126;
-$bg_block_gradient: linear-gradient(180deg, #ECEEF8 0%, rgba(236, 238, 248, 0) 100%);
+$bg_gradient_grey: linear-gradient(180deg, #ECEEF8 0%, rgba(236, 238, 248, 0) 100%);
+$bg_gradient_rose: linear-gradient(242.33deg, #FFAB90 -7.67%, rgba(94, 102, 250, 0.1) 99.98%);
 $border_btn:1px solid #3F51B5;
 // font-size
 $h1_fs: 65px;
@@ -27,6 +29,7 @@ $h5_fs: 18px;
 $h6_fs:14px;
 $h2_fs_wh: 34px;
 $fs_btn: 16px;
+$fs_big_34:34px;
 $fs_link_btn: 15px;
 $fs_body1: 18px;
 $fs_body2: 16px;
@@ -48,7 +51,7 @@ $width_solution_container: 408px;
 $width_footer:1280px;
 // margin
 $margin_main: 0 312px;
-$margin_footer: 0 320px;
+$margin_0_320: 0 320px;
 $margin_0-auto: 0 auto;
 // radius
 $radius_4: 4px;
