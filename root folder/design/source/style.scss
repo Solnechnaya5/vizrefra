@@ -68,6 +68,15 @@
             line-height: $lh2;
         }
         
+        @mixin text-big_blue {
+            font-family: 'Gordita';
+            font-style: normal;
+            font-weight: $fw_reg;
+            font-size: $fs_big_34;
+            color: $text_blue;
+            line-height: $lh2;
+        }
+        
         @mixin text-grey1 {
             font-family: 'Gordita';
             font-style: normal;
@@ -187,7 +196,8 @@
         }
         
         .page-wrapper {
-            width: $width_main;
+            max-width: $width_main;
+            width: 100%;
             background-color: #FFFFFF;
             margin: $margin_0-auto;
             overflow: hidden;
@@ -961,25 +971,20 @@
         }
         
         .footer {
-            @include flex-column;
+            @include flex-center_row;
             width: $width_footer;
             margin: $margin_0_320;
-            span {
-                width: inherit;
-                height: 1px;
-                background-color: $bg_grey;
-                margin-bottom: 50px;
-            }
         }
         
         .footer-container {
             display: flex;
             width: $width_footer;
+            border-top: $border_grey;
         }
         
         .footer-left {
             min-width: 236px;
-            margin-right: 201px;
+            margin: 50px 201px 0 0;
         }
         
         .footer-left_copyright {
@@ -1002,7 +1007,9 @@
             }
         }
         
-        .footer-right {}
+        .footer-right {
+            margin-top: 50px;
+        }
         
         .footer-menu_columns {
             display: flex;
@@ -1207,5 +1214,92 @@
                 top: 0;
                 left: 120px;
                 z-index: 5;
+            }
+        }
+        
+        .why-top {
+            width: inherit;
+            height: 900px;
+            background: $bg_menu;
+            h1 {
+                @include h1-title;
+                width: 920px;
+                margin: 0 0 40px 320px;
+                padding-top: 100px;
+            }
+            p {
+                @include text-big_blue;
+                width: 951px;
+                margin: 0 0 40px 320px;
+            }
+            a {
+                @include button;
+                @include link-white;
+                width: 122px;
+                height: 48px;
+                background: $bg_btn_blue;
+                &:hover {
+                    background: $bg_btn_blue_hov;
+                }
+                margin:0 0 40px 320px;
+            }
+        }
+        
+        .benefits {
+            margin-left: 578px;
+            padding: 150px 0;
+            border-left: $border_grey;
+        }
+        
+        .benefit-container {
+            width: 655px;
+            margin-bottom: 194px;
+            margin-left: 150px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            h2 {
+                @include h2-title;
+                margin-bottom: 20px;
+                width: 655px;
+                position: relative;
+                &::before {
+                    content: ".";
+                    display: block;
+                    width: 12px;
+                    height: 12px;
+                    color: $bg_block_blue;
+                    position: absolute;
+                    top: -10px;
+                    left: -157px;
+                }
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 58px;
+                    height: 58px;
+                    position: absolute;
+                    top: 15px;
+                    left: -179px;
+                    border: $border_blue;
+                    border-radius: 50%;
+                }
+            }
+            p {
+                width: 516px;
+            }
+        }
+        
+        .benefit-description {
+            @include text-grey1;
+            color: $text_main;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-explanation {
+            @include text-grey2;
+            font-weight: $fw_med;
+            a {
+                color: $text_blue;
             }
         }

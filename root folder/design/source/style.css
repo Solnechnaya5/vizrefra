@@ -1,5 +1,6 @@
 .page-wrapper {
-  width: 1920px;
+  max-width: 1920px;
+  width: 100%;
   background-color: #FFFFFF;
   margin: 0 auto;
   overflow: hidden;
@@ -1205,18 +1206,18 @@ body.fixed-page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 1280px;
   margin: 0 320px;
-}
-.footer span {
-  width: inherit;
-  height: 1px;
-  background-color: #D9DDF2;
-  margin-bottom: 50px;
 }
 
 .footer-container {
@@ -1224,11 +1225,12 @@ body.fixed-page {
   display: -ms-flexbox;
   display: flex;
   width: 1280px;
+  border-top: 1px solid #D9DDF2;
 }
 
 .footer-left {
   min-width: 236px;
-  margin-right: 201px;
+  margin: 50px 201px 0 0;
 }
 
 .footer-left_copyright {
@@ -1271,6 +1273,10 @@ body.fixed-page {
   padding-right: 8px;
   margin-right: 8px;
   border-right: 1px solid #18181B;
+}
+
+.footer-right {
+  margin-top: 50px;
 }
 
 .footer-menu_columns {
@@ -1568,4 +1574,135 @@ body.fixed-page {
   top: 0;
   left: 120px;
   z-index: 5;
+}
+
+.why-top {
+  width: inherit;
+  height: 900px;
+  background: #ECEEF8;
+}
+.why-top h1 {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 65px;
+  line-height: 93px;
+  color: #18181B;
+  width: 920px;
+  margin: 0 0 40px 320px;
+  padding-top: 100px;
+}
+.why-top p {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  color: #6876CA;
+  line-height: 170%;
+  width: 951px;
+  margin: 0 0 40px 320px;
+}
+.why-top a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  font-family: "Gordita";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-decoration: none;
+  width: 122px;
+  height: 48px;
+  background: #3F51B5;
+  margin: 0 0 40px 320px;
+}
+.why-top a:hover {
+  background: #6876CA;
+}
+
+.benefits {
+  margin-left: 578px;
+  padding: 150px 0;
+  border-left: 1px solid #D9DDF2;
+}
+
+.benefit-container {
+  width: 655px;
+  margin-bottom: 194px;
+  margin-left: 150px;
+}
+.benefit-container:last-child {
+  margin-bottom: 0;
+}
+.benefit-container h2 {
+  font-family: "Gordita";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 170%;
+  color: #18181B;
+  margin-bottom: 20px;
+  width: 655px;
+  position: relative;
+}
+.benefit-container h2::before {
+  content: ".";
+  display: block;
+  width: 12px;
+  height: 12px;
+  color: #6876CA;
+  position: absolute;
+  top: -10px;
+  left: -157px;
+}
+.benefit-container h2::after {
+  content: "";
+  display: block;
+  width: 58px;
+  height: 58px;
+  position: absolute;
+  top: 15px;
+  left: -179px;
+  border: 1px solid #3F51B5;
+  border-radius: 50%;
+}
+.benefit-container p {
+  width: 516px;
+}
+
+.benefit-description {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #60606C;
+  line-height: 170%;
+  color: #18181B;
+  margin-bottom: 20px;
+}
+
+.benefit-explanation {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #60606C;
+  line-height: 170%;
+  font-weight: 500;
+}
+.benefit-explanation a {
+  color: #6876CA;
 }
