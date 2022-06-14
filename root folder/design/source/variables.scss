@@ -17,6 +17,7 @@ $bg_btn_white:#FFFFFF;
 $bg_menu:#ECEEF8;
 $bg_block_blue: #6876CA;
 $bg_block_grey: rgba(236, 238, 248, 1);
+$bg_block_grey_ta: rgba(236, 238, 248, 0.5);
 $bg_block_dark: #0D1126;
 $bg_gradient_grey: linear-gradient(180deg, #ECEEF8 0%, rgba(236, 238, 248, 0) 100%);
 $bg_gradient_rose: linear-gradient(242.33deg, #FFAB90 -7.67%, rgba(94, 102, 250, 0.1) 99.98%);
@@ -51,6 +52,7 @@ $fw_reg: 400;
 $width_main:1920px;
 $wraper: 1296px;
 $width_solution_container: 408px;
+$width_container: 1280px;
 $width_footer:1280px;
 // margin
 $margin_main: 0 312px;
@@ -62,3 +64,4 @@ $radius_8:8px;
 // borders
 $border_grey: 1px solid #D9DDF2;
 $border_blue: 1px solid #3F51B5;
+$border_blue_dashed: 1px dashed #B3BBE5;

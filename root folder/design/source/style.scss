@@ -42,6 +42,15 @@
     text-decoration: none;
 }
 
+@mixin link-blue {
+    font-family: 'Gordita';
+    font-size: $fs_link_btn;
+    font-style: normal;
+    font-weight: $fw_med;
+    color: $text_blue;
+    text-decoration: none;
+}
+
 @mixin button {
     display: flex;
     flex-direction: row;
@@ -1534,5 +1543,169 @@ body.fixed-page {
     p {
         @include text-grey3;
         color: $text_white;
+    }
+}
+
+.header-page.ta-header {
+    background-color: $bg_white;
+    border-bottom: $border_grey;
+}
+
+.ta-top {
+    @include flex-space;
+    margin: $margin_0_320;
+    height: 135px;
+}
+
+.ta-top_left {
+    margin: 24px 0 31px;
+    h3 {
+        @include h6-title;
+        margin-bottom: 8px;
+    }
+    p {
+        @include text-grey3;
+    }
+}
+
+.ta-top_right {
+    margin: 41px 0;
+}
+
+.ta-top_buttons {
+    @include flex-center_row;
+    justify-content: flex-start;
+    width: 406px;
+    height: 60px;
+    background-color: $bg_block_grey;
+    a {
+        &:first-child {
+            width: 197px;
+            height: 52px;
+            background-color: $bg_btn_white;
+            @include button;
+            @include link-blue;
+            margin: 0 43px 0 6px;
+        }
+        &:last-child {
+            @include link-black;
+        }
+    }
+}
+
+.ta-window {
+    width: $width_container;
+    height: 799px;
+    background-color: $bg_block_grey_ta;
+    border-radius: $radius_8;
+    margin: $margin_0_320;
+    button {
+        width: 1232px;
+        height: 44px;
+        margin: 24px;
+        @include button;
+        @include link-white;
+        background-color: $bg_btn_blue;
+        &:hover {
+            background-color: $bg_btn_blue_hov;
+        }
+    }
+}
+
+.ta-window_top {
+    width: inherit;
+    height: 90px;
+    @include flex-space;
+    h5 {
+        @include h5-title;
+        margin-left: 24px;
+    }
+    img {
+        display: block;
+        width: 16.97px;
+        height: 9.9px;
+        margin-right: 37.51px;
+    }
+}
+
+.ta-window_drag-drop {
+    @include flex-center_row;
+    width: 1232px;
+    height: 134px;
+    border: $border_blue_dashed;
+    border-radius: $radius_8;
+    margin: 0 24px 16px;
+    p {
+        @include flex-center_row;
+        @include text-grey3;
+        img {
+            display: block;
+            width: 18px;
+            height: 15px;
+            margin-right: 9px;
+        }
+        a {
+            @include link-blue;
+            font-weight: $fw_reg;
+            margin: 0 3px;
+        }
+    }
+}
+
+.ta-window_paste-text {
+    width: 1232px;
+    height: 475px;
+    background-color: $bg_white;
+    border-radius: $radius_4;
+    margin: 0 24px;
+    p {
+        @include text-grey3;
+        margin: 16px;
+    }
+}
+
+.ta-footer {
+    width: $width_footer;
+    height: 85px;
+    margin: $margin_0_320;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ta_footer-left {
+    @include text-footer;
+}
+
+.ta_footer-right {
+    a {
+        @include text-footer;
+        &:first-child {
+            padding-right: 8px;
+            margin-right: 8px;
+            border-right: 1px solid $text_main;
+        }
+    }
+}
+
+.ta_green-cirle {
+    width: 1232px;
+    height: 475px;
+    margin: 177px 24px 84px 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.green-cirle {
+    width: 98px;
+    height: 98px;
+    margin-top: 110px;
+    @include flex-center_row;
+    border-radius: 50%;
+    border: 2px solid #76EAC0;
+    img {
+        display: block;
+        width: 25.04px;
+        height: 19.03px;
     }
 }
