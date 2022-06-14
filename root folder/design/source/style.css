@@ -2382,3 +2382,205 @@ body.fixed-page {
   width: 25.04px;
   height: 19.03px;
 }
+
+.ta-window2 {
+  width: 1280px;
+  height: 799px;
+  background-color: #FFFFFF;
+  margin: 0 320px;
+}
+
+.ta-window2_top {
+  width: inherit;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(236, 238, 248, 0.5);
+  border-radius: 8px;
+}
+.ta-window2_top h5 {
+  font-family: "Gordita";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 170%;
+  color: #18181B;
+  margin-left: 24px;
+}
+.ta-window2_top img {
+  display: block;
+  width: 16.97px;
+  height: 9.9px;
+  margin-right: 37.51px;
+}
+
+.ta-window2_toggle-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 24px 0 49px;
+}
+.ta-window2_toggle-buttons button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  font-family: "Gordita";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  color: #18181B;
+  width: 197px;
+  height: 44px;
+  margin-right: 4px;
+  background-color: #FFFFFF;
+  border: 1px solid #D9DDF2;
+}
+.ta-window2_toggle-buttons button:active {
+  background-color: #3F51B5;
+  font-family: "Gordita";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.ta-window2_classification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 52px;
+}
+.ta-window2_classification h5 {
+  font-family: "Gordita";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 170%;
+  color: #18181B;
+}
+.ta-window2_classification p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 245px;
+  height: 28px;
+  padding-left: 8px;
+  background-color: rgba(236, 238, 248, 0.5);
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #60606C;
+  line-height: 170%;
+  color: #18181B;
+}
+.ta-window2_classification p span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 90px;
+  height: 14px;
+  background-color: #FFFFFF;
+  font-size: 10px;
+  margin-left: 9px;
+}
+
+.ta-window2_summary h5 {
+  font-family: "Gordita";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 170%;
+  color: #18181B;
+  margin-bottom: 8px;
+}
+.ta-window2_summary p {
+  height: 104px;
+  padding: 16px 0;
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #60606C;
+  line-height: 170%;
+  color: black;
+  border-top: 1px solid #18181B;
+  border-bottom: 1px solid #18181B;
+}
+
+.ta-widow2_schedules-space img {
+  display: block;
+  width: 860px;
+  height: 279px;
+  margin: 80px 110px 142px;
+}

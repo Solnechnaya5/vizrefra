@@ -1709,3 +1709,98 @@ body.fixed-page {
         height: 19.03px;
     }
 }
+
+.ta-window2 {
+    width: $width_container;
+    height: 799px;
+    background-color: $bg_white;
+    margin: $margin_0_320;
+}
+
+.ta-window2_top {
+    width: inherit;
+    height: 90px;
+    @include flex-space;
+    background-color: $bg_block_grey_ta;
+    border-radius: $radius_8;
+    h5 {
+        @include h5-title;
+        margin-left: 24px;
+    }
+    img {
+        display: block;
+        width: 16.97px;
+        height: 9.9px;
+        margin-right: 37.51px;
+    }
+}
+
+.ta-window2_toggle-buttons {
+    @include flex-center_row;
+    margin: 24px 0 49px;
+    button {
+        @include button;
+        @include link-black;
+        width: 197px;
+        height: 44px;
+        margin-right: 4px;
+        background-color: $bg_btn_white;
+        border: $border_grey;
+        &:active {
+            background-color: $bg_btn_blue;
+            @include link-white;
+        }
+    }
+}
+
+.ta-window2_classification {
+    @include flex-center_row;
+    margin-bottom: 52px;
+    h5 {
+        @include h5-title;
+    }
+    p {
+        @include flex-center_row;
+        justify-content: flex-start;
+        width: 245px;
+        height: 28px;
+        padding-left: 8px;
+        background-color: $bg_block_grey_ta;
+        @include text-grey3;
+        color: $text_main;
+        span {
+            @include flex-center_row;
+            justify-content: flex-start;
+            width: 90px;
+            height: 14px;
+            background-color: $bg_btn_white;
+            font-size: 10px;
+            margin-left: 9px;
+        }
+    }
+}
+
+.ta-window2_summary {
+    h5 {
+        @include h5-title;
+        margin-bottom: 8px;
+    }
+    p {
+        height: 104px;
+        padding: 16px 0;
+        @include text-grey3;
+        color: black;
+        border-top: 1px solid #18181B;
+        border-bottom: 1px solid #18181B;
+        ;
+    }
+}
+
+.ta-widow2_schedules-space {
+    img {
+        display: block;
+        width: 860px;
+        height: 279px;
+        margin: 80px 110px 142px;
+    }
+}
