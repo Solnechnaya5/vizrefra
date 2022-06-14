@@ -1226,6 +1226,7 @@ body.fixed-page {
   display: flex;
   width: 1280px;
   border-top: 1px solid #D9DDF2;
+  margin-bottom: 55px;
 }
 
 .footer-left {
@@ -1295,6 +1296,14 @@ body.fixed-page {
 .footer-menu_column-title {
   margin-bottom: 8px;
 }
+.footer-menu_column-title h6 {
+  font-family: "Gordita";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 170%;
+  color: #18181B;
+}
 
 .footer-menu_item {
   font-family: "Gordita";
@@ -1361,10 +1370,10 @@ body.fixed-page {
   position: absolute;
   width: 641.77px;
   height: 444.06px;
-  top: 100px;
-  right: 0;
+  top: 200px;
+  right: -30px;
   z-index: 5;
-  background: linear-gradient(242.33deg, #FFAB90 -7.67%, rgba(94, 102, 250, 0.1) 99.98%);
+  background: linear-gradient(240.46deg, #FFAB90 -0.47%, rgba(94, 102, 250, 0.1) 93.28%);
   opacity: 0.5;
   -webkit-filter: blur(180px);
           filter: blur(180px);
@@ -1579,9 +1588,30 @@ body.fixed-page {
 .why-top {
   width: inherit;
   height: 900px;
-  background: #ECEEF8;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  background-color: #FFFFFF;
 }
-.why-top h1 {
+.why-top img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.why-top_container {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.why-top_container h1 {
   font-family: "Gordita";
   font-style: normal;
   font-weight: 500;
@@ -1592,7 +1622,7 @@ body.fixed-page {
   margin: 0 0 40px 320px;
   padding-top: 100px;
 }
-.why-top p {
+.why-top_container p {
   font-family: "Gordita";
   font-style: normal;
   font-weight: 400;
@@ -1602,7 +1632,7 @@ body.fixed-page {
   width: 951px;
   margin: 0 0 40px 320px;
 }
-.why-top a {
+.why-top_container a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1629,7 +1659,7 @@ body.fixed-page {
   background: #3F51B5;
   margin: 0 0 40px 320px;
 }
-.why-top a:hover {
+.why-top_container a:hover {
   background: #6876CA;
 }
 
@@ -1705,4 +1735,326 @@ body.fixed-page {
 }
 .benefit-explanation a {
   color: #6876CA;
+}
+
+.contact-top {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1920px;
+  height: 858px;
+  position: relative;
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+.contact-top img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.contact-top_container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 858px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 126px 320px;
+}
+
+.contact-top_content {
+  width: 485px;
+  height: 606px;
+  margin-right: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contact-top_content h1 {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 65px;
+  line-height: 93px;
+  color: #18181B;
+  margin-bottom: 24px;
+}
+.contact-top_content p {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #60606C;
+  line-height: 170%;
+}
+
+.contact-top_form {
+  width: 625px;
+  height: 606px;
+  background: #FFFFFF;
+  border: 1px solid #D9DDF2;
+  border-radius: 8px;
+}
+.contact-top_form h4 {
+  font-family: "Gordita";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 170%;
+  color: #18181B;
+  margin: 36px 170px 24px;
+}
+.contact-top_form p {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #FF5353;
+  line-height: 170%;
+  margin: 16px 48px 32px 48px;
+}
+.contact-top_form p:last-child {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #60606C;
+  line-height: 170%;
+  font-size: 12px;
+  text-align: center;
+}
+
+.contact-form button {
+  width: 529px;
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  font-family: "Gordita";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 170%;
+  background-color: #3F51B5;
+  margin: 0 48px 32px 48px;
+}
+.contact-form button:hover {
+  background-color: #6876CA;
+}
+
+.user-name {
+  position: relative;
+}
+.user-name input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 529px;
+  height: 48px;
+  border: 1px solid #D9DDF2;
+  gap: 4px;
+  padding: 0 16px;
+  margin: 0 48px 20px;
+  font-family: "Gordita";
+  font-style: normal;
+  font-size: 14px;
+  color: #60606C;
+  line-height: 100%;
+}
+.user-name span {
+  position: absolute;
+  top: 21px;
+  right: 64px;
+  font-size: 14px;
+  color: #60606C;
+  line-height: 100%;
+}
+
+.user-company {
+  position: relative;
+}
+.user-company input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 529px;
+  height: 48px;
+  border: 1px solid #D9DDF2;
+  gap: 4px;
+  padding: 0 16px;
+  margin: 0 48px 20px;
+  font-family: "Gordita";
+  font-style: normal;
+  font-size: 14px;
+  color: #60606C;
+  line-height: 100%;
+}
+.user-company span {
+  position: absolute;
+  top: 21px;
+  right: 64px;
+  font-size: 14px;
+  color: #60606C;
+  line-height: 100%;
+}
+
+.user-email {
+  position: relative;
+}
+.user-email input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 529px;
+  height: 48px;
+  border: 1px solid #D9DDF2;
+  gap: 4px;
+  padding: 0 16px;
+  margin: 0 48px 20px;
+  font-family: "Gordita";
+  font-style: normal;
+  font-size: 14px;
+  color: #60606C;
+  line-height: 100%;
+}
+.user-email span {
+  position: absolute;
+  top: 21px;
+  right: 64px;
+  font-size: 14px;
+  color: #60606C;
+  line-height: 100%;
+}
+
+.user-phone {
+  position: relative;
+}
+.user-phone input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 529px;
+  height: 48px;
+  border: 1px solid #D9DDF2;
+  gap: 4px;
+  padding: 0 16px;
+  margin: 0 48px 20px;
+  font-family: "Gordita";
+  font-style: normal;
+  font-size: 14px;
+  color: #60606C;
+  line-height: 100%;
+}
+.user-phone span {
+  position: absolute;
+  top: 21px;
+  right: 64px;
+  font-size: 14px;
+  color: #60606C;
+  line-height: 100%;
+}
+
+.message textarea {
+  width: 529px;
+  height: 104px;
+  border: 1px solid #D9DDF2;
+  padding: 16px 0 0 16px;
+  margin: 0 48px;
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #60606C;
+  line-height: 170%;
+}
+
+.contact-block {
+  max-width: 1920px;
+  height: 280px;
+  background-color: #6876CA;
+}
+
+.contact-block_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 320px 93px;
+  padding-top: 93px;
+}
+
+.contact-block_item {
+  width: 296px;
+  margin-right: 141px;
+}
+.contact-block_item:last-child {
+  margin-right: 0;
+}
+.contact-block_item span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #FFFFFF;
+  margin-bottom: 20px;
+}
+.contact-block_item h5 {
+  font-family: "Gordita";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 170%;
+  color: #18181B;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+.contact-block_item p {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #60606C;
+  line-height: 170%;
+  color: #FFFFFF;
 }
