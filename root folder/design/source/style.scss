@@ -136,7 +136,7 @@
     font-style: normal;
     font-size: $fs_body3;
     font-weight: $fw_med;
-    color: $text_main;
+    color: $text_grey;
     line-height: $lh2;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -172,7 +172,7 @@
     font-family: "Gordita";
     font-size: $h2_fs;
     font-style: normal;
-    font-weight: $h2_fs_wh;
+    font-weight: $fw_reg;
     line-height: $lh1;
     color: $text_white;
 }
@@ -217,7 +217,7 @@
     font-family: "Gordita";
     font-size: $h6_fs;
     font-style: normal;
-    font-weight: $fw_bold;
+    font-weight: $fw_med;
     line-height: $lh2;
     color: $text_main;
 }
@@ -422,21 +422,30 @@ body.fixed-page {
 .page-top {
     display: flex;
     width: $wraper;
-    height: 672px;
+    height: 623px;
     margin: 0 285px 0 312px;
     .page-top_left {
         width: 407px;
-        height: 692px;
+        height: 623px;
         margin: 90px 196px 0 0;
     }
     .page-top_right {
         width: 712px;
+        height: 623px;
         .page-top_slider {
             width: 712px;
-            height: 692px;
+            height: 623px;
+            overflow: hidden;
+            position: relative;
             img {
-                width: 712px;
-                height: 594px;
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin-top: 28.87px;
             }
         }
     }
@@ -445,6 +454,8 @@ body.fixed-page {
 .page-top_title {
     h1 {
         @include h1-title;
+        text-decoration: 4px underline #FF5722;
+        margin-bottom: 30px;
     }
 }
 
@@ -559,11 +570,16 @@ body.fixed-page {
 .content-block_left {
     width: 50%;
     text-align: center;
+    margin-right: 100px;
+    img {
+        max-width: 457px;
+        max-height: 329px;
+    }
 }
 
 .content-block_right {
     width: 50%;
-    text-align-last: left;
+    text-align: left;
 }
 
 .content-block_container {
@@ -597,19 +613,15 @@ body.fixed-page {
 
 .tarif {
     width: $width_main;
-    // position: relative;
+    position: relative;
+    height: 900px;
+    margin-bottom: 250px;
 }
 
 .tarif-top {
     @include flex-center_column;
     background-color: $bg_block_blue;
     height: 343px;
-    span {
-        width: 924px;
-        height: 50px;
-        background-color: $bg_btn_white;
-        border-radius: 35px 35px 0 0;
-    }
 }
 
 .tarif-top_content {
@@ -632,6 +644,7 @@ body.fixed-page {
     p {
         @include text-white;
         font-size: $fs_body1;
+        font-weight: $fw_reg;
     }
 }
 
@@ -644,19 +657,21 @@ body.fixed-page {
 }
 
 .tarif-plans_container {
-    display: flex;
-    max-width: 850px;
-    position: relative;
-    // top: 343px;
+    @include flex-center_row;
+    width: 924px;
+    height: 600px;
+    position: absolute;
     left: 538px;
-    z-index: 10;
+    top: -50px;
+    border: 50px solid white;
+    border-radius: 35px 35px 0 0;
 }
 
 .tarif-plan_gradientbg {
     position: relative;
-    left: 304px;
+    left: 386px;
     bottom: 400px;
-    z-index: 2;
+    z-index: 10;
     width: 1262.56px;
     height: 386px;
     margin: 0;
@@ -669,13 +684,16 @@ body.fixed-page {
 
 .tarif-plan {
     width: 407px;
-    min-height: 550px;
+    height: 550px;
     background-color: $bg_btn_white;
     border-radius: $radius_8;
     border: $border_grey;
+    margin-top: 50px;
     &:first-child {
         margin-right: 30px;
     }
+    position: relative;
+    z-index: 50;
 }
 
 .tarif-plan_container {
@@ -684,12 +702,14 @@ body.fixed-page {
 }
 
 .tarif-plan_title {
-    #starter {
+    h4 {
         font-size: $h4_fs;
+        font-weight: $fw_med;
+    }
+    #starter {
         color: $color_price1;
     }
     #business {
-        font-size: $h4_fs;
         color: $color_price2;
     }
     margin-bottom: 10px;
@@ -714,6 +734,7 @@ body.fixed-page {
 .tarif-plan_term {
     span {
         @include text-grey2;
+        color: $text_grey2;
         font-size: $fs_body4;
     }
     margin-bottom: 24px;
@@ -753,7 +774,7 @@ body.fixed-page {
         font-size: $fs_body2;
         font-weight: $fw_med;
         line-height: $lh1;
-        color: $text_grey;
+        color: $text_grey2;
         margin-bottom: 32px;
     }
 }
@@ -789,10 +810,11 @@ body.fixed-page {
 .clients-title {
     h4 {
         @include text-grey1;
+        color: $text_grey2;
         font-weight: $fw_med;
         text-align: center;
     }
-    margin-bottom: 32px;
+    margin-bottom: 45px;
 }
 
 .clients-items {
@@ -824,15 +846,21 @@ body.fixed-page {
 .mob-app_left {
     margin-right: 167px;
     h4 {
-        @include text-grey1;
+        @include text-grey3;
+        font-size: $fs_body3;
+        font-weight: $fw_med;
+        text-transform: uppercase;
         margin-bottom: 20px;
     }
     h2 {
         @include h2-title_wh;
+        font-size: $fs_big_34;
         margin-bottom: 20px;
     }
     p {
         @include text-white;
+        font-size: $fs_body1;
+        font-weight: $fw_reg;
     }
 }
 
@@ -889,7 +917,7 @@ body.fixed-page {
     position: relative;
     z-index: 50;
     bottom: 437px;
-    left: 217px;
+    left: 320px;
 }
 
 .products-items_bg {
@@ -901,6 +929,7 @@ body.fixed-page {
     position: relative;
     overflow: hidden;
     background-color: $bg_white;
+    margin-left: 103px;
     img {
         display: block;
         width: 100%;

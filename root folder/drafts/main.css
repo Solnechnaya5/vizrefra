@@ -1,0 +1,647 @@
+.tarif {
+    width: 1920px;
+}
+
+.tarif-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #6876CA;
+    height: 343px;
+}
+
+.tarif-top span {
+    width: 924px;
+    height: 50px;
+    background-color: #FFFFFF;
+    border-radius: 35px 35px 0 0;
+}
+
+.tarif-top_content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 742px;
+    padding-top: 70px;
+    margin: 0px 589px;
+}
+
+.tarif-title {
+    margin-bottom: 20px;
+}
+
+.tarif-title h2 {
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 170%;
+    font-size: 48px;
+}
+
+.tarif-text p {
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 170%;
+    font-size: 18px;
+}
+
+.tarif-plans {
+    width: 1920px;
+    height: 570px;
+    margin-bottom: 150px;
+    position: relative;
+}
+
+.tarif-plans_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 850px;
+    position: relative;
+    left: 538px;
+    z-index: 10;
+}
+
+.tarif-plan_gradientbg {
+    position: relative;
+    left: 304px;
+    bottom: 400px;
+    z-index: 2;
+    width: 1262.56px;
+    height: 386px;
+    margin: 0;
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+    background: linear-gradient(242.33deg, #FFAB90 -7.67%, rgba(94, 102, 250, 0.1) 99.98%);
+    opacity: 0.5;
+    -webkit-filter: blur(400px);
+    filter: blur(400px);
+    border-radius: 200px;
+}
+
+.tarif-plan {
+    width: 407px;
+    min-height: 550px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid #D9DDF2;
+}
+
+.tarif-plan:first-child {
+    margin-right: 30px;
+}
+
+.tarif-plan_container {
+    width: 343px;
+    margin: 32px;
+}
+
+.tarif-plan_title {
+    margin-bottom: 10px;
+}
+
+.tarif-plan_title #starter {
+    font-size: 24px;
+    color: #009688;
+}
+
+.tarif-plan_title #business {
+    font-size: 24px;
+    color: #6876CA;
+}
+
+.tarif-plan_description {
+    margin-bottom: 10px;
+}
+
+.tarif-plan_description p {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #60606C;
+    line-height: 170%;
+}
+
+.tarif-plan_price {
+    margin-bottom: 10px;
+}
+
+.tarif-plan_price span {
+    font-size: 32px;
+    color: #18181B;
+    font-weight: 500;
+}
+
+.tarif-plan_term {
+    margin-bottom: 24px;
+}
+
+.tarif-plan_term span {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #60606C;
+    line-height: 170%;
+    font-size: 12px;
+}
+
+.tarif-plan_button {
+    width: 100%;
+    height: 48px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    background-color: #3F51B5;
+    padding: 11px 24px;
+    cursor: pointer;
+    margin-bottom: 32px;
+}
+
+.tarif-plan_button:hover {
+    background-color: #6876CA;
+}
+
+.tarif-plan_button a {
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+}
+
+.tarif-plan_button.btn-white {
+    background-color: #FFFFFF;
+    border: 1px solid #3F51B5;
+}
+
+.tarif-plan_button.btn-white a {
+    color: #3F51B5;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+}
+
+.tarif-plan_about p {
+    font-family: "Gordita";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: auto;
+    color: #60606C;
+    margin-bottom: 32px;
+}
+
+.tarif-plan_benefits li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: "Gordita";
+    color: #60606C;
+    font-size: 14px;
+    line-height: auto;
+    margin-bottom: 32px;
+}
+
+.tarif-plan_benefits li .check-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #D9DDF2;
+    border-radius: 50%;
+    margin-right: 9px;
+}
+
+.tarif-plan_benefits li .check-icon img {
+    width: 6.5px;
+    height: 4.5px;
+}
+
+.clients {
+    width: 1062px;
+    margin: 0 auto 215px;
+}
+
+.clients-title {
+    margin-bottom: 32px;
+}
+
+.clients-title h4 {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #60606C;
+    line-height: 170%;
+    font-weight: 500;
+    text-align: center;
+}
+
+.clients-items {
+    width: 1062px;
+    height: 72.37px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.clients-item {
+    max-width: 190px;
+    margin-right: 162px;
+}
+
+.clients-item:last-child {
+    margin-right: 0;
+}
+
+.tarif {
+    width: 1920px;
+}
+
+.tarif-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #6876CA;
+    height: 343px;
+}
+
+.tarif-top span {
+    width: 924px;
+    height: 50px;
+    background-color: #FFFFFF;
+    border-radius: 35px 35px 0 0;
+}
+
+.tarif-top_content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 742px;
+    padding-top: 70px;
+    margin: 0px 589px;
+}
+
+.tarif-title {
+    margin-bottom: 20px;
+}
+
+.tarif-title h2 {
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 170%;
+    font-size: 48px;
+}
+
+.tarif-text p {
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 170%;
+    font-size: 18px;
+}
+
+.tarif-plans {
+    width: 1920px;
+    height: 570px;
+    margin-bottom: 150px;
+    position: relative;
+}
+
+.tarif-plans_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 850px;
+    position: relative;
+    left: 538px;
+    z-index: 10;
+}
+
+.tarif-plan_gradientbg {
+    position: relative;
+    left: 304px;
+    bottom: 400px;
+    z-index: 2;
+    width: 1262.56px;
+    height: 386px;
+    margin: 0;
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+    background: linear-gradient(242.33deg, #FFAB90 -7.67%, rgba(94, 102, 250, 0.1) 99.98%);
+    opacity: 0.5;
+    -webkit-filter: blur(400px);
+    filter: blur(400px);
+    border-radius: 200px;
+}
+
+.tarif-plan {
+    width: 407px;
+    min-height: 550px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid #D9DDF2;
+}
+
+.tarif-plan:first-child {
+    margin-right: 30px;
+}
+
+.tarif-plan_container {
+    width: 343px;
+    margin: 32px;
+}
+
+.tarif-plan_title {
+    margin-bottom: 10px;
+}
+
+.tarif-plan_title #starter {
+    font-size: 24px;
+    color: #009688;
+}
+
+.tarif-plan_title #business {
+    font-size: 24px;
+    color: #6876CA;
+}
+
+.tarif-plan_description {
+    margin-bottom: 10px;
+}
+
+.tarif-plan_description p {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #60606C;
+    line-height: 170%;
+}
+
+.tarif-plan_price {
+    margin-bottom: 10px;
+}
+
+.tarif-plan_price span {
+    font-size: 32px;
+    color: #18181B;
+    font-weight: 500;
+}
+
+.tarif-plan_term {
+    margin-bottom: 24px;
+}
+
+.tarif-plan_term span {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #60606C;
+    line-height: 170%;
+    font-size: 12px;
+}
+
+.tarif-plan_button {
+    width: 100%;
+    height: 48px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    background-color: #3F51B5;
+    padding: 11px 24px;
+    cursor: pointer;
+    margin-bottom: 32px;
+}
+
+.tarif-plan_button:hover {
+    background-color: #6876CA;
+}
+
+.tarif-plan_button a {
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+}
+
+.tarif-plan_button.btn-white {
+    background-color: #FFFFFF;
+    border: 1px solid #3F51B5;
+}
+
+.tarif-plan_button.btn-white a {
+    color: #3F51B5;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+}
+
+.tarif-plan_about p {
+    font-family: "Gordita";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: auto;
+    color: #60606C;
+    margin-bottom: 32px;
+}
+
+.tarif-plan_benefits li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: "Gordita";
+    color: #60606C;
+    font-size: 14px;
+    line-height: auto;
+    margin-bottom: 32px;
+}
+
+.tarif-plan_benefits li .check-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #D9DDF2;
+    border-radius: 50%;
+    margin-right: 9px;
+}
+
+.tarif-plan_benefits li .check-icon img {
+    width: 6.5px;
+    height: 4.5px;
+}
+
+.clients {
+    width: 1062px;
+    margin: 0 auto 215px;
+}
+
+.clients-title {
+    margin-bottom: 32px;
+}
+
+.clients-title h4 {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #60606C;
+    line-height: 170%;
+    font-weight: 500;
+    text-align: center;
+}
+
+.clients-items {
+    width: 1062px;
+    height: 72.37px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.clients-item {
+    max-width: 190px;
+    margin-right: 162px;
+}
+
+.clients-item:last-child {
+    margin-right: 0;
+}

@@ -276,24 +276,34 @@ body.fixed-page {
   display: -ms-flexbox;
   display: flex;
   width: 1296px;
-  height: 672px;
+  height: 623px;
   margin: 0 285px 0 312px;
 }
 .page-top .page-top_left {
   width: 407px;
-  height: 692px;
+  height: 623px;
   margin: 90px 196px 0 0;
 }
 .page-top .page-top_right {
   width: 712px;
+  height: 623px;
 }
 .page-top .page-top_right .page-top_slider {
   width: 712px;
-  height: 692px;
+  height: 623px;
+  overflow: hidden;
+  position: relative;
 }
 .page-top .page-top_right .page-top_slider img {
-  width: 712px;
-  height: 594px;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 28.87px;
 }
 
 .page-top_title h1 {
@@ -303,6 +313,9 @@ body.fixed-page {
   font-size: 65px;
   line-height: 93px;
   color: #18181B;
+  -webkit-text-decoration: 4px underline #FF5722;
+          text-decoration: 4px underline #FF5722;
+  margin-bottom: 30px;
 }
 
 .page-top_text {
@@ -425,7 +438,7 @@ body.fixed-page {
   font-style: normal;
   font-size: 14px;
   font-weight: 500;
-  color: #18181B;
+  color: #60606C;
   line-height: 170%;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -472,12 +485,16 @@ body.fixed-page {
 .content-block_left {
   width: 50%;
   text-align: center;
+  margin-right: 100px;
+}
+.content-block_left img {
+  max-width: 457px;
+  max-height: 329px;
 }
 
 .content-block_right {
   width: 50%;
-  -moz-text-align-last: left;
-       text-align-last: left;
+  text-align: left;
 }
 
 .content-block_container {
@@ -523,6 +540,9 @@ body.fixed-page {
 
 .tarif {
   width: 1920px;
+  position: relative;
+  height: 900px;
+  margin-bottom: 250px;
 }
 
 .tarif-top {
@@ -541,12 +561,6 @@ body.fixed-page {
           align-items: center;
   background-color: #6876CA;
   height: 343px;
-}
-.tarif-top span {
-  width: 924px;
-  height: 50px;
-  background-color: #FFFFFF;
-  border-radius: 35px 35px 0 0;
 }
 
 .tarif-top_content {
@@ -592,6 +606,7 @@ body.fixed-page {
   color: #FFFFFF;
   line-height: 170%;
   font-size: 18px;
+  font-weight: 400;
 }
 
 .tarif-plans {
@@ -605,17 +620,30 @@ body.fixed-page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 850px;
-  position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 924px;
+  height: 600px;
+  position: absolute;
   left: 538px;
-  z-index: 10;
+  top: -50px;
+  border: 50px solid white;
+  border-radius: 35px 35px 0 0;
 }
 
 .tarif-plan_gradientbg {
   position: relative;
-  left: 304px;
+  left: 386px;
   bottom: 400px;
-  z-index: 2;
+  z-index: 10;
   width: 1262.56px;
   height: 386px;
   margin: 0;
@@ -630,10 +658,13 @@ body.fixed-page {
 
 .tarif-plan {
   width: 407px;
-  min-height: 550px;
+  height: 550px;
   background-color: #FFFFFF;
   border-radius: 8px;
   border: 1px solid #D9DDF2;
+  margin-top: 50px;
+  position: relative;
+  z-index: 50;
 }
 .tarif-plan:first-child {
   margin-right: 30px;
@@ -647,12 +678,14 @@ body.fixed-page {
 .tarif-plan_title {
   margin-bottom: 10px;
 }
-.tarif-plan_title #starter {
+.tarif-plan_title h4 {
   font-size: 24px;
+  font-weight: 500;
+}
+.tarif-plan_title #starter {
   color: #009688;
 }
 .tarif-plan_title #business {
-  font-size: 24px;
   color: #6876CA;
 }
 
@@ -687,6 +720,7 @@ body.fixed-page {
   font-size: 16px;
   color: #60606C;
   line-height: 170%;
+  color: #AEAEB7;
   font-size: 12px;
 }
 
@@ -745,7 +779,7 @@ body.fixed-page {
   font-size: 16px;
   font-weight: 500;
   line-height: auto;
-  color: #60606C;
+  color: #AEAEB7;
   margin-bottom: 32px;
 }
 
@@ -790,7 +824,7 @@ body.fixed-page {
 }
 
 .clients-title {
-  margin-bottom: 32px;
+  margin-bottom: 45px;
 }
 .clients-title h4 {
   font-family: "Gordita";
@@ -799,6 +833,7 @@ body.fixed-page {
   font-size: 18px;
   color: #60606C;
   line-height: 170%;
+  color: #AEAEB7;
   font-weight: 500;
   text-align: center;
 }
@@ -850,18 +885,22 @@ body.fixed-page {
   font-family: "Gordita";
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 14px;
   color: #60606C;
   line-height: 170%;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
   margin-bottom: 20px;
 }
 .mob-app_left h2 {
   font-family: "Gordita";
   font-size: 48px;
   font-style: normal;
-  font-weight: 34px;
+  font-weight: 400;
   line-height: auto;
   color: #FFFFFF;
+  font-size: 34px;
   margin-bottom: 20px;
 }
 .mob-app_left p {
@@ -871,6 +910,8 @@ body.fixed-page {
   font-weight: 500;
   color: #FFFFFF;
   line-height: 170%;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .mob-app_right {
@@ -929,7 +970,7 @@ body.fixed-page {
   font-style: normal;
   font-size: 14px;
   font-weight: 500;
-  color: #18181B;
+  color: #60606C;
   line-height: 170%;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -964,7 +1005,7 @@ body.fixed-page {
   position: relative;
   z-index: 50;
   bottom: 437px;
-  left: 217px;
+  left: 320px;
 }
 
 .products-items_bg {
@@ -976,6 +1017,7 @@ body.fixed-page {
   position: relative;
   overflow: hidden;
   background-color: #FFFFFF;
+  margin-left: 103px;
 }
 .products-items_bg img {
   display: block;
@@ -1300,7 +1342,7 @@ body.fixed-page {
   font-family: "Gordita";
   font-size: 14px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 170%;
   color: #18181B;
 }
@@ -1339,7 +1381,7 @@ body.fixed-page {
   font-style: normal;
   font-size: 14px;
   font-weight: 500;
-  color: #18181B;
+  color: #60606C;
   line-height: 170%;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -1423,7 +1465,7 @@ body.fixed-page {
   font-style: normal;
   font-size: 14px;
   font-weight: 500;
-  color: #18181B;
+  color: #60606C;
   line-height: 170%;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -1447,7 +1489,7 @@ body.fixed-page {
   font-style: normal;
   font-size: 14px;
   font-weight: 500;
-  color: #18181B;
+  color: #60606C;
   line-height: 170%;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -2089,7 +2131,7 @@ body.fixed-page {
   font-family: "Gordita";
   font-size: 14px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 170%;
   color: #18181B;
   margin-bottom: 8px;
