@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <title>Entity Recognition</title>
+    <style>
+      .justify-content-center {
+        display: flex;
+        justify-content: center;
+      }
+      .tag-class {
+        display: inline-block;
+        box-sizing: border-box;
+        font-size: 0.55em;
+        font-weight: bold;
+        background: rgb(255, 255, 255);
+        color: #000;
+        padding: 0.2em;
+        vertical-align: middle;
+        border-radius: 0.35em;
+        margin-bottom: 4px;
+        margin-right: 0.15em;
+        margin-left: 0.5em;
+        cursor: pointer;
+      }
+      .mark-class {
+        padding: 1px 3px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.2s; /* Animation */
+        display: inline-block;
+        margin: 2px 0;
+      }
+      .mark-class:hover {
+        transform: scale(1.1);
+      }
+      .padding {
+        padding: 0 15px;
+      }
+      .entity-div {
+        overflow-y: auto;
+        line-height: 1.5;
+        padding: 0 10px;
+        width: 100%;
+      }
+      .tooltip {
+        height: auto;
+        width: auto;
+        position: absolute;
+        margin: 5px 0;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="justify-content-center">
+      <div id="entity" class="padding"></div>
+    </div>
+  </body>
+  <script>
+    const entityData = JSON.parse(localStorage.getItem('raw')).tags
+    const string = localStorage.getItem('original_text')
+
+    const fontSize = 20;
+    const fontFamily = "sans-serif";
+    const fontColor = "#000";
+
+    let newString = ""; // not a props
+
+    const colors = ["#808080", "#a6e22c", "#facc01", "#1eefdc", "#ed4a4a"];
+
+    const entityType = entityData.map((type) => type.type_);
+    const uniqueEntityType = [...new Set(entityType)];
+
+    const colorScale = d3
+      .scaleOrdinal(d3.schemeCategory10)
+      .domain(uniqueEntityType)
+      .range(colors);
+
+    const div = d3
+      .select("#entity")
+      .append("div")
+      .attr("class", "entity-div")
+      .style("font-size", fontSize + "px")
+      .style("font-family", fontFamily)
+
+    const tooltip = d3
+      .select("#entity")
+      .append("div")
+      .attr("class", "tooltip")
+      .style("opacity", 0)
+      .style("color", fontColor);
+
+    div
+      .selectAll(null)
+      .data(entityData)
+      .enter()
+      .each((d, i) => {
+        const start = d.offset;
+        const end = start + d.len;
+        const before = string.slice(entityData[i - 1] ? entityData[i - 1].offset + end : 0, start);
+        const after = string.slice(end, entityData[i + 1] ? entityData[i + 1].offset : string.length);
+        const middle = string.slice(start, end);
+        newString +=
+          before +
+          '<mark class="mark-class" style="background-color:' + colorScale(d.type_) + '"">' +
+            middle +
+            '<span class="tag-class" onmousemove="displaytooltip(' + i + ', this)" onmouseleave="removeTooltip()">' +
+              d.type_.slice(0, 3) +
+            "</span>" +
+          "</mark>" +
+          after;
+      });
+    div.html(newString);
+
+    function displaytooltip(index, element) {
+      const elementPostion = element.getBoundingClientRect();
+      const d = entityData[index];
+      tooltip.transition().duration(200).style("opacity", 0.9);
+      tooltip
+        .style("left", elementPostion.left + "px")
+        .style("top", (elementPostion.top > 20 ? elementPostion.top - 45 : elementPostion.top + 35) + "px")
+        .html(d.type_);
+      tooltip.style("background-color", colorScale(d.type_));
+    }
+
+    function removeTooltip() {
+      tooltip.transition().duration(200).style("opacity", 0);
+      tooltip.style("background-color", "").html("").style("left", "").style("top", "");
+    }
+  </script>
+</html>

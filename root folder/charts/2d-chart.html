@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <title>Document</title>
+    <style>
+      #chart3 .dot {
+        stroke: #fff;
+      }
+
+      .dot {
+        fill-opacity: 1;
+        stroke: #fff;
+        stroke-width: 2;
+        stroke-opacity: 1;
+        opacity: 0.7;
+      }
+
+      .justify-content-center1 {
+        display: flex;
+        justify-content: center;
+      }
+      .axis path,
+      .axis line {
+        fill: none;
+        stroke: #fff;
+        shape-rendering: crispEdges;
+      }
+      .tooltip {
+        height: auto;
+        padding: 6px;
+        position: absolute;
+        width: auto;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body onload="loadChart()">
+    <div id="mychart" style="display: flex; justify-content: center;"></div>
+    <script>
+      function loadChart() {
+        const data = JSON.parse(localStorage.getItem('refine')).entities;
+
+        const colors = [
+          "#f0f921",
+          "#e3685f",
+          "#a92495",
+          "#6002a4",
+          '#5802a3',
+        ];
+
+        function x(d) {
+          return d.x;
+        }
+        function y(d) {
+          return d.y;
+        }
+        function radius(d) {
+          return d.size;
+        }
+        function color(d) {
+          return d.entity;
+        }
+
+        // const color = d3.scale.category20().range(colors);
+        const margin = { top: 5.5, right: 19.5, bottom: 12.5, left: 39.5 };
+        const width = 1000,
+          height = 500 - margin.top - margin.bottom;
+
+        const distortionSpeed = 2.5; // speed of distortion
+
+        const yAxisRange = data.map((d) => d.y);
+        const xAxisRange = data.map((d) => d.x);
+        const sizeRange = data.map((d) => d.size);
+        const entityRange = data.map((d) => d.entity);
+        const colorScaleRegion = [...new Set(entityRange)];
+
+        // chart margins
+        const minSizeRange = d3.min(sizeRange), maxSizeRange = d3.max(sizeRange);
+        const yScaleMinNumber = d3.min(yAxisRange), yScaleMaxNumber = d3.max(yAxisRange);
+        const xScaleMinNumber = d3.min(xAxisRange), xScaleMaxNumber = d3.max(xAxisRange);
+        const circleRange = 40;
+        const backgroundColor = "rgb(229, 236, 246)";
+
+        // Various scales and distortions.
+        const xScale = d3
+          .scaleLinear()
+          .domain([xScaleMinNumber * 1.2, xScaleMaxNumber * 1.4])
+          .range([0, width]);
+
+        const yScale = d3
+          .scaleLinear()
+          .domain([yScaleMinNumber * 1.2, yScaleMaxNumber * 1.4])
+          .range([height, 0]);
+
+        const radiusScale = d3
+          .scaleSqrt()
+          .domain([0, maxSizeRange])
+          .range([0, circleRange]);
+
+        const colorScale = d3
+          .scaleOrdinal(d3.schemeCategory10)
+          .domain(colorScaleRegion)
+          .range(colors);
+
+        // The x & y axes.
+        const xAxis = d3
+          .axisBottom(xScale)
+          .tickFormat(x => x.toFixed(2))
+          .tickSize(-height);
+
+        const yAxis = d3.axisLeft(yScale).tickSize(-width);
+
+        const svg = d3
+          .select("#mychart")
+          .append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        // Add a background rect for mousemove.
+        svg
+          .append("rect")
+          .style("fill", backgroundColor)
+          .attr("width", width)
+          .attr("height", height);
+
+        // Add the x-axis.
+        svg
+          .append("g")
+          .attr("class", "x axis")
+          .attr("transform", "translate(0," + height + ")")
+          .call(xAxis);
+
+        // Add the y-axis.
+        svg.append("g").attr("class", "y axis").call(yAxis);
+
+        const tooltip = d3.select("#mychart")
+          .append("div")
+          .attr("class", "tooltip")
+          .style("opacity", 0)
+          .style('color', '#000');
+
+        const outerCircle = svg
+          .append("g")
+          .attr("class", "dots")
+          .selectAll(".dot")
+          .data(data)
+          .enter()
+          .append('g')
+
+          const dot = outerCircle.append("circle")
+          .attr("class", "dot")
+          .style("fill", (d, i) => colorScale(color(d)))
+          .call(position)
+          .on("mousemove", (d) => {
+            tooltip.transition().duration(200).style('opacity', 0.9);
+            tooltip.html(d.entity)
+            .style('left', `${d3.event.layerX + 20}px`)
+            .style('top', `${(d3.event.layerY)}px`);
+            tooltip.style('background-color', colorScale(color(d)));
+          })
+          .on("mouseout", (d) => tooltip.transition().duration(200).style('opacity', 0))
+          .sort((a, b) => radius(b) - radius(a));
+
+        // Add label above circle
+        outerCircle.append('text')
+          .attr('x', (d) => xScale(x(d)))
+          .attr('y', (d) => yScale(y(d)) - radiusScale(radius(d)) - 10)
+          .style('font-size', '14px')
+          .attr('text-anchor', 'middle')
+          .style('font-family', 'sans-serif')
+          .style('fill', '#000')
+          .sort((a, b) => radius(b) - radius(a))
+          .text((d) => d.entity)
+
+        // Positions the dots based on data.
+        function position(dot) {
+          dot
+            .attr("cx", (d) => xScale(x(d)))
+            .attr("cy", (d) => yScale(y(d)))
+            .attr("r", (d) => radiusScale(radius(d)));
+        }
+      }
+    </script>
+
+  </body>
+</html>

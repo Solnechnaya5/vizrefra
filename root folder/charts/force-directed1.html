@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    text {
+      font: 10px sans-serif;
+    }
+
+    .background {
+      fill: none;
+      pointer-events: all;
+    }
+
+    #chart1 .node {
+      stroke: #fff;
+      stroke-width: 1.5px;
+    }
+
+    #chart1 .link {
+      stroke: #999;
+      stroke-opacity: 0.6;
+      stroke-width: 1.5px;
+    }
+  </style>
+</head>
+<body onload="chart1()">
+  <p id="chart1" style="display: flex; justify-content: center;"/>
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="../design/js/fisheye.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+    integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script type="text/javascript">
+    function chart1() {
+      let data = JSON.parse(localStorage.getItem('refine'));
+      var width = 960,
+        height = 500;
+
+      var color = d3.scale.category20();
+
+      var fisheye = d3.fisheye.circular().radius(120);
+
+      var force = d3.layout
+        .force()
+        .charge(-240)
+        .linkDistance(40)
+        .size([width, height]);
+
+      var svg = d3
+        .select("#chart1")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+      svg
+        .append("rect")
+        .attr("class", "background")
+        .attr("width", width)
+        .attr("height", height);
+
+        let groupData = _.chain(data.entities).groupBy("cluster").value();
+
+        let mainData = {
+          nodes: [],
+          links: [],
+        };
+        // KEY LOOP
+        Object.keys(groupData).forEach((item, key) => {
+          let selectedItem = groupData[item];
+
+          selectedItem.forEach((innerItem, innerKey) => {
+            // Generating node array
+            mainData["nodes"].push({
+              name: innerItem.entity,
+              group: innerItem.cluster,
+              size: innerItem.size,
+            });
+          });
+        });
+
+        let finalData = {
+          nodes: [],
+          links: [],
+        };
+
+        let pushedOnce = false;
+
+        mainData.nodes.forEach((item, key) => {
+          finalData["nodes"].push(item);
+          pushedOnce = false;
+
+          mainData.nodes.forEach((innerItem, innerKey) => {
+            if (key !== innerKey && item.group === innerItem.group) {
+              finalData["links"].push({
+                source: innerKey,
+                target: key,
+                value: innerItem.cluster,
+              });
+            }
+
+            // when group change we merging last point of previous group with new group's first point
+            if (key > 0) {
+              if (
+                mainData.nodes[key - 1].group !== mainData.nodes[key].group &&
+                item.group !== innerItem.group &&
+                !pushedOnce
+              ) {
+                pushedOnce = true;
+                finalData["links"].push({
+                  source: innerKey,
+                  target: key,
+                  value: innerItem.cluster,
+                });
+              }
+            }
+          });
+        });
+        data = finalData;
+
+        var n = data.nodes.length;
+
+        force.nodes(data.nodes).links(data.links);
+
+        // Initialize the positions deterministically, for better results.
+        data.nodes.forEach(function (d, i) {
+          d.x = d.y = (width / n) * i;
+        });
+
+        // Run the layout a fixed number of times.
+        // The ideal number of times scales with graph complexity.
+        // Of course, don't run too long—you'll hang the page!
+        force.start();
+        for (var i = n; i > 0; --i) force.tick();
+        force.stop();
+
+        // Center the nodes in the middle.
+        var ox = 0,
+          oy = 0;
+        data.nodes.forEach(function (d) {
+          (ox += d.x), (oy += d.y);
+        });
+        (ox = ox / n - width / 2), (oy = oy / n - height / 2);
+        data.nodes.forEach(function (d) {
+          (d.x -= ox), (d.y -= oy);
+        });
+
+        var link = svg
+          .selectAll(".link")
+          .data(data.links)
+          .enter()
+          .append("line")
+          .attr("class", "link")
+          .attr("x1", function (d) {
+            return d.source.x;
+          })
+          .attr("y1", function (d) {
+            return d.source.y;
+          })
+          .attr("x2", function (d) {
+            return d.target.x;
+          })
+          .attr("y2", function (d) {
+            return d.target.y;
+          })
+          .style("stroke-width", function (d) {
+            return Math.sqrt(d.value);
+          });
+
+        const outerCircle = svg
+          .selectAll(".node")
+          .data(data.nodes)
+          .enter()
+          .append("g");
+
+        let getDynamicRadiusFromSize = (size) => {
+          return 4.5 * (parseInt(-Math.log(size, 10)) / 4);
+        };
+
+        var node = outerCircle
+          .append("circle")
+          .attr("class", "node")
+          .attr("cx", function (d) {
+            return d.x;
+          })
+          .attr("cy", function (d) {
+            return d.y;
+          })
+          // .attr("r", 4.5)
+          .attr("r", function (d) {
+            // debugger
+            return 4.5 * (parseInt(-Math.log(d.size, 10)) / 4);
+          }) // setting dynamic radius from size
+          .attr("title", function (d) {
+            return d.name + " - " + d.group;
+          })
+          .attr("data-debug", function (d) {
+            return JSON.stringify(d);
+          })
+          .style("fill", function (d) {
+            return color(d.group);
+          });
+        // .call(force.drag);
+
+        var text = outerCircle
+          .append("text")
+          .attr("class", "text")
+          .attr("y", function (d) {
+            return d.y - 10;
+          })
+          .attr("x", function (d) {
+            return d.x;
+          })
+          .text(function (d) {
+            return d.name;
+          });
+        node.append("title").text(function (d) {
+          return d.name;
+        });
+
+        svg.on("mousemove", function () {
+          fisheye.focus(d3.mouse(this));
+
+          node
+            .each(function (d) {
+              d.fisheye = fisheye(d);
+            })
+            .attr("cx", function (d) {
+              return d.fisheye.x;
+            })
+            .attr("cy", function (d) {
+              return d.fisheye.y;
+            })
+            .attr("r", function (d) {
+              return d.fisheye.z * 4.5 * (parseInt(-Math.log(d.size, 10)) / 4);
+            });
+
+          link
+            .attr("x1", function (d) {
+              return d.source.fisheye.x;
+            })
+            .attr("y1", function (d) {
+              return d.source.fisheye.y;
+            })
+            .attr("x2", function (d) {
+              return d.target.fisheye.x;
+            })
+            .attr("y2", function (d) {
+              return d.target.fisheye.y;
+            });
+
+          outerCircle
+            .select("text")
+            .attr("x", (d) => {
+              return d.fisheye.x;
+            })
+            .attr("y", function (d) {
+              return d.fisheye.y - 10;
+            });
+        });
+    };
+  </script>
+</body>
+</html>

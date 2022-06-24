@@ -2519,7 +2519,7 @@ body.fixed-page {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  width: 245px;
+  min-width: 245px;
   height: 28px;
   padding-left: 8px;
   background-color: rgba(236, 238, 248, 0.5);
