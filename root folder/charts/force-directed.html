@@ -92,64 +92,60 @@
         .style("opacity", 0)
         .style("color", "#000");
 
-        let groupData = _.chain(data.entities).groupBy("cluster").value();
+      let groupData = _.chain(data.entities).groupBy("cluster").value();
 
-        let mainData = {
-          nodes: [],
-          links: [],
-        };
-        // KEY LOOP
-        Object.keys(groupData).forEach((item, key) => {
-          let selectedItem = groupData[item];
+      let mainData = {
+        nodes: [],
+        links: [],
+      };
 
-          selectedItem.forEach((innerItem, innerKey) => {
-            // Generating node array
-            mainData["nodes"].push({
-              name: innerItem.entity,
-              group: innerItem.cluster,
-              size: innerItem.size,
-            });
+      let finalData = {
+        nodes: [],
+        links: [],
+      };
+
+      let sourceCounter = 0
+      let targetCounter = 0
+      let changedGroupValue = 0
+      let oldKey = ''
+      Object.keys(groupData).forEach(function(item, key) {
+        let groupList = groupData[item]
+
+        groupList.forEach(function(innerGroupItem, innerKey){
+          finalData["nodes"].push({
+            "name": innerGroupItem.entity,
+            "group": innerGroupItem.cluster,
+            "size": innerGroupItem.size
           });
-        });
 
-        let finalData = {
-          nodes: [],
-          links: [],
-        };
+          if(oldKey !== '') {
+            finalData["links"].push({
+              source: changedGroupValue,
+              target: sourceCounter,
+              value: 1,
+            })
+            targetCounter = sourceCounter
+            // sourceCounter += 1
+            oldKey = ''
+          }
 
-        let pushedOnce = false;
+          finalData["links"].push({
+            source: sourceCounter,
+            target: targetCounter,
+            value: 1,
+          })
+          sourceCounter += 1
+        })
 
-        mainData.nodes.forEach((item, key) => {
-          finalData["nodes"].push(item);
-          pushedOnce = false;
-
-          mainData.nodes.forEach((innerItem, innerKey) => {
-            if (key !== innerKey && item.group === innerItem.group) {
-              finalData["links"].push({
-                source: innerKey,
-                target: key,
-                value: innerItem.cluster,
-              });
-            }
-
-            // when group change we merging last point of previous group with new group's first point
-            if (key > 0) {
-              if (
-                mainData.nodes[key - 1].group !== mainData.nodes[key].group &&
-                item.group !== innerItem.group &&
-                !pushedOnce
-              ) {
-                pushedOnce = true;
-                finalData["links"].push({
-                  source: innerKey,
-                  target: key,
-                  value: innerItem.cluster,
-                });
-              }
-            }
-          });
-        });
-        data = finalData;
+        // storing parent loop key
+        oldKey = key
+        // targetCounter = sourceCounter
+        changedGroupValue = targetCounter
+      })
+      // debugger
+      console.log(finalData)
+      finalData["links"].shift()
+      data = finalData;
 
         var n = data.nodes.length;
 
@@ -237,8 +233,8 @@
           })
           .on("mouseout", function (d) {
             tooltip.transition().duration(200).style("opacity", 0);
-          });
-        // .call(force.drag);
+          })
+        .call(force.drag);
 
         var text = outerCircle
           .append("text")
