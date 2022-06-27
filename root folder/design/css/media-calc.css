@@ -1,324 +1,327 @@
-@media only screen and (max-width: 1919px) {
-    .container {
-        width: calc(290px + (1296 - 290)*((100vw - 320px) / (1920 - 320)));
-        margin-right: calc(15px + (312 - 15)*((100vw - 320px) / (1920 - 320)));
-        margin-left: calc(15px + (312 - 15)*((100vw - 320px) / (1920 - 320)));
-    }
-    .container2 {
-        width: calc(290px + (1296 - 290)*((100vw - 320px) / (1920 - 320)));
-        margin-right: calc(15px + (312 - 15)*((100vw - 320px) / (1920 - 320)));
-        margin-left: calc(15px + (312 - 15)*((100vw - 320px) / (1920 - 320)));
-    }
-    .header-page {
-        width: calc(320px + (1920 - 320)*((100vw - 320px) / (1920 - 320)));
-    }
-    .header-menu_items .header-menu_item a {
-        margin-right: calc(20px + (40 - 20)*((100vw - 320px) / (1920 - 320)));
-    }
-    /* ***********************************main page********************************** */
-    .page-top {
-        width: calc(290px + (1296 - 290)*((100vw - 320px) / (1920 - 320)));
-        height: 623px;
-        margin-right: calc(15px + (285 - 15)*((100vw - 320px) / (1920 - 320)));
-        margin-left: calc(15px + (312 - 15)*((100vw - 320px) / (1920 - 320)));
-    }
-    .page-top .page-top_left {
-        width: calc(290px + (407 - 290)*((100vw - 320px) / (1920 - 320)));
-        height: 623px;
-        margin-top: calc(16px + (90 - 16)*((100vw - 320px) / (1920 - 320)));
-        margin-right: calc(15px + (196 - 15)*((100vw - 320px) / (1920 - 320)));
-    }
-    .page-top .page-top_right {
-        width: calc(290px + (712 - 290)*((100vw - 320px) / (1920 - 320)));
-        height: 623px;
-    }
-    .page-top .page-top_right .page-top_slider {
-        width: calc(290px + (712 - 290)*((100vw - 320px) / (1920 - 320)));
-        height: 623px;
-    }
-    .page-top .page-top_right .page-top_slider img {
-        margin-top: 28.87px;
-    }
-    .page-top_title h1 {
-        font-size: calc(48px + (65 - 48)*((100vw - 320px) / (1920 - 320)));
-        line-height: calc(81.6px + (93 - 81.6)*((100vw - 320px) / (1920 - 320)));
-    }
-    .page-top_text {
-        width: calc(290px + (407 - 290)*((100vw - 320px) / (1920 - 320)));
-        margin-bottom: calc(20px + (30 - 20)*((100vw - 320px) / (1920 - 320)));
-    }
-    .page-top_text p {
-        font-size: calc(16px + (18 - 16)*((100vw - 320px) / (1920 - 320)));
-    }
-    .page-top_button {
-        width: 140px;
-        height: 48px;
-    }
-    .products {
-        width: calc(320px + (1920 - 320)*((100vw - 320px) / (1920 - 320)));
-        margin-bottom: calc(50px + (74 - 50)*((100vw - 320px) / (1920 - 320)));
-    }
-    .products-subtitle {
-        margin-bottom: 50px;
-        margin-bottom: calc(20px + (50 - 20)*((100vw - 320px) / (1920 - 320)));
-    }
-    .products-subtitle h2 {
-        font-size: calc(28px + (48 - 28)*((100vw - 320px) / (1920 - 320)));
-    }
-    .products-items {
-        width: calc(320px + (1920 - 320)*((100vw - 320px) / (1920 - 320)));
-        height: calc(330px + (470 - 330)*((100vw - 320px) / (1920 - 320)));
-    }
-    .products-items_container {
-        max-width: 1281px;
-        height: 407px;
-        height: calc(330px + (470 - 330)*((100vw - 320px) / (1920 - 320)));
-        bottom: 437px;
-        bottom: calc(15px + (437 - 15)*((100vw - 320px) / (1920 - 320)));
-        left: 320px;
-        left: calc(15px + (320 - 15)*((100vw - 320px) / (1920 - 320)));
-        bottom: calc(150px + (437 - 150)*((100vw - 320px) / (1920 - 320)));
-    }
-    .products-items_bg {
-        width: calc(320px + (1692 - 320)*((100vw - 320px) / (1920 - 320)));
-        height: calc(200px + (470 - 200)*((100vw - 320px) / (1920 - 320)));
-        margin-left: calc(5px + (103 - 5)*((100vw - 320px) / (1920 - 320)));
-    }
-    .products-items_bg img {
-        display: block;
-    }
-    .products-item {
-        width: calc(270px + (407 - 270)*((100vw - 320px) / (1920 - 320)));
-        height: calc(338px + (404 - 338)*((100vw - 320px) / (1920 - 320)));
-        margin-right: calc(15px + (30 - 15)*((100vw - 320px) / (1920 - 320)));
-    }
-    .products-item .products-item_container {
-        margin: 47px 32px 0 32px;
-        margin-top: calc(27px + (30 - 27)*((100vw - 320px) / (1920 - 320)));
-        margin-right: calc(10px + (32 - 10)*((100vw - 320px) / (1920 - 320)));
-        margin-left: calc(10px + (32 - 10)*((100vw - 320px) / (1920 - 320)));
-    }
-    .products-item_logo {
-        width: calc(153px + (221 - 153)*((100vw - 320px) / (1920 - 320)));
-        height: calc(43px + (69 - 43)*((100vw - 320px) / (1920 - 320)));
-    }
-    .why-vr {
-        width: calc(290px + (1920 - 290)*((100vw - 320px) / (1920 - 320)));
-        height: 318px;
-    }
-    .why-vr_column {
-        width: calc(290px + (296 - 290)*((100vw - 320px) / (1920 - 320)));
-        margin-right: calc(15px + (141 - 15)*((100vw - 320px) / (1920 - 320)))
-    }
-    .solutions {
-        width: calc(320px + (1920 - 320)*((100vw - 320px) / (1920 - 320)));
-        width: calc(50px + (1 00 - 50)*((100vw - 320px) / (1920 - 320)));
-    }
-    .solutions-top {
-        width: calc(290px + (854 - 290)*((100vw - 320px) / (1920 - 320)));
-        margin-right: calc(15px + (312 - 15)*((100vw - 320px) / (1920 - 320)));
-        margin-left: calc(15px + (312 - 15)*((100vw - 320px) / (1920 - 320)));
-        margin-bottom: calc(41px + (46 - 41)*((100vw - 320px) / (1920 - 320)));
-    }
-    .solutions-top_subtitle h2 {
-        font-size: calc(36px + (48 - 36)*((100vw - 320px) / (1920 - 320)));
-    }
-    .solutions-top_text {
-        width: calc(290px + (652 - 290)*((100vw - 320px) / (1920 - 320)));
-    }
-    .solutions-content {
-        width: calc(290px + (1296 - 290)*((100vw - 320px) / (1920 - 320)));
-        margin-right: calc(15px + (312 - 15)*((100vw - 320px) / (1920 - 320)));
-        margin-left: calc(15px + (312 - 15)*((100vw - 320px) / (1920 - 320)));
-    }
-    .content_block {
-        width: calc(290px + (1296 - 290)*((100vw - 320px) / (1920 - 320)));
-        height: 350px;
-        margin-bottom: 74px;
-        margin-bottom: calc(32px + (74 - 32)*((100vw - 320px) / (1920 - 320)));
-    }
-    .content-block_container {
-        width: calc(290px + (408 - 290)*((100vw - 320px) / (1920 - 320)));
-    }
-    .content-block_title h3 {
-        font-size: calc(24px + (28 - 24)*((100vw - 320px) / (1920 - 320)));
-    }
-    /* tarif */
-    .tarif {
-        width: calc(320px + (1920 - 320)*((100vw - 320px) / (1920 - 320)));
-    }
-    .tarif-top {
-        height: 343px;
-    }
-    .tarif-top span {
-        width: 924px;
-        margin-left: calc(15px + (498 - 15)*((100vw - 320px) / (1920 - 320)));
-        height: 50px;
-    }
-    .tarif-top_content {
-        width: calc(290px + (742 - 290)*((100vw - 320px) / (1920 - 320)));
-        padding-top: calc(50px + (70 - 50)*((100vw - 320px) / (1920 - 320)));
-        margin-right: calc(15px + (589 - 15)*((100vw - 320px) / (1920 - 320)));
-        margin-left: calc(15px + (589 - 15)*((100vw - 320px) / (1920 - 320)));
-    }
-    .tarif-title {
-        margin-bottom: 20px;
-    }
-    .tarif-title h2 {
-        font-size: calc(28px + (48 - 28)*((100vw - 320px) / (1920 - 320)));
-    }
-    .tarif-text p {
-        font-size: 18px;
-        font-size: calc(16px + (18 - 16)*((100vw - 320px) / (1920 - 320)));
-    }
-    .tarif-plans {
-        font-size: calc(320px + (1920 - 320)*((100vw - 320px) / (1920 - 320)));
-        max-width: 1920px;
-        min-width: 320px;
-        width: calc(320px + (1920 - 320)*((100vw - 320px) / (1920 - 320)));
-        height: 570px;
-        margin-bottom: 150px;
-    }
-    .tarif-plans_container {
-        width: 850px;
-        left: 538px;
-        left: calc(15px + (538 - 15)*((100vw - 320px) / (1920 - 320)));
-    }
-    .tarif-plan_gradientbg {
-        left: 304px;
-        left: calc(15px + (304 - 15)*((100vw - 320px) / (1920 - 320)));
-        bottom: 400px;
-        z-index: 2;
-        width: 1262.56px;
-        width: calc(300px + (1262.56 - 300)*((100vw - 320px) / (1920 - 320)));
-        height: 386px;
-    }
-    .tarif-plan {
-        width: calc(290px + (407 - 290)*((100vw - 320px) / (1920 - 320)));
-        min-height: 550px;
-    }
-    .tarif-plan:first-child {
-        margin-right: calc(15px + (30 - 15)*((100vw - 320px) / (1920 - 320)));
-    }
-    .tarif-plan_container {
-        width: 343px;
-        width: calc(250px + (343 - 250)*((100vw - 320px) / (1920 - 320)));
-        margin: 32px;
-        margin: calc(20px + (32 - 32)*((100vw - 320px) / (1920 - 320)));
-    }
-    .tarif-plan_description p {
-        font-size: calc(14px + (16 - 14)*((100vw - 320px) / (1920 - 320)));
-    }
-    .tarif-plan_benefits li {
-        margin-bottom: 32px;
-        margin-bottom: calc(16px + (32 - 16)*((100vw - 320px) / (1920 - 320)));
-    }
-    .clients {
-        width: 1062px;
-        width: calc(290px + (1062 - 290)*((100vw - 320px) / (1920 - 320)));
-        margin: 0 auto 215px;
-        margin-right: calc(15px + (215 - 15)*((100vw - 320px) / (1920 - 320)));
-        margin-left: calc(15px + (215 - 15)*((100vw - 320px) / (1920 - 320)));
-    }
-    .clients-title h4 {
-        font-size: 18px;
-        font-size: calc(16px + (18 - 16)*((100vw - 320px) / (1920 - 320)));
-    }
-    .clients-items {
-        width: calc(290px + (1062 - 290)*((100vw - 320px) / (1920 - 320)));
-        font-size: calc(290px + (1062 - 290)*((100vw - 320px) / (1920 - 320)));
-        height: 72.37px;
-    }
-    .clients-item {
-        max-width: 190px;
-        margin-right: 162px;
-        margin-right: calc(10px + (162 - 10)*((100vw - 320px) / (1920 - 320)));
-    }
-    .mob-app {
-        width: 100%;
-        height: 382px;
-    }
-    .mob-app_container {
-        margin: 99px 429px;
-        margin-right: calc(15px + (429 - 15)*((100vw - 320px) / (1920 - 320)));
-        margin-bottom: calc(50px + (99 - 50)*((100vw - 320px) / (1920 - 320)));
-        margin-left: calc(15px + (429 - 15)*((100vw - 320px) / (1920 - 320)));
-        padding-top: 99px;
-        padding-top: calc(50px + (99 - 50)*((100vw - 320px) / (1920 - 320)));
-    }
-    .mob-app_left {
-        margin-right: calc(5px + (167 - 5)*((100vw - 320px) / (1920 - 320)));
-    }
-    .mob-app_left p {
-        font-size: calc(14px + (18 - 14)*((100vw - 320px) / (1920 - 320)));
-    }
-    .mob-app_logo {
-        width: 180px;
-        height: 50px;
-        margin-right: 20px;
-    }
-    .mob-app_logo:last-child {
-        margin-right: 0;
-    }
-    .mob-app_logo img {
-        width: 100%;
-        height: 100%;
-    }
-    .cta {
-        width: calc(320px + (1920 - 320)*((100vw - 320px) / (1920 - 320)));
-    }
-    .cta-text h2 {
-        font-size: calc(28px + (48 - 28)*((100vw - 320px) / (1920 - 320)));
-    }
-    .footer {
-        width: calc(250px + (1280 - 250)*((100vw - 320px) / (1920 - 320)));
-        margin-right: calc(35px + (320 - 35)*((100vw - 320px) / (1920 - 320)));
-        margin-left: calc(35px + (320 - 35)*((100vw - 320px) / (1920 - 320)));
-    }
-    .footer-container {
-        width: calc(250px + (1280 - 250)*((100vw - 320px) / (1920 - 320)));
-    }
-    .footer-left {
-        margin: 50px 201px 0 0;
-        margin-right: calc(44px + (201 - 44)*((100vw - 320px) / (1920 - 320)));
-    }
-    .footer-menu_column:first-child {
-        margin-right: calc(44px + (146 - 44)*((100vw - 320px) / (1920 - 320)));
-    }
-    .footer-menu_column:last-child {
-        margin-left: calc(44px + (201 - 44)*((100vw - 320px) / (1920 - 320)));
-    }
-}
-
-@media only screen and (max-width: 1520px) {
-    .tarif-top span {
-        width: 924px;
-        margin-left: calc(15px + (460 - 15)*((100vw - 320px) / (1920 - 320)));
-        height: 50px;
-        margin-right: calc(15px + (460 - 15)*((100vw - 320px) / (1920 - 320)));
-    }
-    .tarif-plans_container {
-        width: 850px;
-        left: 538px;
-        left: calc(15px + (518 - 15)*((100vw - 320px) / (1920 - 320)));
-    }
-}
-
-@media only screen and (max-width: 1440px) {
-    .tarif-top span {
-        width: 924px;
-        margin-left: calc(15px + (360 - 15)*((100vw - 320px) / (1920 - 320)));
-        height: 50px;
-        margin-right: calc(15px + (460 - 15)*((100vw - 320px) / (1920 - 320)));
-    }
-    .tarif-plans_container {
-        width: 850px;
-        left: calc(15px + (420 - 15)*((100vw - 320px) / (1920 - 320)));
-    }
-}
-
-@media only screen and (max-width: 1320px) {
-    /* .tarif-plans {
+    @media only screen and (max-width: 1919px) {
+        .container {
+            width: calc(290px + (1296 - 290)*((100vw - 320px) / (1920 - 320)));
+            margin-right: calc(15px + (312 - 15)*((100vw - 320px) / (1920 - 320)));
+            margin-left: calc(15px + (312 - 15)*((100vw - 320px) / (1920 - 320)));
+        }
+        .container2 {
+            width: calc(290px + (1296 - 290)*((100vw - 320px) / (1920 - 320)));
+            margin-right: calc(15px + (312 - 15)*((100vw - 320px) / (1920 - 320)));
+            margin-left: calc(15px + (312 - 15)*((100vw - 320px) / (1920 - 320)));
+        }
+        .header-page {
+            width: calc(320px + (1920 - 320)*((100vw - 320px) / (1920 - 320)));
+        }
+        .header-menu_items .header-menu_item a {
+            margin-right: calc(20px + (40 - 20)*((100vw - 320px) / (1920 - 320)));
+        }
+        /* ***********************************main page********************************** */
+        .page-top {
+            width: calc(290px + (1296 - 290)*((100vw - 320px) / (1920 - 320)));
+            height: 623px;
+            margin-right: calc(15px + (285 - 15)*((100vw - 320px) / (1920 - 320)));
+            margin-left: calc(15px + (312 - 15)*((100vw - 320px) / (1920 - 320)));
+        }
+        .page-top .page-top_left {
+            width: calc(290px + (407 - 290)*((100vw - 320px) / (1920 - 320)));
+            height: 623px;
+            margin-top: calc(16px + (90 - 16)*((100vw - 320px) / (1920 - 320)));
+            margin-right: calc(15px + (196 - 15)*((100vw - 320px) / (1920 - 320)));
+        }
+        .page-top_title h1 {
+            font-size: calc(48px + (65 - 48)*((100vw - 320px) / (1920 - 320)));
+            line-height: calc(81.6px + (93 - 81.6)*((100vw - 320px) / (1920 - 320)));
+        }
+        .page-top_text {
+            width: calc(290px + (407 - 290)*((100vw - 320px) / (1920 - 320)));
+            margin-bottom: calc(20px + (30 - 20)*((100vw - 320px) / (1920 - 320)));
+        }
+        .page-top_text p {
+            font-size: calc(16px + (18 - 16)*((100vw - 320px) / (1920 - 320)));
+        }
+        .page-top_button {
+            width: 140px;
+            height: 48px;
+        }
+        .products {
+            width: calc(320px + (1920 - 320)*((100vw - 320px) / (1920 - 320)));
+            margin-bottom: calc(50px + (74 - 50)*((100vw - 320px) / (1920 - 320)));
+        }
+        .products-subtitle {
+            margin-bottom: 50px;
+            margin-bottom: calc(20px + (50 - 20)*((100vw - 320px) / (1920 - 320)));
+        }
+        .products-subtitle h2 {
+            font-size: calc(28px + (48 - 28)*((100vw - 320px) / (1920 - 320)));
+        }
+        .products-items {
+            width: calc(320px + (1920 - 320)*((100vw - 320px) / (1920 - 320)));
+            height: calc(330px + (470 - 330)*((100vw - 320px) / (1920 - 320)));
+        }
+        .products-items_container {
+            width: 1281px;
+            width: calc(290px + (1281 - 290)*((100vw - 320px) / (1920 - 320)));
+            height: 407px;
+            height: calc(330px + (470 - 330)*((100vw - 320px) / (1920 - 320)));
+            bottom: 437px;
+            bottom: calc(15px + (437 - 15)*((100vw - 320px) / (1920 - 320)));
+            left: 320px;
+            left: calc(15px + (320 - 15)*((100vw - 320px) / (1920 - 320)));
+            bottom: calc(150px + (437 - 150)*((100vw - 320px) / (1920 - 320)));
+        }
+        .products-items_bg {
+            width: calc(320px + (1692 - 320)*((100vw - 320px) / (1920 - 320)));
+            height: calc(200px + (470 - 200)*((100vw - 320px) / (1920 - 320)));
+            margin-left: calc(5px + (103 - 5)*((100vw - 320px) / (1920 - 320)));
+        }
+        .products-items_bg img {
+            display: block;
+        }
+        .products-item {
+            width: calc(270px + (407 - 270)*((100vw - 320px) / (1920 - 320)));
+            height: calc(338px + (404 - 338)*((100vw - 320px) / (1920 - 320)));
+            margin-right: calc(15px + (30 - 15)*((100vw - 320px) / (1920 - 320)));
+        }
+        .products-item .products-item_container {
+            margin: 47px 32px 0 32px;
+            margin-top: calc(27px + (30 - 27)*((100vw - 320px) / (1920 - 320)));
+            margin-right: calc(10px + (32 - 10)*((100vw - 320px) / (1920 - 320)));
+            margin-left: calc(10px + (32 - 10)*((100vw - 320px) / (1920 - 320)));
+        }
+        .products-item_logo {
+            width: calc(153px + (221 - 153)*((100vw - 320px) / (1920 - 320)));
+            height: calc(43px + (69 - 43)*((100vw - 320px) / (1920 - 320)));
+        }
+        .why-vr {
+            /* width: calc(290px + (1920 - 290)*((100vw - 320px) / (1920 - 320)));
+        height: 318px; */
+        }
+        .why-vr_column {
+            width: calc(290px + (296 - 290)*((100vw - 320px) / (1920 - 320)));
+            margin-right: calc(15px + (141 - 15)*((100vw - 320px) / (1920 - 320)))
+        }
+        .content-block_left {
+            margin-right: calc(30px + (100 - 30)*((100vw - 320px) / (1920 - 320)))
+        }
+        .content-block_left img {
+            width: 457px;
+            width: calc(290px + (457 - 290)*((100vw - 320px) / (1920 - 320)));
+            max-height: 329px;
+            width: calc(220px + (329 - 220)*((100vw - 320px) / (1920 - 320)));
+        }
+        .solutions {
+            width: calc(320px + (1920 - 320)*((100vw - 320px) / (1920 - 320)));
+            margin-top: calc(50px + (100 - 50)*((100vw - 320px) / (1920 - 320)));
+            margin-bottom: calc(90px + (200 - 90)*((100vw - 320px) / (1920 - 320)));
+            ;
+        }
+        .solutions-top {
+            width: calc(290px + (854 - 290)*((100vw - 320px) / (1920 - 320)));
+            margin-right: calc(15px + (312 - 15)*((100vw - 320px) / (1920 - 320)));
+            margin-left: calc(15px + (312 - 15)*((100vw - 320px) / (1920 - 320)));
+            margin-bottom: calc(41px + (46 - 41)*((100vw - 320px) / (1920 - 320)));
+        }
+        .solutions-top_subtitle h2 {
+            font-size: calc(36px + (48 - 36)*((100vw - 320px) / (1920 - 320)));
+        }
+        .solutions-top_text {
+            width: calc(290px + (652 - 290)*((100vw - 320px) / (1920 - 320)));
+        }
+        .solutions-content {
+            width: calc(290px + (1296 - 290)*((100vw - 320px) / (1920 - 320)));
+            margin-right: calc(15px + (312 - 15)*((100vw - 320px) / (1920 - 320)));
+            margin-left: calc(15px + (312 - 15)*((100vw - 320px) / (1920 - 320)));
+        }
+        .content_block {
+            width: calc(290px + (1296 - 290)*((100vw - 320px) / (1920 - 320)));
+            height: 350px;
+            margin-bottom: 74px;
+            margin-bottom: calc(32px + (74 - 32)*((100vw - 320px) / (1920 - 320)));
+        }
+        .content-block_container {
+            width: calc(200px + (408 - 200)*((100vw - 320px) / (1920 - 320)));
+        }
+        .content-block_title h3 {
+            font-size: calc(24px + (28 - 24)*((100vw - 320px) / (1920 - 320)));
+        }
+        .tarif {
+            width: calc(320px + (1920 - 320)*((100vw - 320px) / (1920 - 320)));
+        }
+        .tarif-top {
+            height: 343px;
+        }
+        .tarif-top span {
+            width: 924px;
+            margin-left: calc(15px + (498 - 15)*((100vw - 320px) / (1920 - 320)));
+            height: 50px;
+        }
+        .tarif-top_content {
+            width: calc(290px + (742 - 290)*((100vw - 320px) / (1920 - 320)));
+            margin-right: calc(15px + (589 - 15)*((100vw - 320px) / (1920 - 320)));
+            margin-left: calc(15px + (589 - 15)*((100vw - 320px) / (1920 - 320)));
+        }
+        .tarif-title {
+            margin-bottom: 20px;
+        }
+        .tarif-title h2 {
+            font-size: calc(28px + (48 - 28)*((100vw - 320px) / (1920 - 320)));
+        }
+        .tarif-plans {
+            width: calc(320px + (1920 - 320)*((100vw - 320px) / (1920 - 320)));
+            height: 570px;
+            margin-bottom: 150px;
+            margin-bottom: calc(43px + (150 - 43)*((100vw - 320px) / (1920 - 320)));
+        }
+        .tarif-plans_container {
+            width: 850px;
+            left: 538px;
+            left: calc(15px + (538 - 15)*((100vw - 320px) / (1920 - 320)));
+        }
+        .tarif-plan_gradientbg {
+            left: 304px;
+            left: calc(15px + (304 - 15)*((100vw - 320px) / (1920 - 320)));
+            bottom: 400px;
+            z-index: 2;
+            width: 1262.56px;
+            width: calc(300px + (1262.56 - 300)*((100vw - 320px) / (1920 - 320)));
+            height: 386px;
+        }
+        .tarif-plan_term {
+            margin-bottom: 24px;
+        }
+        .tarif-plan_about p {
+            margin-bottom: 32px;
+            margin-bottom: calc(16px + (32 - 16)*((100vw - 320px) / (1920 - 320)));
+        }
+        .tarif-plan_benefits li {
+            margin-bottom: calc(16px + (32 - 16)*((100vw - 320px) / (1920 - 320)));
+        }
+        .clients {
+            width: 1062px;
+            width: calc(290px + (1062 - 290)*((100vw - 320px) / (1920 - 320)));
+            margin: 0 429px 150px 429px;
+            /* margin-right: calc(23px + (429 - 23)*((100vw - 320px) / (1920 - 320)));
+        margin-left: calc(23px + (429 - 23)*((100vw - 320px) / (1920 - 320))); */
+            margin-bottom: calc(51px + (150 - 51)*((100vw - 320px) / (1920 - 320)));
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .clients-title {
+            display: flex;
+            justify-content: center;
+            width: calc(290px + (1062 - 290)*((100vw - 320px) / (1920 - 320)));
+        }
+        .clients-items {
+            width: calc(290px + (1062 - 290)*((100vw - 320px) / (1920 - 320)));
+        }
+        .clients-item {
+            margin-right: calc(8px + (162 - 8)*((100vw - 320px) / (1920 - 320)));
+        }
+        .mob-app {
+            width: 100%;
+            height: auto;
+        }
+        .mob-app_container {
+            height: auto;
+            margin-right: calc(15px + (429 - 15)*((100vw - 320px) / (1920 - 320)));
+            padding-bottom: calc(50px + (99 - 50)*((100vw - 320px) / (1920 - 320)));
+            margin-left: calc(15px + (429 - 15)*((100vw - 320px) / (1920 - 320)));
+            padding-top: calc(50px + (99 - 50)*((100vw - 320px) / (1920 - 320)));
+        }
+        .mob-app_left {
+            margin-right: calc(5px + (167 - 5)*((100vw - 320px) / (1920 - 320)));
+        }
+        .mob-app_left p {
+            font-size: calc(14px + (18 - 14)*((100vw - 320px) / (1920 - 320)));
+        }
+        .mob-app_logo {
+            width: 180px;
+            height: 50px;
+            margin-right: 20px;
+        }
+        .mob-app_logo:last-child {
+            margin-right: 0;
+        }
+        .mob-app_logo img {
+            width: 100%;
+            height: 100%;
+        }
+        .cta {
+            width: calc(320px + (1920 - 320)*((100vw - 320px) / (1920 - 320)));
+        }
+        .cta-text h2 {
+            font-size: calc(28px + (48 - 28)*((100vw - 320px) / (1920 - 320)));
+        }
+        .footer {
+            width: calc(250px + (1280 - 250)*((100vw - 320px) / (1920 - 320)));
+            margin-right: calc(35px + (320 - 35)*((100vw - 320px) / (1920 - 320)));
+            margin-left: calc(35px + (320 - 35)*((100vw - 320px) / (1920 - 320)));
+        }
+        .footer-container {
+            width: calc(250px + (1280 - 250)*((100vw - 320px) / (1920 - 320)));
+        }
+        .footer-left {
+            margin: 50px 201px 0 0;
+            margin-right: calc(15px + (201 - 15)*((100vw - 320px) / (1920 - 320)));
+        }
+        .footer-menu_column:first-child {
+            margin-right: calc(15px + (146 - 15)*((100vw - 320px) / (1920 - 320)));
+        }
+        .footer-menu_column:last-child {
+            margin-left: calc(15px + (201 - 15)*((100vw - 320px) / (1920 - 320)));
+        }
+    }
+    
+    @media only screen and (max-width: 1520px) {
+        .page-top {
+            margin-right: 0;
+            max-width: 1100px;
+        }
+        .page-top .page-top_left {
+            margin-right: calc(15px + (50 - 15)*((100vw - 320px) / (1520 - 320)));
+        }
+        .page-top_slider img {
+            margin-top: 28.87px;
+        }
+        .tarif-top span {
+            width: 924px;
+            margin-left: calc(15px + (460 - 15)*((100vw - 320px) / (1920 - 320)));
+            height: 50px;
+            margin-right: calc(15px + (460 - 15)*((100vw - 320px) / (1920 - 320)));
+        }
+        .tarif-plans_container {
+            width: 850px;
+            left: 538px;
+            left: calc(15px + (518 - 15)*((100vw - 320px) / (1920 - 320)));
+        }
+    }
+    
+    @media only screen and (max-width: 1440px) {
+        .page-top {
+            margin-left: calc(15px + (100 - 15)*((100vw - 320px) / (1152 - 320)));
+        }
+        .tarif-top span {
+            width: 924px;
+            margin-left: calc(15px + (360 - 15)*((100vw - 320px) / (1920 - 320)));
+            height: 50px;
+            margin-right: calc(15px + (460 - 15)*((100vw - 320px) / (1920 - 320)));
+        }
+        .tarif-plans_container {
+            width: 850px;
+            left: calc(15px + (420 - 15)*((100vw - 320px) / (1920 - 320)));
+        }
+    }
+    
+    @media only screen and (max-width: 1320px) {
+        .page-top .page-top_right {
+            width: calc(500px + (712 - 500)*((100vw - 320px) / (1320 - 320)));
+            height: 623px;
+        }
+        .page-top .page-top_right .page-top_slider {
+            width: calc(500px + (712 - 500)*((100vw - 320px) / (1320 - 320)));
+            height: 623px;
+        }
+        /* .tarif-plans {
          min-height: 1000px;
      }
      .tarif-plans_container {
@@ -326,75 +329,257 @@
          align-items: center;
          height: 1000px;
      } */
-    .tarif-plans_container {
-        max-width: 850px;
+        .tarif-plans_container {
+            max-width: 850px;
+        }
+        .tarif-plan {
+            width: calc(290px + (407 - 290)*((100vw - 320px) / (1920 - 320)));
+            height: 550px;
+        }
+        .tarif-plan_container {
+            width: 343px;
+            width: calc(260px + (343 - 260)*((100vw - 320px) / (1920 - 320)));
+            margin: 32px;
+            margin: calc(16px + (32 - 16)*((100vw - 320px) / (1920 - 320)));
+        }
+        .tarif-top span {
+            width: calc(660px + (924 - 660)*((100vw - 320px) / (1920 - 320)));
+        }
     }
-    .tarif-plan {
-        width: calc(290px + (407 - 290)*((100vw - 320px) / (1920 - 320)));
-        height: 550px;
+    
+    @media only screen and (max-width: 1152px) {
+        .page-top {
+            flex-direction: column;
+            margin-left: calc(15px + (400 - 15)*((100vw - 320px) / (1920 - 320)));
+            height: calc(558px + (1246 - 558)*((100vw - 320px) / (1152 - 320)));
+        }
+        .page-top .page-top_left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-right: 0;
+            width: calc(309px + (712 - 309)*((100vw - 320px) / (1152 - 320)));
+            height: 350px;
+        }
+        .page-top .page-top_right {
+            width: calc(309px + (712 - 309)*((100vw - 320px) / (1152 - 320)));
+            height: calc(259px + (623 - 259)*((100vw - 320px) / (1152 - 320)));
+        }
+        .page-top .page-top_right .page-top_slider {
+            width: calc(309px + (712 - 309)*((100vw - 320px) / (1152 - 320)));
+            height: calc(259px + (623 - 259)*((100vw - 320px) / (1152 - 320)));
+        }
+        .mob-app_right {
+            flex-direction: column;
+            width: 180px;
+            align-items: center;
+        }
+        .mob-app_logo {
+            margin-bottom: 12px;
+        }
+        .mob-app_logo:first-child {
+            margin-right: 0;
+        }
+        .footer-left {
+            margin-right: calc(15px + (50 - 15)*((100vw - 320px) / (1152 - 320)));
+        }
     }
-    .tarif-plan_container {
-        width: 343px;
-        width: calc(260px + (343 - 260)*((100vw - 320px) / (1920 - 320)));
-        margin: 32px;
-        margin: calc(16px + (32 - 16)*((100vw - 320px) / (1920 - 320)));
+    
+    @media only screen and (max-width: 1024px) {
+        .page-top_left {
+            margin-right: 0;
+        }
+        .tarif-top_content {
+            margin-left: calc(15px + (295 - 15)*((100vw - 320px) / (1024 - 320)));
+            padding-top: calc(50px + (70 - 50)*((100vw - 320px) / (1024 - 320)));
+        }
+        .tarif-plans {
+            min-height: 1120px;
+        }
+        .tarif-plans_container {
+            flex-direction: column;
+            align-items: center;
+            width: calc(320px + (980 - 320)*((100vw - 320px) / (1920 - 320)));
+        }
+        .tarif-plan {
+            width: calc(290px + (407 - 290)*((100vw - 320px) / (1920 - 320)));
+            margin-bottom: 20px;
+            margin-left: 30px;
+        }
+        .tarif-plan:first-child {
+            margin-right: 0;
+        }
+        .tarif-top span {
+            width: calc(320px + (427 - 320)*((100vw - 320px) / (1024 - 320)));
+            margin-left: calc(15px + (300 - 15)*((100vw - 320px) / (1024 - 320)));
+        }
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+        }
     }
-    .tarif-top span {
-        width: calc(660px + (924 - 660)*((100vw - 320px) / (1920 - 320)));
+    
+    @media only screen and (max-width: 800px) {
+        .products-items_container {
+            left: calc(10px + (70 - 10)*((100vw - 320px) / (800 - 320)));
+        }
     }
-}
-
-@media only screen and (max-width: 1152px) {}
-
-@media only screen and (max-width: 1024px) {
-    .tarif-top_content {
-        margin-left: calc(15px + (295 - 15)*((100vw - 320px) / (1024 - 320)));
+    
+    @media only screen and (max-width: 768px) {
+        .products-items_container {
+            left: 15px;
+            width: 570px;
+            overflow-y: hidden;
+            overflow-x: scroll;
+            margin: 0 auto;
+        }
+        .products-item {
+            width: 270px;
+            height: 338px;
+        }
+        .products-item_description p {
+            display: block;
+            width: 250px;
+            height: 50px;
+        }
+        .why-vr {
+            height: auto;
+        }
+        .why-vr .container2 {
+            min-height: 500px;
+            padding-bottom: 60px;
+        }
+        .why-vr_title h3 {
+            padding-top: calc(40px + (63 - 40)*((100vw - 320px) / (1920 - 320)));
+        }
+        .why-vr_columns {
+            flex-direction: column;
+        }
+        .why-vr_column {
+            width: calc(290px + (350 - 290)*((100vw - 320px) / (1920 - 320)));
+            margin-right: 0;
+            margin-bottom: 40px;
+        }
+        .why-vr_column:last-child {
+            margin-bottom: 0;
+        }
+        .clients-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            height: auto;
+            margin: 0 auto;
+        }
+        .clients-item {
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
     }
-    .tarif-plans {
-        min-height: 1000px;
+    
+    @media only screen and (max-width: 600px) {
+        .products-items_container {
+            width: 280px;
+        }
+        .content_block {
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            width: 290px;
+            margin-bottom: 67px;
+        }
+        .content-block_left,
+        .content-block_right,
+        .content-block_container {
+            width: 290px;
+        }
+        .mob-app_container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .mob-app_left {
+            margin-bottom: 30px;
+        }
     }
-    .tarif-plans_container {
-        flex-direction: column;
-        align-items: center;
-        width: calc(320px + (980 - 320)*((100vw - 320px) / (1920 - 320)));
+    
+    @media only screen and (max-width: 533px) {
+        .tarif-plans {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        .tarif-plans_container {
+            position: relative;
+            top: -40px;
+            width: 320px;
+        }
+        .tarif-top span {
+            display: none;
+        }
+        .tarif-plan {
+            margin-left: calc(1px + (100 - 1)*((100vw - 320px) / (532 - 320)));
+        }
+        .footer-menu_columns {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        .footer-menu_column {
+            margin-bottom: 40px;
+        }
+        .footer-menu_column:first-child {
+            margin-right: 40px;
+        }
+        .footer-menu_column:last-child {
+            margin-left: 0;
+        }
     }
-    .tarif-plan {
-        width: calc(290px + (407 - 290)*((100vw - 320px) / (1920 - 320)));
-        margin-bottom: 20px;
+    
+    @media only screen and (max-width: 450px) {
+        .products-subtitle {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        .products-items_container {
+            height: 350px;
+            left: 0;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+        .products-item {
+            margin-bottom: 10px;
+            padding-bottom: 20px;
+        }
     }
-    .tarif-plan:first-child {
-        margin-right: 0;
+    
+    @media only screen and (max-width: 360px) {
+        .tarif-plan {
+            margin-left: 0;
+        }
+        .clients-item {
+            margin-right: 5px;
+        }
     }
-    .tarif-top span {
-        width: calc(320px + (427 - 320)*((100vw - 320px) / (1024 - 320)));
-        margin-left: calc(15px + (285 - 15)*((100vw - 320px) / (1024 - 320)));
+    
+    @media only screen and (max-width: 320px) {
+        .cta-text {
+            width: 290px;
+        }
+        .footer-left {
+            margin-right: 0;
+            text-align: center;
+        }
+        .footer-menu_columns {
+            width: 320px;
+            align-items: center;
+            text-align: center;
+        }
+        .footer-menu_column,
+        .footer-menu_column:first-child,
+        .footer-menu_column:last-child {
+            width: 208px;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
     }
-}
-
-@media only screen and (max-width: 800px) {}
-
-@media only screen and (max-width: 768px) {}
-
-@media only screen and (max-width: 600px) {}
-
-@media only screen and (max-width: 533px) {
-    .tarif-plans {
-        position: relative;
-        display: flex;
-        justify-content: center;
-    }
-    .tarif-plans_container {
-        position: relative;
-        top: -40px;
-        width: 320px;
-    }
-    .tarif-top span {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 450px) {}
-
-@media only screen and (max-width: 360px) {}
-
-@media only screen and (max-width: 320px) {}

@@ -370,7 +370,7 @@ body.fixed-page {
 }
 
 .why-vr {
-  width: 1920px;
+  width: 100%;
   height: 318px;
   background-color: #6876CA;
 }
@@ -540,9 +540,6 @@ body.fixed-page {
 
 .tarif {
   width: 1920px;
-  position: relative;
-  height: 900px;
-  margin-bottom: 250px;
 }
 
 .tarif-top {
@@ -553,14 +550,15 @@ body.fixed-page {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-color: #6876CA;
   height: 343px;
+}
+.tarif-top span {
+  width: 924px;
+  height: 50px;
+  background-color: #FFFFFF;
+  border-radius: 35px 35px 0 0;
+  margin-left: 498px;
 }
 
 .tarif-top_content {
@@ -580,6 +578,10 @@ body.fixed-page {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-align: center;
   width: 742px;
   padding-top: 70px;
   margin: 0px 589px;
@@ -606,7 +608,6 @@ body.fixed-page {
   color: #FFFFFF;
   line-height: 170%;
   font-size: 18px;
-  font-weight: 400;
 }
 
 .tarif-plans {
@@ -620,30 +621,17 @@ body.fixed-page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 924px;
-  height: 600px;
-  position: absolute;
+  max-width: 850px;
+  position: relative;
   left: 538px;
-  top: -50px;
-  border: 50px solid white;
-  border-radius: 35px 35px 0 0;
+  z-index: 10;
 }
 
 .tarif-plan_gradientbg {
   position: relative;
-  left: 386px;
+  left: 304px;
   bottom: 400px;
-  z-index: 10;
+  z-index: 2;
   width: 1262.56px;
   height: 386px;
   margin: 0;
@@ -658,13 +646,10 @@ body.fixed-page {
 
 .tarif-plan {
   width: 407px;
-  height: 550px;
+  min-height: 550px;
   background-color: #FFFFFF;
   border-radius: 8px;
   border: 1px solid #D9DDF2;
-  margin-top: 50px;
-  position: relative;
-  z-index: 50;
 }
 .tarif-plan:first-child {
   margin-right: 30px;
@@ -678,14 +663,12 @@ body.fixed-page {
 .tarif-plan_title {
   margin-bottom: 10px;
 }
-.tarif-plan_title h4 {
-  font-size: 24px;
-  font-weight: 500;
-}
 .tarif-plan_title #starter {
+  font-size: 24px;
   color: #009688;
 }
 .tarif-plan_title #business {
+  font-size: 24px;
   color: #6876CA;
 }
 
@@ -720,7 +703,6 @@ body.fixed-page {
   font-size: 16px;
   color: #60606C;
   line-height: 170%;
-  color: #AEAEB7;
   font-size: 12px;
 }
 
@@ -779,7 +761,7 @@ body.fixed-page {
   font-size: 16px;
   font-weight: 500;
   line-height: auto;
-  color: #AEAEB7;
+  color: #60606C;
   margin-bottom: 32px;
 }
 
@@ -820,7 +802,7 @@ body.fixed-page {
 
 .clients {
   width: 1062px;
-  margin: 0 auto 215px;
+  margin: 0 429px 150px 429px;
 }
 
 .clients-title {
