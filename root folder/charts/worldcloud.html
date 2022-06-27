@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Cloud</title>
+    <meta charset="utf-8" />
+
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+
+    <!-- Load d3-cloud -->
+    <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+
+    <!-- Create a div where the graph will take place -->
+  </head>
+  <body onload="worldCloud()">
+    <div id="my_dataviz"></div>
+  </body>
+</html>
+
+<script>
+  function worldCloud() {
+    const myWords = JSON.parse(localStorage.getItem('raw')).entities;
+    const fontMinSize = 20,
+      fontMaxSize = 50; // Font size range
+    const userWidth = 1000,
+      userHeight = 700; // User-defined width and height
+    const fontPadding = 3; // Padding between words
+    const rotateMin = 0,
+      rotateMax = 0; // Rotation range
+    const fontFamily = "Impact"; // Font family
+    const userNumberOfWords = null; // Number of words to display
+
+    if (userNumberOfWords !== null) {
+      myWords.length = userNumberOfWords;
+    }
+    // Font color
+    const fontColor = [
+      "#857c85",
+      "#d27d7d",
+      "#596657",
+      "#696969",
+      "#c16548",
+      "#005247",
+      "#182799",
+      "#b960a7",
+      "#ddbd4d",
+      "#301934",
+      "#000000",
+      "#705177",
+    ];
+
+    const margin = {
+      top: 10,
+      right: 10,
+      bottom: 10,
+      left: 10,
+    };
+    const width = userWidth - margin.left - margin.right;
+    const height = userHeight - margin.top - margin.bottom;
+
+    const svg = d3
+      .select("#my_dataviz")
+      .append("svg")
+      .attr("viewBox", [0, 0, width, height])
+      .attr("width", width)
+      // .attr("width", width + margin.left + margin.right)
+      // .attr("height", height + margin.top + margin.bottom)
+      .attr("style", "max-width: 100%; height: auto; height: intrinsic;")
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    const layout = d3.layout
+      .cloud()
+      .size([width, height])
+      .words(
+        myWords.map(function (d) {
+          return { text: d.entity, size: d.salience };
+        })
+      )
+      .font(fontFamily)
+      .padding(fontPadding)
+      .rotate(rotateMin, rotateMax)
+      .fontSize(
+        (d) =>
+          Math.floor(Math.random() * (fontMaxSize - fontMinSize)) + fontMinSize
+      )
+      .on("end", draw);
+    layout.start();
+
+    function draw(words) {
+      svg
+        .append("g")
+        .attr(
+          "transform",
+          "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")"
+        )
+        .selectAll("text")
+        .data(words)
+        .enter()
+        .append("text")
+        .style("font-size", function (d) {
+          return d.size;
+        })
+        .style("fill", function (d, i) {
+          return fontColor[i % fontColor.length];
+        })
+        .attr("text-anchor", "middle")
+        .attr("transform", function (d) {
+          return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+        })
+        .text(function (d) {
+          return d.text;
+        });
+    }
+  }
+</script>

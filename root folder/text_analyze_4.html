@@ -9,7 +9,27 @@
     <link rel="stylesheet" href="./design/source/style.css">
     <link rel="stylesheet" href="./design/fonts/fonts.css">
     <link rel="stylesheet" href="./design/css/style-media.css">
-    <title>Text analyze 1</title>
+    <title>Text analyze 4</title>
+    <style>
+        .align-center {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .active-button {
+            background-color: #3F51B5 !important;
+            font-family: "Gordita" !important;
+            font-size: 15px !important;
+            font-style: normal !important;
+            font-weight: 500 !important;
+            color: #FFFFFF !important;
+            text-decoration: none !important;
+        }
+        .iframe {
+            width: 100%;
+            height: 550px;
+        }
+    </style>
 </head>
 
 <body>
@@ -76,23 +96,46 @@
                     <img src="./design/img/icons/row-top.png" alt="" srcset="">
                 </div>
                 <div class="ta-window2_toggle-buttons">
-                    <button type="button">Text Understanding</button>
-                    <button type="button">2D Map</button>
-                    <button type="button">Top Entities</button>
-                    <button type="button">Entity Recognition</button>
-                    <button type="button">3D Map</button>
+                    <button type="button" id="#button1" onclick="changeTab('#text-understanding')">Text Understanding</button>
+                    <button type="button" id="#button2" onclick="changeTab('#2d-chart')">2D Map</button>
+                    <button type="button" id="#button3" onclick="changeTab('#top-entities')">Top Entities</button>
+                    <button type="button" id="#button4" onclick="changeTab('#entity-recognition')">Entity Recognition</button>
+                    <button type="button" id="#button5" onclick="changeTab('#3d-map')">3D Map</button>
+                    <button type="button" id="#button6" onclick="changeTab('#weighted-graph')">Weighted Graph</button>
                 </div>
-                <div class="ta-window2_classification">
+                <div class="ta-window2_classification" id="#show-classification" style="display: block;">
                     <h5>Classification:</h5>
-                    <p>Books & Literature <span>57.0% confidence</span></p>
+                    <!-- 57.0% confidence -->
+                    <!-- Books & Literature -->
+                    <p id="#classification1">
+                        <span id="#classification2"></span>
+                    </p>
                 </div>
-                <div class="ta-window2_summary">
+                <div class="ta-window2_summary" id="#show-summary" style="display: block;">
                     <h5>Summary</h5>
-                    <p>THE Lord Justice-Clerk was a stranger in that part of the country; but his lady wife was known there from a child, as her race had been before her. And besides, he was an ill man to refuse. It was a wonder to many that she had married
-                        - seeming so wholly of the stuff that makes old maids. At that very hour of his demise, he had ten going pleas before the Session, eight of them oppressive. Weir!"</p>
+                    <p id="#summary"></p>
                 </div>
                 <div class="ta-widow2_schedules-space">
-                    <img src="./design/img/image-17.png" alt="">
+                    <div class="align-center" id="#text-understanding" style="display: none;">
+                        <span><iframe src="" title="" id="#iframe1" scrolling="no" width="500" height="300"></iframe></span>
+                        <span><iframe src="" title="" id="#iframe2" scrolling="no" width="500" height="300"></iframe></span>
+                    </div>
+                    <div class="align-center" id="#2d-chart" style="display: none;">
+                        <iframe src="" title="" id="#iframe3" class="iframe"></iframe>
+                    </div>
+                    <div class="align-center" id="#top-entities" style="display: none;">
+                        <iframe src="" title="" id="#iframe4" class="iframe"></iframe>
+                    </div>
+                    <div class="align-center" id="#entity-recognition" style="display: none;">
+                        <iframe src="" title="" id="#iframe5" class="iframe"></iframe>
+                    </div>
+                    <div class="align-center" id="#3d-map" style="display: none;">
+                        <!-- <iframe src="" title="" id="#iframe6" class="iframe"></iframe> -->
+                        3d Map
+                    </div>
+                    <div class="align-center" id="#weighted-graph" style="display: none;">
+                        <iframe src="" title="" id="#iframe7" class="iframe"></iframe>
+                    </div>
                 </div>
             </section>
         </main>
@@ -108,6 +151,8 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="./design/js/burger-menu.js"></script>
+    <script src="./design/js/analyze-data.js"></script>
+    <script src="./design/js/api.js"></script>
 </body>
 
 </html>
