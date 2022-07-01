@@ -23,8 +23,7 @@
 <script>
   function worldCloud() {
     const myWords = JSON.parse(localStorage.getItem('raw')).entities;
-    const fontMinSize = 20,
-      fontMaxSize = 50; // Font size range
+    const fontScale = 250 //font size
     const userWidth = 1000,
       userHeight = 700; // User-defined width and height
     const fontPadding = 3; // Padding between words
@@ -83,10 +82,7 @@
       .font(fontFamily)
       .padding(fontPadding)
       .rotate(rotateMin, rotateMax)
-      .fontSize(
-        (d) =>
-          Math.floor(Math.random() * (fontMaxSize - fontMinSize)) + fontMinSize
-      )
+      .fontSize((d) => Math.sqrt(d.size) * fontScale)
       .on("end", draw);
     layout.start();
 
