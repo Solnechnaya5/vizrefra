@@ -2589,7 +2589,7 @@ body.fixed-page {
   margin-bottom: 8px;
 }
 .ta-window2_summary p {
-  height: 104px;
+  min-height: 104px;
   padding: 16px 0;
   font-family: "Gordita";
   font-style: normal;
