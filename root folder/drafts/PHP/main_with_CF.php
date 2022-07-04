@@ -1,98 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+/*
+Template name:Home page
+*/
+?>
+<?php $page_id = get_the_ID()?>
+<?php get_header() ?>
+ <main> 
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./design/css/null.css">
-    <link rel="stylesheet" href="./design/source/style.css">
-    <link rel="stylesheet" href="./design/fonts/fonts.css">
-    <link rel="stylesheet" href="./design/css/style-media.css">
-    <link rel="stylesheet" href="./design/css/media-calc.css">
-    <title>Home page deo58</title>
-
-</head>
-
-<body>
-
-    <div class="page-wrapper">
-        <header class="header-page">
-            <div class="container">
-                <div class="header-logo">
-                    <a href="home_page.html"><img src="./design/img/VizRefra.png" alt="company logo"></a>
-                </div>
-                <div class="header-menu">
-                    <ul class="header-menu_items">
-                        <li class="header-menu_item">
-                            <a href="#">Products</a>
-                        </li>
-                        <li class="header-menu_item">
-                            <a href="./about_vizrefra.html">About Us</a></li>
-                        <li class="header-menu_item">
-                            <a href="./why_vizrefra.html">Why VizRefra</a> </li>
-                        <li class="header-menu_item">
-                            <a href="./contact_us.html">Contact Us</a> </li>
-                    </ul>
-                    <div class="header-menu_button">
-                        <a href="#" class="general-btn">Try Free <img src="./design/img/icons/white-arrow.png" alt=""></a>
-                    </div>
-
-                </div>
-
-            </div>
-            <!-- burger-menu -->
-            <div class="burger-menu-icon">
-                <span></span>
-            </div>
-            <nav class="burger-menu">
-
-                <ul class="burger-menu__items">
-                    <li class="burger-menu__item"><a href="#">Products</a></li>
-                    <div class="burger-menu_container">
-                        <li class="burger-menu__item"><a href="#">News Monitor</a></li>
-                        <li class="burger-menu__item"><a href="#">Twitter Monitor</a></li>
-                        <li class="burger-menu__item"><a href="#">Vizfind</a></li>
-                    </div>
-                    <li class="burger-menu__item"><a href="./about_vizrefra.html">About Us</a></li>
-                    <li class="burger-menu__item"><a href="./why_vizrfra.html">Why VizRefra</a></li>
-                    <li class="burger-menu__item"><a href="#">Contact Us</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
             <section class="page-top">
                 <div class="page-top_left">
                     <div class="page-top_title">
-                        <h1>Text Navigation Solutions</h1>
+                        <h1> <?php echo carbon_get_post_meta($page_id, 'header_1' ); ?></h1>
                     </div>
                     <div class="page-top_text">
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                        <p><?php echo carbon_get_post_meta($page_id, 'top_text' ); ?></p>
                     </div>
                     <div class="page-top_button">
-                        <a href="#">Try Free<img src="./design/img/icons/white-arrow.png" alt="arrow"></a>
+                        <a href="<?php echo carbon_get_post_meta($page_id, 'btn_link' ); ?>"><?php echo carbon_get_post_meta($page_id, 'btn_text' ); ?>
+                        <img src="<?php echo wp_get_attachment_image_url( carbon_get_post_meta( $page_id, 'btn_img' )); ?>" alt="arrow"></a>
                     </div>
                 </div>
                 <div class="page-top_right">
                     <div class="page-top_slider">
-                        <img src="/design/img/main-screen.png" alt="slider">
+                        <img src="<?php echo wp_get_attachment_image_url( carbon_get_post_meta( $page_id, 'top_image' ), "full"); ?>" alt="slider">
                     </div>
                 </div>
             </section>
             <section class="products">
                 <div class="products-title">
-                    <h3>PRODUCTS</h3>
+                    <h3><?php echo carbon_get_post_meta($page_id, 'products_title' ); ?></h3>
                 </div>
                 <div class="products-subtitle">
-                    <h2>Get started with our products</h2>
+                    <h2><?php echo carbon_get_post_meta($page_id, 'products_subtitle' ); ?></h2>
                 </div>
                 <div class="products-items">
                     <div class="products-items_bg">
-                        <img src="./design/img/products/products_bg.png" alt="background"></div>
+                        <img src="<?php echo wp_get_attachment_image_url( carbon_get_post_meta( $page_id, 'products_bg' ), "full"); ?>" alt="background"></div>
                     <div class="products-items_container">
                         <div class="products-item">
                             <div class="products-item_container">
-                                <div class="products-item_logo"><img src="./design/img/products/image_11.png" alt="logo"></div>
+                                <div class="products-item_logo"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/products/image_11.png" alt="logo"></div>
                                 <div class="producs-item_title">
                                     <h5>News monitor</h5>
                                 </div>
@@ -100,13 +47,13 @@
                                     <p>Start analyzing easily and totally free. Start analyzing easily and totally free.</p>
                                 </div>
                                 <div class="products-item_link">
-                                    <a href="">Learn and Try<img src="./design/img/icons/black-arrow.png" alt="logo"></a>
+                                    <a href="">Learn and Try<img src="<?php echo ( get_template_directory_uri()); ?>/design/img/icons/black-arrow.png" alt="logo"></a>
                                 </div>
                             </div>
                         </div>
                         <div class="products-item">
                             <div class="products-item_container">
-                                <div class="products-item_logo"><img src="./design/img/products/image_12.png" alt="logo"></div>
+                                <div class="products-item_logo"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/products/image_12.png" alt="logo"></div>
                                 <div class="producs-item_title">
                                     <h5>Twitter monitor</h5>
                                 </div>
@@ -114,13 +61,13 @@
                                     <p>Monitor social media to learn about your customers and trends related to your products or your organization reputation. </p>
                                 </div>
                                 <div class="products-item_link">
-                                    <a href="">Learn and Try<img src="./design/img/icons/black-arrow.png" alt="icon"></a>
+                                    <a href="">Learn and Try<img src="<?php echo ( get_template_directory_uri()); ?>/design/img/icons/black-arrow.png" alt="icon"></a>
                                 </div>
                             </div>
                         </div>
                         <div class="products-item">
                             <div class="products-item_container">
-                                <div class="products-item_logo"><img src="./design/img/products/image_16.png" alt="logo"></div>
+                                <div class="products-item_logo"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/products/image_16.png" alt="logo"></div>
                                 <div class="producs-item_title">
                                     <h5>Vizfind</h5>
                                 </div>
@@ -128,7 +75,7 @@
                                     <p>Start analyzing easily and totally free. Start analyzing easily and totally free.</p>
                                 </div>
                                 <div class="products-item_link">
-                                    <a href="">Learn and Try<img src="./design/img/icons/black-arrow.png" alt="icon"></a>
+                                    <a href="">Learn and Try<img src="<?php echo ( get_template_directory_uri()); ?>/design/img/icons/black-arrow.png" alt="icon"></a>
                                 </div>
                             </div>
                         </div>
@@ -138,22 +85,21 @@
             <section class="why-vr">
                 <div class="container2">
                     <div class="why-vr_title">
-                        <h3>Why VizRefra?</h3>
+                        <h3><?php echo carbon_get_post_meta($page_id, 'why_vr_title' ); ?></h3>
                     </div>
 
                     <div class="why-vr_columns">
                         <div class="why-vr_column">
                             <span></span>
-                            <p>It is a long established fact that a reader will be distracted by the readable content. </p>
+                            <p><?php echo carbon_get_post_meta($page_id, 'first_column' ); ?></p>
                         </div>
 
                         <div class="why-vr_column">
                             <span></span>
-                            <p>It is a long established fact that a reader will be distracted by the readable content. </p>
-                        </div>
+                            <p><?php echo carbon_get_post_meta($page_id, 'second_column' ); ?></p>                        </div>
                         <div class="why-vr_column">
                             <span></span>
-                            <p>It is a long established fact that a reader will be distracted by the readable content. </p>
+                            <p><?php echo carbon_get_post_meta($page_id, 'third_column' ); ?></p>                        </div>
                         </div>
                     </div>
                 </div>
@@ -161,18 +107,18 @@
             <section class="solutions">
                 <div class="solutions-top">
                     <div class="solutions-top_title">
-                        <h3>SOLUTIONS</h3>
+                        <h3><?php echo carbon_get_post_meta($page_id, 'solutions_title' ); ?></h3>
                     </div>
                     <div class="solutions-top_subtitle">
-                        <h2>Simplify your text analytics process</h2>
+                        <h2><?php echo carbon_get_post_meta($page_id, 'solutions_subtitle' ); ?></h2>
                     </div>
                     <div class="solutions-top_text">
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                        <p><?php echo carbon_get_post_meta($page_id, 'solutions_text' ); ?></p>
                     </div>
                 </div>
                 <div class="solutions-content">
                     <div class="content_block">
-                        <div class="content-block_left"><img src="./design/img/solutions/Group35.png" alt="graphic"></div>
+                        <div class="content-block_left"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/solutions/Group35.png" alt="graphic"></div>
                         <div class="content-block_right">
                             <div class="content-block_container">
                                 <div class="content-block_title">
@@ -182,13 +128,13 @@
                                     <p>We use machine learning algorithms to discover main topics to create navigation tools through 3D landscape across large volume of scattered textual data</p>
                                 </div>
                                 <div class="content-block_link">
-                                    <a href="">Explore Solution<img src="./design/img/icons/black-arrow.png" alt="graphic"></a>
+                                    <a href="">Explore Solution<img src="<?php echo ( get_template_directory_uri()); ?>/design/img/icons/black-arrow.png" alt="graphic"></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="content_block">
-                        <div class="content-block_left"><img src="./design/img/solutions/Group15.png" alt="graphic"></div>
+                        <div class="content-block_left"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/solutions/Group15.png" alt="graphic"></div>
                         <div class="content-block_right">
                             <div class="content-block_container">
                                 <div class="content-block_title">
@@ -198,13 +144,13 @@
                                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
                                 </div>
                                 <div class="content-block_link">
-                                    <a href="">Explore Solution<img src="./design/img/icons/black-arrow.png" alt="graphic"></a>
+                                    <a href="">Explore Solution<img src="<?php echo ( get_template_directory_uri()); ?>/design/img/icons/black-arrow.png" alt="graphic"></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="content_block">
-                        <div class="content-block_left"><img src="./design/img/solutions/Group17.png" alt="graphic"></div>
+                        <div class="content-block_left"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/solutions/Group17.png" alt="graphic"></div>
                         <div class="content-block_right">
                             <div class="content-block_container">
                                 <div class="content-block_title">
@@ -214,13 +160,13 @@
                                     <p>Create relationship with our sate of the art Python customized programs to find hidden relationships in the text.</p>
                                 </div>
                                 <div class="content-block_link">
-                                    <a href="">Explore Solution<img src="./design/img/icons/black-arrow.png" alt="arrow"></a>
+                                    <a href="">Explore Solution<img src="<?php echo ( get_template_directory_uri()); ?>/design/img/icons/black-arrow.png" alt="arrow"></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="content_block">
-                        <div class="content-block_left"><img src="./design/img/solutions/Group31.png" alt="graphic"></div>
+                        <div class="content-block_left"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/solutions/Group31.png" alt="graphic"></div>
                         <div class="content-block_right">
                             <div class="content-block_container">
                                 <div class="content-block_title">
@@ -230,13 +176,13 @@
                                     <p>We use Entity Recognition to find main themes, topics and entities. </p>
                                 </div>
                                 <div class="content-block_link">
-                                    <a href="">Explore Solution<img src="./design/img/icons/black-arrow.png" alt=""></a>
+                                    <a href="">Explore Solution<img src="<?php echo ( get_template_directory_uri()); ?>/design/img/icons/black-arrow.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="content_block">
-                        <div class="content-block_left"><img src="./design/img/solutions/Frame34.png" alt="graphic"></div>
+                        <div class="content-block_left"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/solutions/Frame34.png" alt="graphic"></div>
                         <div class="content-block_right">
                             <div class="content-block_container">
                                 <div class="content-block_title">
@@ -246,7 +192,7 @@
                                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
                                 </div>
                                 <div class="content-block_link">
-                                    <a href="#">Explore Solution<img src="./design/img/icons/black-arrow.png" alt="arrow"></a>
+                                    <a href="#">Explore Solution<img src="<?php echo ( get_template_directory_uri()); ?>/design/img/icons/black-arrow.png" alt="arrow"></a>
                                 </div>
                             </div>
                         </div>
@@ -257,10 +203,10 @@
                 <div class="tarif-top">
                     <div class="tarif-top_content">
                         <div class="tarif-title">
-                            <h2>Start analyzing your texts now!</h2>
+                            <h2><?php echo carbon_get_post_meta($page_id, 'tarif_title' ); ?></h2>
                         </div>
                         <div class="tarif-text">
-                            <p>It is a long established fact that a reader will be distracted by the readable content. </p>
+                            <p><?php echo carbon_get_post_meta($page_id, 'solutions_text' ); ?> </p>
                         </div>
                     </div>
                     <span></span>
@@ -288,15 +234,15 @@
                                     <p>Starter plan combination:</p>
                                     <ul class="tarif-plan_benefits">
                                         <li>
-                                            <div class="check-icon"><img src="./design/img/icons/check-mark.png " alt="icon"></div> Benefit 1</li>
+                                            <div class="check-icon"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/icons/check-mark.png " alt="icon"></div> Benefit 1</li>
                                         <li>
-                                            <div class="check-icon"><img src="./design/img/icons/check-mark.png " alt="icon"></div>Benefit 2</li>
+                                            <div class="check-icon"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/icons/check-mark.png " alt="icon"></div>Benefit 2</li>
                                         <li>
-                                            <div class="check-icon"><img src="./design/img/icons/check-mark.png " alt="icon"></div>Benefit 3</li>
+                                            <div class="check-icon"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/icons/check-mark.png " alt="icon"></div>Benefit 3</li>
                                         <li>
-                                            <div class="check-icon"><img src="./design/img/icons/check-mark.png " alt="icon"></div>Benefit 4</li>
+                                            <div class="check-icon"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/icons/check-mark.png " alt="icon"></div>Benefit 4</li>
                                         <li>
-                                            <div class="check-icon"><img src="./design/img/icons/check-mark.png " alt="icon"></div>Benefit 5</li>
+                                            <div class="check-icon"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/icons/check-mark.png " alt="icon"></div>Benefit 5</li>
                                     </ul>
                                 </div>
                             </div>
@@ -322,15 +268,15 @@
                                     <p>All from the Starter plan, plus:</p>
                                     <ul class="tarif-plan_benefits">
                                         <li>
-                                            <div class="check-icon"><img src="./design/img/icons/check-mark.png " alt="icon"></div>Benefit 1</li>
+                                            <div class="check-icon"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/icons/check-mark.png " alt="icon"></div>Benefit 1</li>
                                         <li>
-                                            <div class="check-icon"><img src="./design/img/icons/check-mark.png " alt="icon"></div>Benefit 2</li>
+                                            <div class="check-icon"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/icons/check-mark.png " alt="icon"></div>Benefit 2</li>
                                         <li>
-                                            <div class="check-icon"><img src="./design/img/icons/check-mark.png " alt="icon"></div>Benefit 3</li>
+                                            <div class="check-icon"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/icons/check-mark.png " alt="icon"></div>Benefit 3</li>
                                         <li>
-                                            <div class="check-icon"><img src="./design/img/icons/check-mark.png " alt="icon"></div>Benefit 4</li>
+                                            <div class="check-icon"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/icons/check-mark.png " alt="icon"></div>Benefit 4</li>
                                         <li>
-                                            <div class="check-icon"><img src="./design/img/icons/check-mark.png " alt="icon"></div>Benefit 5</li>
+                                            <div class="check-icon"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/icons/check-mark.png " alt="icon"></div>Benefit 5</li>
                                     </ul>
                                 </div>
                             </div>
@@ -348,10 +294,10 @@
                     <h4>Trusted by most data-driven companies across the globe</h4>
                 </div>
                 <div class="clients-items">
-                    <div class="clients-item"><img src="./design/img/clients/image 11.png" alt="pic"></div>
-                    <div class="clients-item"><img src="./design/img/clients/image 12.png" alt="pic"></div>
-                    <div class="clients-item"><img src="./design/img/clients/image 14.png" alt="pic"></div>
-                    <div class="clients-item"><img src="./design/img/clients/image 15.png" alt="pic"></div>
+                    <div class="clients-item"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/clients/image 11.png" alt="pic"></div>
+                    <div class="clients-item"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/clients/image 12.png" alt="pic"></div>
+                    <div class="clients-item"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/clients/image 14.png" alt="pic"></div>
+                    <div class="clients-item"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/clients/image 15.png" alt="pic"></div>
                 </div>
             </section>
             <section class="mob-app">
@@ -362,12 +308,11 @@
                         <p>Download app to get the most out of your service and benefits.</p>
                     </div>
                     <div class="mob-app_right">
-                        <div class="mob-app_logo"><img src="./design/img/mob-app/App_Store.png" alt="mob"></div>
-                        <div class="mob-app_logo"><img src="./design/img/mob-app/Google_Play.png" alt="mob"></div>
+                        <div class="mob-app_logo"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/mob-app/App_Store.png" alt="mob"></div>
+                        <div class="mob-app_logo"><img src="<?php echo ( get_template_directory_uri()); ?>/design/img/mob-app/Google_Play.png" alt="mob"></div>
                     </div>
                 </div>
             </section>
-
             <section class="cta">
                 <divx class="cta-text">
 
@@ -378,7 +323,7 @@
                 </divx>
                 <div class="cta-buttons">
                     <div class="cta-button ">
-                        <a href="#">Try Free<img src="./design/img/icons/white-arrow.png" alt="icon"></a>
+                        <a href="#">Try Free<img src="<?php echo ( get_template_directory_uri()); ?>/design/img/icons/white-arrow.png" alt="icon"></a>
                     </div>
                     <div class="cta-button">
                         <a href="#">Contact Us</a>
@@ -386,71 +331,38 @@
                 </div>
             </section>
         </main>
-        <footer class="footer">
-            <div class="footer-container">
-                <section class="footer-left">
-                    <div class="footer-left_copyright">VizRefra © 2022</div>
-                    <div class="footer-left_links">
-                        <a href="#">Terms of Use </a>
-                        <a href="#"> Privacy Statement</a>
-                    </div>
-                </section>
-                <section class="footer-right">
-                    <div class="footer-menu_columns">
-                        <div class="footer-menu_column">
-                            <div class="footer-menu_column-title">
-                                <h6>Products</h6>
-                            </div>
-                            <ul class="footer-menu_items">
-                                <li class="footer-menu_item"><a href="#">News Monitor</a></li>
-                                <li class="footer-menu_item"><a href="#">Twitter Monitor</a></li>
-                                <li class="footer-menu_item">
-                                    <a href="#"></a>Vizfind</li>
-                            </ul>
-                        </div>
-                        <div class="footer-menu_column">
-                            <div class="footer-menu_column-title">
-                                <h6>Solutions</h6>
-                            </div>
-                            <ul class="footer-menu_items">
-                                <li class="footer-menu_item">
-                                    <a href="#">Text 3D Map</a>
-                                </li>
-                                <li class="footer-menu_item">
-                                    <a href="#">Sintement Analysis</a>
-                                </li>
-                                <li class="footer-menu_item">
-                                    <a href="#">Text 2D Map</a>
-                                </li>
-                                <li class="footer-menu_item">
-                                    <a href="#">Identify Entities</a>
-                                </li>
-                                <li class="footer-menu_item">
-                                    <a href="#">Word Cloud</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="footer-menu_column">
-                            <div class="footer-menu_column-title">
-                                <h6>Contacts</h6>
-                            </div>
-                            <ul class="footer-menu_items">
-                                <li class="footer-menu_item">Sydney, NSW 2000, Australia</li>
-                                <li class="footer-menu_item">
-                                    <a href="mailto:jqadan@vizrefra.com">jqadan@vizrefra.com</a>
-                                </li>
-                                <li class="footer-menu_item">
-                                    <a href="tel:+614-35770557">+614-35770557</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </footer>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="./design/js/burger-menu.js"></script>
-</body>
+        <?php get_footer(); ?> 
+        /*
+Fields for Home page
+*/
+Container::make( 'post_meta', __( 'Aditional fields' ) )
+->show_on_page(9)
+->add_tab('Top screen',[
+    Field::make( 'text', 'btn_text', 'Top button text' )
+    ->set_width(50),
+    Field::make( 'image', 'btn_img', 'Top button image' )
+    ->set_width(50),
+    Field::make( 'text', 'btn_link', 'Link for button' ),
+    Field::make( 'image', 'top_image', 'Top image' ),
+])
+->add_tab('Products',[
+    Field::make( 'text', 'products_title', 'Products Title' ),
+    Field::make( 'text', 'products_subtitle', 'Products subtitle' ),
+    Field::make( 'image', 'products_bg', 'Background image' ),
+])
 
-</html>
+->add_tab('Why VizRefra',[
+    Field::make( 'text', 'why_vr_title', 'Title' ),
+    Field::make( 'text', 'first_column', 'First column' ),
+    Field::make( 'text', 'second_column', 'Second column' ),
+    Field::make( 'text', 'third_column', 'Third column' ),
+])
+->add_tab('Solutions',[
+    Field::make( 'text', 'solutions_title', 'Title' ),
+    Field::make( 'text', 'solutions_subtitle', 'Subtitle' ),
+    Field::make( 'text', 'solutions_text', 'Text' ),
+])
+->add_tab('Tarif',[
+    Field::make( 'text', 'tarif_title', 'Title' ),
+    Field::make( 'text', 'tarif_text', 'Text' ),
+])
