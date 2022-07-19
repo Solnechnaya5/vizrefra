@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>d3-x3d : 3D Particle Plot Example</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://x3dom.org/download/dev/x3dom-full.js"></script>
+  <link rel="stylesheet" href="https://x3dom.org/download/dev/x3dom.css" />
+  <script src="../design/js/d3-x3d.js"></script>
+  <style>
+
+    div.tooltip {
+      position: absolute;
+      /* max-width: 100px; */
+      /* width: 100%; */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-color: #1f1f1f;
+      border: 0 solid #1f1f1f;
+      border-radius: .125rem;
+      -webkit-box-shadow: 0 0 0.1875rem rgb(0 0 0 / 30%);
+      box-shadow: 0 0 0.1875rem rgb(0 0 0 / 30%);
+      color: #fff;
+      font-family: Arial;
+      font-size: 0.85rem;
+      font-weight: bold;
+      padding: 0.5em 1em;
+      text-transform: capitalize;
+    }
+  </style>
+</head>
+
+<body>
+    <div id="chartholder"></div>
+
+  <script>
+    function loadChart(data) {
+      // Select chartholder
+      var chartHolder = d3.select("#chartholder");
+
+      // Declare the chart component
+      var myChart = d3.x3d.chart.scatterPlot()
+      .mappings({x: "x", y: "y", z: "z", size: "size", color: "salience"})
+      .colors(d3.schemeRdYlGn[8]);
+
+      // Generate chart
+      chartHolder.datum(data).call(myChart);
+    }
+    let data = JSON.parse(localStorage.getItem('refine')).entities;
+
+    var points = data.map((d) => {
+      return {
+        key: d.entity,
+        values: [
+        {key: "x", value: d.x},
+        {key: "y", value: d.y},
+        {key: "z", value: d.height},
+        {key: "size", value: d.size * 1000},
+        {key: "salience", value: d.salience}
+        ]
+      }
+    })
+
+    var entityData = {
+      key: 'Entity',
+      values: points
+    };
+
+    loadChart(entityData);
+    x3dom.reload();
+
+    var tooltip = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
+    //  Display tooltip on hover
+    let allShapes = d3.selectAll('.d3X3dBubbles shape')
+
+    allShapes.on('mouseover', (d) => {
+      console.log(d);
+      tooltip.transition().duration(200).style("opacity", .9);
+      tooltip.html(d.key)
+      .style("left", (d3.event.layerX) + "px")
+      .style("top", (d3.event.layerY - 28) + "px");
+    })
+    allShapes.on("mouseout", function(d) {
+      tooltip.transition().duration(500).style("opacity", 0);
+    });
+
+  </script>
+</body>
+
+</html>
