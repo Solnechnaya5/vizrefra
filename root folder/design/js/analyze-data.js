@@ -16,7 +16,7 @@ $(document).ready(() => {
   document.getElementById('#iframe3').setAttribute("src", clientUrl + 'charts/2d-chart.html');
   document.getElementById('#iframe4').setAttribute("src", clientUrl + 'charts/barchart.html');
   document.getElementById('#iframe5').setAttribute("src", clientUrl + 'charts/entityRecognition.html');
-  // document.getElementById('#iframe6').setAttribute("src", clientUrl + 'charts/3d-chart.html');
+  document.getElementById('#iframe6').setAttribute("src", clientUrl + 'charts/3d-chart.html');
   document.getElementById('#iframe7').setAttribute("src", clientUrl + 'charts/force-directed.html')
 
   document.getElementById("#summary").textContent = JSON.parse(localStorage.getItem("summarize")).summary;
