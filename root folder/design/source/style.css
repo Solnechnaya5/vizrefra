@@ -2398,8 +2398,8 @@ body.fixed-page {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+    /* -ms-flex-direction: row;
+    flex-direction: row; */
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -2413,44 +2413,13 @@ body.fixed-page {
     margin: 0 24px 16px;
 }
 
-.ta-window_drag-drop p {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    font-family: "Gordita";
+.ta-window_drag-drop span {
+    font-family: 'Gordita';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    color: #60606C;
     line-height: 170%;
-}
-
-.ta-window_drag-drop p img {
-    display: block;
-    width: 18px;
-    height: 15px;
-    margin-right: 9px;
-}
-
-.ta-window_drag-drop p a {
-    font-family: "Gordita";
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    color: #6876CA;
-    text-decoration: none;
-    font-weight: 400;
-    margin: 0 3px;
+    color: #18181B;
 }
 
 .ta-window_paste-text {
@@ -2469,6 +2438,41 @@ body.fixed-page {
     color: #60606C;
     line-height: 170%;
     margin: 16px;
+}
+
+.ta_file-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#upload-container label {
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #6876CA;
+    text-decoration: none;
+    font-weight: 400;
+    margin: 0 3px;
+}
+
+#upload-container label:hover {
+    cursor: pointer;
+}
+
+#upload-container div {
+    position: relative;
+    z-index: 10;
+}
+
+#upload-container input[type=file] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    position: absolute;
+    z-index: -10;
 }
 
 .ta-footer {
