@@ -16,6 +16,29 @@
             background-color: #6876CA !important;
             cursor: not-allowed !important;
         }
+
+        .override-da-green-cirle {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            left: calc(50% - 50px);;
+            bottom: 15px;
+        }
+
+        .override-green-cirle {
+            width: 98px;
+            height: 98px;
+            border-radius: 50%;
+            border: 2px solid #76EAC0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .override-green-cirle img {
+            display: block;
+            width: 25.04px;
+            height: 19.03px;
+        }
     </style>
 </head>
 
@@ -83,12 +106,12 @@
                     <h5>Analyze File or Text</h5>
                     <img src="./design/img/icons/row-top.png " alt=" " srcset=" ">
                 </div>
-                <div class="ta_green-cirle " id="success-response " style="display: none; ">
+                <div class="ta_green-cirle " id="success-response" style="display: none; ">
                     <div class="green-cirle ">
                         <img src="./design/img/icons/green-check2.png " alt="icon ">
                     </div>
                 </div>
-                <div id="drag-drop " style="display: block; ">
+                <div id="drag-drop" style="display: block; ">
                     <div class="ta-window_drag-drop">
 
                         <img src="./design/img/icons/cloud.png " alt="icon ">
@@ -104,10 +127,10 @@
                 </div>
 
                 <div class="ta-window_paste-text " id="text-area " style="display: block; ">
-                    <textarea name="text " id="data " cols="30 " rows="10 " placeholder="... or Paste text here " style="width: 100%; height: 100%; "></textarea>
+                    <textarea name="text " id="data" cols="30 " rows="10 " placeholder="... or Paste text here " style="width: 100%; height: 100%; "></textarea>
                 </div>
-                <button type="submit " id="analyze " onclick="submitAnalyzeButton() " name="Analyze ">
-                    <em class="fa fa-circle-o-notch fa-spin " id="loader " style="display: none; "></em>
+                <button type="submit " id="analyze" onclick="submitAnalyzeButton() " name="Analyze ">
+                    <em class="fa fa-circle-o-notch fa-spin " id="loader" style="display: none; "></em>
                     Analyze
                 </button>
             </section>
@@ -116,9 +139,15 @@
                     <h5>Analyze Web Page</h5>
                     <img src="./design/img/icons/row-top.png " alt=" " srcset=" ">
                 </div>
-                <div class="wa-window_iput-row">
-                    <input type="text" placeholder="Enter URL to analyze">
-                    <button type="submit " name="Analyze ">
+                <div class="override-da-green-cirle" id="href-success-response" style="display: none;">
+                    <div class="override-green-cirle">
+                        <img src="./design/img/icons/green-check2.png " alt="icon ">
+                    </div>
+                </div>
+                <div class="wa-window_iput-row" id="href-section">
+                    <input type="text" id="href-input-link" placeholder="Enter URL to analyze">
+                    <button type="submit" id="href-btn" name="Analyze" onclick="analyzeHref()">
+                        <em class="fa fa-circle-o-notch fa-spin" id="href-loader" style="display: none; "></em>
                         Analyze
                     </button>
                 </div>
