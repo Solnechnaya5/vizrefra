@@ -161,7 +161,8 @@
             tooltip.transition().duration(200).style('opacity', 0.9);
             tooltip.html(d.entity)
             .style('left', `${d3.event.layerX + 20}px`)
-            .style('top', `${(d3.event.layerY)}px`);
+            .style('top', `${(d3.event.layerY)}px`)
+            .style('width', 'fit-content');
             tooltip.style('background-color', colorScale(color(d)));
           })
           .on("mouseout", (d) => tooltip.transition().duration(200).style('opacity', 0))
