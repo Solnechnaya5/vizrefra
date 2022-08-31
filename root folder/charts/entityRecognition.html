@@ -46,7 +46,7 @@
         padding: 0 10px;
         width: 100%;
       }
-      .tooltip {
+      .chart-tooltip {
         height: auto;
         width: auto;
         position: absolute;
@@ -92,7 +92,7 @@
     const tooltip = d3
       .select("#entity")
       .append("div")
-      .attr("class", "tooltip")
+      .attr("class", "chart-tooltip")
       .style("opacity", 0)
       .style("color", fontColor);
 

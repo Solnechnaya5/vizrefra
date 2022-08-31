@@ -29,7 +29,7 @@
         stroke: #fff;
         shape-rendering: crispEdges;
       }
-      .tooltip {
+      .chart-tooltip {
         height: auto;
         padding: 6px;
         position: absolute;
@@ -141,7 +141,7 @@
 
         const tooltip = d3.select("#mychart")
           .append("div")
-          .attr("class", "tooltip")
+          .attr("class", "chart-tooltip")
           .style("opacity", 0)
           .style('color', '#000');
 

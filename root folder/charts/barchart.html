@@ -6,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    .tooltip {
+    .chart-tooltip {
       background: rgb(82, 94, 253);
       border: 0;
       font-size: 15px;
@@ -20,7 +20,7 @@
       width: 200px;
       right: 100%;
     }
-    .tooltip::before {
+    .chart-tooltip::before {
       content:'';
       display:block;
       width:0;
@@ -149,7 +149,7 @@
         .attr('stroke', '#d4d6d9')
 
         const tooltip = d3.select('body').append('div')
-        .attr('class', 'tooltip')
+        .attr('class', 'chart-tooltip')
         .style('opacity', 0);
 
         chart.selectAll(".bar")

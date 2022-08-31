@@ -10,7 +10,7 @@
   <script src="../design/js/d3-x3d.js"></script>
   <style>
 
-    div.tooltip {
+    div.chart-tooltip {
       position: absolute;
       /* max-width: 100px; */
       /* width: 100%; */
@@ -71,7 +71,7 @@
     x3dom.reload();
 
     var tooltip = d3.select("body").append("div")
-    .attr("class", "tooltip")
+    .attr("class", "chart-tooltip")
     .style("opacity", 0);
 
     //  Display tooltip on hover
