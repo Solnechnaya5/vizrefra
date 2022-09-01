@@ -13,3 +13,14 @@ openButton2.onclick = function() {
     hiddenInput2.classList.toggle('open-input2');
     openButton2.classList.toggle('transform_arrow');
 }
+
+
+
+function openArea() {
+    let openArrow1 = document.getElementById('arrow1');
+    let hiddenInput1 = document.getElementById('open-input1');
+
+    openArrow1.classList.toggle('transform_arrow');
+    hiddenInput1.classList.toggle('open-input');
+
+};
