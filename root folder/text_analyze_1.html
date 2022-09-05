@@ -98,7 +98,7 @@
                             <span>Drag and Drop or</span>
                             <form id="upload-container" method="POST" action="" class="ta_file-upload">
                                 <div>
-                                    <input type="file" id="file-input" accept=".txt">
+                                    <input type="file" id="file-input" accept=".txt" onchange="previewFile(this)">
                                     <label for="file-input">Select a File</label>
                                 </div>
                             </form>
@@ -107,7 +107,7 @@
                     </div>
 
                     <div class="ta-window_paste-text " id="text-area " style="display: block; ">
-                        <textarea name="text " id="data " cols="30 " rows="10 " placeholder="... or Paste text here " style="width: 100%; height: 100%; "></textarea>
+                        <textarea name="text " id="data" cols="30 " rows="10 " placeholder="... or Paste text here " style="width: 100%; height: 100%; "></textarea>
                     </div>
                     <button type="submit " id="analyze " onclick="submitAnalyzeButton() " name="Analyze ">
                         <em class="fa fa-circle-o-notch fa-spin " id="loader " style="display: none; "></em>

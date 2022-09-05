@@ -45,6 +45,50 @@ async function submitAnalyzeButton() {
   }
 }
 
+
+document.querySelector('.ta-window_drag-drop').addEventListener("dragover",function(e){
+  e = e || event;
+  e.preventDefault();
+})
+
+document.querySelector('.ta-window_drag-drop').addEventListener("drop", function(e) {
+  e.preventDefault();
+  let selectedFile =  e.dataTransfer.files[0]
+
+  if(selectedFile.type && selectedFile.type  === 'text/plain') {
+    readTextFile(selectedFile)
+  } else {{
+    swal("Error!!", "Only Support plain file, Tap/Click Try Again ", "error");
+  }}
+})
+
+function readTextFile(selectedFile) {
+  let textBox = document.querySelector('#data')
+
+  var reader = new FileReader();
+
+  reader.onload = function(){
+    textBox.value = reader.result
+  }
+
+  if(selectedFile) {
+    reader.readAsText(selectedFile)
+  }
+}
+
+function previewFile(e) {
+  let selectedFile = e.files[0]
+
+  if(selectedFile.type && selectedFile.type  === 'text/plain') {
+    readTextFile(selectedFile)
+  } else {{
+    swal("Error!!", "Only Support plain file, Tap/Click Try Again ", "error");
+  }}
+
+  // document.querySelector('input[type=file]').files
+}
+
+
 async function analyzeHref() {
   try {
     closeButtonEventHref(false, true)
