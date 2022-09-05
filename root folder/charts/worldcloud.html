@@ -97,10 +97,10 @@
         .data(words)
         .enter()
         .append("text")
-        .style("font-size", function (d) {
+        .attr("font-size", function (d) {
           return d.size;
         })
-        .style("fill", function (d, i) {
+        .attr("fill", function (d, i) {
           return fontColor[i % fontColor.length];
         })
         .attr("text-anchor", "middle")
