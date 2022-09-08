@@ -5,6 +5,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <style>
     .chart-tooltip {
       background: rgb(82, 94, 253);
@@ -94,7 +95,10 @@
     </div>
     <script>
       function loadBarChart() {
-        const sample = JSON.parse(localStorage.getItem('raw')).entities
+        let data = JSON.parse(localStorage.getItem('raw')).entities
+        const ordered = _.orderBy(data, ['salience'],['desc'])
+        const sample = _.take(ordered, 20) // taking first 20 data
+
         const TotalRange =  Math.max(...sample.map(o => o.salience))
         const margin = 60;
         const width = 1000 - 2 * margin;
