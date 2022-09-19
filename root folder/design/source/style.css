@@ -2321,13 +2321,17 @@
         width: 1280px;
         height: auto;
         border-radius: 8px;
-        margin: 0 320px;
+        margin: 0 auto;
     }
     
-    .ta-window button {
+    .ta-window-btn {
+        padding-bottom: 24px;
+        margin: 24px 24px 0;
+    }
+    
+    .ta-window-btn button {
         width: 1232px;
         height: 44px;
-        margin: 24px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -2386,7 +2390,9 @@
     }
     
     #open-arrow,
-    #open-arrow2 {
+    #open-arrow2,
+    #arrow1,
+    #arrow2 {
         display: block;
         width: 20px;
         height: 15px;
@@ -2405,6 +2411,21 @@
     }
     
     .ta-window_bottom {
+        opacity: 1;
+        visibility: visible;
+        transition: 0.55s opacity, 0.55s visibility;
+        background-color: rgba(236, 238, 248, 0.5);
+    }
+    
+    .close-input {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .ta-window_results {
+        width: auto;
+        height: 0;
+        border-radius: 8px;
         opacity: 0;
         visibility: hidden;
         transition: 0.55s opacity, 0.55s visibility;
@@ -2414,6 +2435,7 @@
     .open-input {
         opacity: 1;
         visibility: visible;
+        height: auto;
     }
     
     .ta-window_drag-drop {
@@ -2422,8 +2444,6 @@
         display: flex;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
-        /* -ms-flex-direction: row;
-    flex-direction: row; */
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
@@ -2462,6 +2482,16 @@
         color: #60606C;
         line-height: 170%;
         margin: 16px;
+    }
+    
+    .ta-window_paste-text textarea {
+        font-family: 'Gordita';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 170%;
+        color: #60606C;
+        padding: 15px;
     }
     
     .ta_file-upload {
@@ -2537,21 +2567,21 @@
     }
     
     .ta_green-cirle {
-        width: 1232px;
+        width: inherit;
         height: 475px;
-        margin: 177px 24px 84px 24px;
+        margin-bottom: 84px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
+        background-color: rgba(236, 238, 248, 0.5);
     }
     
     .green-cirle {
         width: 98px;
         height: 98px;
-        margin-top: 110px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -2577,9 +2607,9 @@
     
     .ta-window2 {
         width: 1280px;
-        height: 799px;
+        height: auto;
         background-color: #FFFFFF;
-        margin: 0 320px;
+        margin: 0 auto;
     }
     
     .ta-window2_top {
@@ -2672,6 +2702,25 @@
         font-weight: 500;
         color: #FFFFFF;
         text-decoration: none;
+    }
+    
+    .transform_arrow {
+        transform: rotate(180deg);
+        transition: all 0.2s ease;
+    }
+    
+    .ta-window2_bottom {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.55s opacity, 0.55s visibility;
+        background-color: rgba(236, 238, 248, 0.5);
+    }
+    
+    .open-input1 {
+        opacity: 1;
+        visibility: visible;
+        height: auto;
     }
     
     .ta-window2_classification {
@@ -2798,6 +2847,13 @@
         position: relative;
     }
     
+    .wa-window_results {
+        width: 1280px;
+        height: auto;
+        border-radius: 8px;
+        position: relative;
+    }
+    
     .wa-window_top {
         width: inherit;
         height: 90px;
@@ -2836,15 +2892,15 @@
     
     .wa-window_bottom {
         padding-bottom: 24px;
-        opacity: 0;
-        visibility: hidden;
+        opacity: 1;
+        visibility: visible;
         transition: 0.55s opacity, 0.55s visibility;
         background-color: rgba(236, 238, 248, 0.5);
     }
     
-    .open-input2 {
-        opacity: 1;
-        visibility: visible;
+    .close-input2 {
+        opacity: 0;
+        visibility: hidden;
     }
     
     .wa-window_iput-row {
@@ -2902,31 +2958,73 @@
         margin-right: 8px;
     }
     
-    .green-cirle2 {
-        width: 98px;
-        height: 98px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        /* display: flex; */
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        border-radius: 50%;
-        border: 2px solid #76EAC0;
-        position: absolute;
-        left: 591px;
-        bottom: 38px;
+    .disable-button {
+        background-color: #6876CA !important;
+        cursor: not-allowed !important;
     }
     
-    .green-cirle2 img {
+    .override-da-green-cirle {
+        width: inherit;
+        height: 475px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(236, 238, 248, 0.5);
+    }
+    
+    .override-green-cirle {
+        width: 98px;
+        height: 98px;
+        border-radius: 50%;
+        border: 2px solid #76EAC0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .override-green-cirle img {
         display: block;
         width: 25.04px;
         height: 19.03px;
+    }
+    
+    #chartholder {
+        display: block;
+        justify-content: center;
+    }
+    
+    .align-center {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .active-button {
+        background-color: #3F51B5 !important;
+        font-family: "Gordita" !important;
+        font-size: 15px !important;
+        font-style: normal !important;
+        font-weight: 500 !important;
+        color: #FFFFFF !important;
+        text-decoration: none !important;
+    }
+    
+    .iframe {
+        width: 100%;
+        height: 550px;
+    }
+    
+    .wa-window2_bottom {
+        padding-bottom: 24px;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        background-color: rgba(236, 238, 248, 0.5);
+    }
+    
+    .open-input2 {
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+        transition: 0.55s opacity, 0.55s visibility;
     }
