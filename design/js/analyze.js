@@ -1,7 +1,7 @@
 const host = 'https://viz.qadan.com.au/api/';
 const token = '89d91bc7-3df1-4582-aafa-1faf363d81b9';
 
-const apiCalled = [
+let apiCalled = [
   {
     key: 'predict',
     api: 'class/predict',

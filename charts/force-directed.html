@@ -10,23 +10,23 @@
         text {
             font: 10px sans-serif;
         }
-        
+
         .background {
             fill: none;
             pointer-events: all;
         }
-        
+
         #chart1 .node {
             stroke: #fff;
             stroke-width: 1.5px;
         }
-        
+
         #chart1 .link {
             stroke: #999;
             stroke-opacity: 0.6;
             stroke-width: 1.5px;
         }
-        
+
         .chart-tooltip {
             height: auto;
             padding: 6px;
@@ -74,6 +74,21 @@
                 .append("svg")
                 .attr("width", width)
                 .attr("height", height);
+
+            const zoomSvg = d3.behavior.zoom()
+                        .on('zoom', function(event) {
+                        // const transform = d3.zoomTransform(this)
+                        console.log(d3.event.scale)
+                        if(d3.event.scale > 5) return
+                        d3.select('.graph')
+                        .attr("transform", "translate(" + d3.event.translate + ") scale(" + d3.event.scale + ")");
+                        })
+
+            svg  = d3.select("svg")
+                    .append("g")
+                    .classed('graph', true)
+                    // .attr("transform","scale(1.3)")
+                    .call(zoomSvg)
 
             svg
                 .append("rect")
@@ -151,6 +166,11 @@
             // Initialize the positions deterministically, for better results.
             data.nodes.forEach(function(d, i) {
                 d.x = d.y = (width / n) * i;
+                // Generate co-ordinate in arc
+                let r = 20 * Math.sqrt(Math.random())
+                let theta = Math.random() * 2 * Math.PI
+                d.x = d.x + r * Math.cos(theta)
+                d.y = d.y + r * Math.sin(theta)
             });
 
 
