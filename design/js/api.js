@@ -1,4 +1,4 @@
-const apiCalled = [
+let apiCalled = [
   {
     key: 'predict',
     api: 'class/predict',
