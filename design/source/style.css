@@ -2648,6 +2648,12 @@
         height: 9.9px;
         margin-right: 37.51px;
     }
+    /* analyze-rezults window part */
+    
+    .analyze-rezults {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
     
     .ta-window2_toggle-buttons {
         display: -webkit-box;
@@ -2839,7 +2845,7 @@
     }
     
     .wa-window {
-        width: 1280px;
+        max-width: 1280px;
         min-height: 739px;
         height: auto;
         border-radius: 8px;
@@ -2848,11 +2854,21 @@
     }
     
     .wa-window_results {
+        max-width: 1280px;
+        height: 90px;
+        border-radius: 8px;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    .wa-window_results_open {}
+    /* .wa-window_results {
         width: 1280px;
         height: auto;
         border-radius: 8px;
         position: relative;
     }
+     */
     
     .wa-window_top {
         width: inherit;
@@ -2907,7 +2923,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 1232px;
+        max-width: 1232px;
         height: 60px;
         background: #FFFFFF;
         border-radius: 4px;
@@ -2915,7 +2931,7 @@
     }
     
     .wa-window_iput-row input {
-        width: 1122px;
+        max-width: 1122px;
     }
     
     .wa-window_iput-row input[type='text'],

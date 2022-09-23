@@ -14,5 +14,5 @@ let hiddenInput2 = document.getElementById('hidden-input2');
 openArrow2.onclick = function() {
     openArrow2.classList.toggle('transform_arrow');
     hiddenInput2.classList.toggle('open-input2');
-
+    document.getElementById("window2").style.height = 'auto';
 };

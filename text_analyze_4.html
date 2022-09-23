@@ -16,7 +16,7 @@
             display: flex;
             justify-content: center;
         }
-
+        
         .active-button {
             background-color: #3F51B5 !important;
             font-family: "Gordita" !important;
@@ -26,7 +26,7 @@
             color: #FFFFFF !important;
             text-decoration: none !important;
         }
-
+        
         .iframe {
             width: 100%;
             height: 550px;
@@ -131,53 +131,12 @@
                         </button>
                     </div>
                 </div>
-
-                <div class="ta-window2_toggle-buttons">
-                    <button type="button" id="#button1" onclick="changeTab('#text-understanding')">Text Understanding</button>
-                    <button type="button" id="#button2" onclick="changeTab('#2d-chart')">2D Map</button>
-                    <button type="button" id="#button3" onclick="changeTab('#top-entities')">Top Entities</button>
-                    <button type="button" id="#button4" onclick="changeTab('#entity-recognition')">Entity Recognition</button>
-                    <button type="button" id="#button5" onclick="changeTab('#3d-map')">3D Map</button>
-                    <button type="button" id="#button6" onclick="changeTab('#weighted-graph')">Weighted Graph</button>
-                </div>
-                <div class="ta-window2_classification" id="#show-classification" style="display: block;">
-                    <h5>Classification:</h5>
-                    <p id="#classification1">
-                        <span id="#classification2"></span>
-                    </p>
-                </div>
-                <div class="ta-window2_summary" id="#show-summary" style="display: block;">
-                    <h5>Summary</h5>
-                    <p id="#summary"></p>
-                </div>
-                <div class="ta-widow2_schedules-space">
-                    <div class="align-center" id="#text-understanding" style="display: none;">
-                        <span><iframe src="" title="" id="#iframe1" scrolling="no" width="500" height="300"></iframe></span>
-                        <span><iframe src="" title="" id="#iframe2" scrolling="no" width="500" height="300"></iframe></span>
-                    </div>
-                    <div class="align-center" id="#2d-chart" style="display: none;">
-                        <iframe src="" title="" id="#iframe3" class="iframe"></iframe>
-                    </div>
-                    <div class="align-center" id="#top-entities" style="display: none;">
-                        <iframe src="" title="" id="#iframe4" class="iframe"></iframe>
-                    </div>
-                    <div class="align-center" id="#entity-recognition" style="display: none;">
-                        <iframe src="" title="" id="#iframe5" class="iframe"></iframe>
-                    </div>
-                    <div class="align-center" id="#3d-map" style="display: none;">
-                        <iframe src="" title="" id="#iframe6" class="iframe" style="width: 600px;"></iframe>
-                    </div>
-                    <div class="align-center" id="#weighted-graph" style="display: none;">
-                        <iframe src="" title="" id="#iframe7" class="iframe"></iframe>
-                    </div>
-                </div>
             </section>
-            <section class="wa-window" id="window2">
+            <section class="wa-window_results" id="window2">
                 <div class="wa-window_top ">
                     <h5>Analyze Web Page</h5>
                     <div id="arrow2">
                         <img src="./design/img/icons/row-top.png " alt=" " srcset=" ">
-
                     </div>
                 </div>
                 <div id="hidden-input2" class="wa-window2_bottom">
@@ -192,6 +151,10 @@
                 <div class="green-cirle2" style="display:none;">
                     <img src="./design/img/icons/green-check2.png " alt="icon ">
                 </div>
+
+            </section>
+            <section class="analyze-rezults">
+
                 <div class="ta-window2_toggle-buttons">
                     <button type="button" id="#button1" onclick="changeTab('#text-understanding')">Text Understanding</button>
                     <button type="button" id="#button2" onclick="changeTab('#2d-chart')">2D Map</button>
@@ -202,7 +165,6 @@
                 </div>
                 <div class="ta-window2_classification" id="#show-classification" style="display: block;">
                     <h5>Classification:</h5>
-
                     <p id="#classification1">
                         <span id="#classification2"></span>
                     </p>
