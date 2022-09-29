@@ -3647,7 +3647,7 @@ top: 0; */
 .page-content {
     position: relative;
     width: inherit;
-    height: 1020px;
+    min-height: 1500px;
     background-color: #ECEEF8;
 }
 
@@ -3918,9 +3918,7 @@ top: 0; */
     margin-bottom: 17px;
 }
 
-.account-status_mark {
-    width: 78px;
-    height: 26px;
+.account-status_mark-stop {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3932,7 +3930,7 @@ top: 0; */
     border-radius: 20px;
 }
 
-.account-status_mark span {
+.account-status_mark-stop span {
     font-family: 'Gordita';
     font-style: normal;
     font-weight: 700;
@@ -3953,34 +3951,403 @@ top: 0; */
     color: #38383F;
 }
 
-.account-payment_history {}
+.account-payment_history {
+    margin: 0 36px 24px 36px;
+}
 
-.payment-titles {}
+.account-payment_history h4 {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 170%;
+    color: #18181B;
+    margin-bottom: 8px;
+}
 
-.payment-invoice {}
+.payment-titles {
+    display: flex;
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 170%;
+    text-transform: uppercase;
+    color: #93939F;
+}
 
-.payment_plan-type {}
+.payment-info {
+    display: flex;
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 170%;
+    color: #18181B;
+    border-bottom: 1px solid #D9D9D9;
+}
 
-.payment-method {}
+.payment-invoice {
+    width: 100px;
+    height: 56px;
+    padding: 18px 0 18px 8px;
+}
 
-.payment-amount {}
+.payment_plan-type {
+    width: 140px;
+    height: 56px;
+    padding: 19px 0 17px 8px;
+}
 
-.payment-date {}
+.payment_plan-type span {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 180%;
+    text-align: center;
+    color: #FFFFFF;
+}
 
-.payment_invoice-load {}
+.account-status_mark-gold {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 12px;
+    gap: 10px;
+    width: 78px;
+    height: 26px;
+    background: #DFB522;
+    border-radius: 16px;
+}
 
-.payment-info {}
+.account-status_mark-silver {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 12px;
+    gap: 10px;
+    width: 78px;
+    height: 26px;
+    background: #93939F;
+    border-radius: 16px;
+}
 
-.payment-pagination {}
+.account-status_mark-bronze {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 12px;
+    gap: 10px;
+    width: 78px;
+    height: 26px;
+    background: #A07E3A;
+    border-radius: 16px;
+}
 
-.all-pages {}
+.payment-method {
+    width: 260px;
+    height: 56px;
+    padding: 18px 0 18px 8px;
+}
 
-.page-number {}
+.payment-amount {
+    width: 110px;
+    height: 56px;
+    padding: 18px 0 18px 8px;
+}
 
-.account-payment {}
+.payment-date {
+    width: 110px;
+    height: 56px;
+    padding: 18px 0 18px 8px;
+}
 
-.payment-method_info {}
+.payment_invoice-load {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.payment-method_info-left {}
+.payment-pagination {
+    display: flex;
+    justify-content: space-between;
+}
 
-.payment-method_info-button {}
+.all-invoices {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 170%;
+    color: #93939F;
+    margin-top: 24px;
+}
+
+.page-number {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 17px 16px;
+    gap: 10px;
+    width: 40px;
+    height: 32px;
+    border: 1px solid #E4E4E7;
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 170%;
+    color: #0B0D0D;
+    margin-top: 24px;
+}
+
+.payment-method_1 {
+    width: inherit;
+    height: 215px;
+    background: #FFFFFF;
+    border-left: 1px solid #D9DDF2;
+    border-bottom: 1px solid #D9DDF2;
+    border-right: 1px solid #D9DDF2;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.payment-method_1 h4 {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 170%;
+    color: #18181B;
+    padding-top: 24px;
+    margin: 0 0 24px 36px;
+}
+
+.payment-method_info {
+    width: 771px;
+    height: 90px;
+    border: 1px solid #E4E4E7;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 36px;
+}
+
+.payment-method_info-left {
+    margin: 17px 0 17px 17px;
+}
+
+.payment-method_info-left p:first-child {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 170%;
+    color: #60606C;
+    margin-bottom: 8px;
+}
+
+.payment-method_info-left p:last-child {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 170%;
+    color: #18181B;
+}
+
+.payment-method_info-button {
+    width: 134px;
+    height: 44px;
+    margin: 23px 16px 23px 0;
+}
+
+.payment-method_info-button img {
+    width: 15.19px;
+    height: 15.18px;
+    margin-right: 10px;
+}
+
+.payment-method_2 {
+    width: inherit;
+    height: 490px;
+    background: #FFFFFF;
+    border-left: 1px solid #D9DDF2;
+    border-bottom: 1px solid #D9DDF2;
+    border-right: 1px solid #D9DDF2;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding-bottom: 40px;
+}
+
+.payment-method_2 h4 {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 170%;
+    color: #18181B;
+    padding-top: 24px;
+    margin: 0 0 24px 36px;
+}
+
+.payment-card {
+    width: 771px;
+    height: 365px;
+    border: 1px solid #E4E4E7;
+    border-radius: 8px;
+    margin: 0 36px 36px 36px;
+}
+
+.payment-card h6 {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 180%;
+    color: #18181B;
+    margin: 17px 0 17px 16px;
+}
+
+.payment-card_old-info {
+    margin: 17px 0 17px 16px;
+}
+
+.payment-card_old-info p {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 170%;
+    color: #18181B;
+    margin-bottom: 8px;
+}
+
+.payment-card_block {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.payment-card_block label {
+    position: absolute;
+    bottom: 38px;
+    left: 10px;
+    z-index: 40;
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 170%;
+    color: #60606C;
+    background: #FFFF;
+}
+
+.payment-card_block input {
+    height: 48px;
+    position: relative;
+    border: 1px solid #E4E4E7;
+    padding-left: 16px;
+}
+
+.payment-card_block input[type="text"] {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #60606C;
+}
+
+.payment-card_block input::placeholder {
+    width: 57px;
+    height: 14px;
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #60606C;
+}
+
+.payment_card-number {
+    display: flex;
+    flex-direction: column;
+    width: 523px;
+    height: auto;
+    position: relative;
+    margin: 0 16px 18px 16px;
+}
+
+.payment_card-number input {
+    width: 523px;
+}
+
+.payment_csv {
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+    height: auto;
+    position: relative;
+    margin: 0 16px 18px 0px;
+}
+
+.payment_csv input {
+    width: 70px;
+}
+
+.payment_expiration-date {
+    display: flex;
+    flex-direction: column;
+    width: 110px;
+    height: auto;
+    position: relative;
+    margin: 0 16px 18px 0px;
+}
+
+.payment_expiration-date input {
+    width: 112px;
+}
+
+.payment_zip input {
+    width: 253px;
+    margin: 0 18px 24px 18px;
+}
+
+.payment_owner-name {
+    width: 253px;
+    margin: 0 18px 24px 0;
+}
+
+.payment-card_btns {
+    display: flex;
+}
+
+.payment_cancel-btn {
+    width: 106px;
+    height: 44px;
+    margin: 0 18px 18px 18px;
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    color: #18181B;
+}
+
+.payment_save-btn {
+    width: 85px;
+    height: 44px;
+    margin: 0 18px 18px 0;
+    background: #3F51B5;
+    border-radius: 4px;
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+}

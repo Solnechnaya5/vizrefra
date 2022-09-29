@@ -66,7 +66,7 @@
                             <span class="blue-bord1"></span>
                         <span class="blue-bord2"></span>
                         </span>
-                        <div class="account-membership">
+                        <section class="account-membership">
                             <div class="account-membership_top">
                                 <h4>Current</h4>
                                 <div class="account-membership_top-btns">
@@ -83,54 +83,60 @@
                             </div>
                             <div class="acount_actual-status ">
                                 <div class="account-status "><span>Status</span>
-                                    <div class="account-status_mark"><span>Stopped</span></div>
+                                    <div class="account-status_mark-stop"><span>Stopped</span></div>
                                 </div>
                                 <div class="account_plan-type "><span>Plan Type</span> Gold</div>
                                 <div class="account-expiration "><span>Expiration</span>May 14, 2022</div>
                             </div>
                             <div class="account-payment_history ">
                                 <h4>History</h4>
-                                <table>
-                                    <tr class="payment-titles ">
-                                        <td class="payment-invoice ">Invoice No</td>
-                                        <td class="payment_plan-type ">Plan Type</td>
-                                        <td class="payment-method ">Payment Method</td>
-                                        <td class="payment-amount ">Amount</td>
-                                        <td class="payment-date ">Amount</td>
-                                        <td class="payment_invoice-load "></td>
-                                    </tr>
-                                    <tr class="payment-info ">
-                                        <td class="payment-invoice ">3</td>
-                                        <td class="payment_plan-type ">Gold</td>
-                                        <td class="payment-method ">Credit Card Mastercard *4545</td>
-                                        <td class="payment-amount ">$300.00</td>
-                                        <td class="payment-date ">03/15/2022</td>
-                                        <td class="payment_invoice-load "><img src="/design/img/icons/download.png " alt="pic "></td>
-                                    </tr>
-                                    <tr class="payment-info ">
-                                        <td class="payment-invoice ">2</td>
-                                        <td class="payment_plan-type ">Silver</td>
-                                        <td class="payment-method ">Credit Card Mastercard *4545</td>
-                                        <td class="payment-amount ">$300.00</td>
-                                        <td class="payment-date ">03/15/2022</td>
-                                        <td class="payment_invoice-load "><img src="/design/img/icons/download.png " alt="pic "></td>
-                                    </tr>
-                                    <tr class="payment-info ">
-                                        <td class="payment-invoice ">1</td>
-                                        <td class="payment_plan-type ">Bronze</td>
-                                        <td class="payment-method ">Credit Card Mastercard *4545</td>
-                                        <td class="payment-amount ">$300.00</td>
-                                        <td class="payment-date ">03/15/2022</td>
-                                        <td class="payment_invoice-load "><img src="/design/img/icons/download.png " alt="pic "></td>
-                                    </tr>
-                                </table>
+                                <section>
+                                    <div class="payment-titles">
+                                        <div class="payment-invoice">Invoice No</div>
+                                        <div class="payment_plan-type">Plan Type</div>
+                                        <div class="payment-method">Payment Method</div>
+                                        <div class="payment-amount">Amount</div>
+                                        <div class="payment-date">Date</div>
+                                        <div class="payment_invoice-load "></div>
+                                    </div>
+                                    <div class="payment-info">
+                                        <div class="payment-invoice ">3</div>
+                                        <div class="payment_plan-type ">
+                                            <div class="account-status_mark-gold"><span>Gold</span></div>
+                                        </div>
+                                        <div class="payment-method ">Credit Card Mastercard *4545</div>
+                                        <div class="payment-amount ">$300.00</div>
+                                        <div class="payment-date ">03/15/2022</div>
+                                        <div class="payment_invoice-load "><img src="/design/img/icons/download.png " alt="pic "></div>
+                                    </div>
+                                    <div class="payment-info ">
+                                        <div class="payment-invoice ">2</div>
+                                        <div class="payment_plan-type ">
+                                            <div class="account-status_mark-silver"> <span>Silver</span></div>
+                                        </div>
+                                        <div class="payment-method ">Credit Card Mastercard *4545</div>
+                                        <div class="payment-amount ">$300.00</div>
+                                        <div class="payment-date ">03/15/2022</div>
+                                        <div class="payment_invoice-load "><img src="/design/img/icons/download.png " alt="pic "></div>
+                                    </div>
+                                    <div class="payment-info ">
+                                        <div class="payment-invoice ">1</div>
+                                        <div class="payment_plan-type ">
+                                            <div class="account-status_mark-bronze"><span>Bronze</span></div>
+                                        </div>
+                                        <div class="payment-method ">Credit Card Mastercard *4545</div>
+                                        <div class="payment-amount ">$300.00</div>
+                                        <div class="payment-date ">03/15/2022</div>
+                                        <div class="payment_invoice-load "><img src="/design/img/icons/download.png " alt="pic "></div>
+                                    </div>
+                                </section>
                                 <div class="payment-pagination ">
-                                    <div class="all-pages "></div>
-                                    <div class="page-number "></div>
+                                    <div class="all-invoices">3 of 3 invoices</div>
+                                    <div class="page-number">1</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="account-payment ">
+                        </section>
+                        <section class="payment-method_1">
                             <h4>Payment Method</h4>
                             <div class="payment-method_info ">
                                 <div class="payment-method_info-left ">
@@ -142,18 +148,56 @@
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </section>
+                        <section class="payment-method_2">
+                            <h4>Payment Method</h4>
+                            <div class="payment-card">
+                                <h6>Edit Card</h6>
+                                <div class="payment-card_old-info">
+                                    <p>John Smith</p>
+                                    <p>Mastercard **** 4545</p>
+                                    <p>08/22</p>
+                                </div>
+                                <form class="payment-card_new-info">
+                                    <div class="payment-card_block">
+                                        <div class="payment_card-number">
+                                            <label for="edit-card">Edit Card</label>
+                                            <input type="text" name="Edit Card" id="edit-card" placeholder="---- ---- ---- ----">
+                                        </div>
+                                        <div class="payment_csv">
+                                            <label for="CSV">CSV</label>
+                                            <input type="text" name="CSV" id="cvs" placeholder="---">
+                                        </div>
+                                        <div class="payment_expiration-date">
+                                            <label for="expiration-date">Expiration Date</label>
+                                            <input type="text" name="Expiration Date" id="expiration-date" placeholder="MM/YY">
+
+                                        </div>
+                                        <div class="payment_zip">
+                                            <input type="text" name="zip" id="" placeholder="Card ZIP or Postal Code">
+                                        </div>
+                                        <div class="payment_owner-name">
+                                            <input type="text" name="name" id="" placeholder="Name on Card">
+                                        </div>
+                                    </div>
+                                    <div class="payment-card_btns">
+                                        <button class="payment_cancel-btn acc-btn">Cancel</button>
+                                        <button class="payment_save-btn">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
                     </div>
                 </section>
                 <span class="line_bg2 "></span>
             </div>
         </main>
-        <footer class="registration-footer ">
-            <div class="registration-footer_conteiner page-account_footer ">
-                <div class="registration-footer_left ">
+        <footer class="regisdivation-footer ">
+            <div class="regisdivation-footer_conteiner page-account_footer ">
+                <div class="regisdivation-footer_left ">
                     <p>VizRefra © 2022</p>
                 </div>
-                <div class="registration-footer_right ">
+                <div class="regisdivation-footer_right ">
                     <a href="# ">Terms of Use </a>
                     <span></span>
                     <a href="# "> Privacy Statement</a>
