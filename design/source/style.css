@@ -1,3046 +1,3986 @@
-    .page-wrapper {
-        max-width: 1920px;
-        width: 100%;
-        background-color: #FFFFFF;
-        margin: 0 auto;
-        overflow: hidden;
-    }
-    
-    .burger-menu {
-        display: none;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #ECEEF8;
-        width: 320px;
-        height: 579px;
-        right: -100%;
-        -webkit-transition: all 0.7s ease;
-        transition: all 0.7s ease;
-        z-index: 70;
-    }
-    
-    .burger-menu__items {
-        margin: 15px 0 0 41px;
-    }
-    
-    .burger-menu_container {
-        margin-left: 30px;
-    }
-    
-    .burger-menu__item {
-        margin-bottom: 32px;
-    }
-    
-    .burger-menu__item a {
-        font-family: "Gordita";
-        font-family: "Gordita";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        color: #18181B;
-    }
-    
-    .burger-menu__item a:hover {
-        color: #3F51B5;
-    }
-    
-    .burger-menu-icon {
-        position: absolute;
-        top: 23px;
-        right: 35px;
-        width: 20px;
-        height: 20px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        padding-right: 35px;
-        display: none;
-    }
-    
-    .burger-menu-icon span,
-    .burger-menu-icon:after,
-    .burger-menu-icon:before {
-        height: 2px;
-        width: 18px;
-        position: absolute;
-        background: #18181B;
-        margin: 0 auto;
-    }
-    
-    .burger-menu-icon span {
-        top: 10px;
-    }
-    
-    .burger-menu-icon:after,
-    .burger-menu-icon:before {
-        content: "";
-    }
-    
-    .burger-menu-icon:after {
-        bottom: 3px;
-        text-align: right;
-    }
-    
-    .burger-menu-icon:before {
-        top: 5px;
-    }
-    
-    .burger-menu-icon.open-menu span {
-        opacity: 0;
-        -webkit-transition: 0.5s;
-        transition: 0.5s;
-    }
-    
-    .burger-menu-icon.open-menu:before {
-        -webkit-transform: rotate(40deg);
-        transform: rotate(40deg);
-        top: 13px;
-        -webkit-transition: 0.4s;
-        transition: 0.4s;
-    }
-    
-    .burger-menu-icon.open-menu:after {
-        -webkit-transform: rotate(-40deg);
-        transform: rotate(-40deg);
-        bottom: 5px;
-        -webkit-transition: 0.4s;
-        transition: 0.4s;
-    }
-    
-    .burger-menu.open-menu {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        right: 0;
-    }
-    
-    body.fixed-page {
-        overflow: hidden;
-    }
-    
-    .container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        width: 1296px;
-        margin: 0 312px;
-    }
-    
-    .container2 {
-        width: 1296px;
-        margin: 0 312px;
-    }
-    
-    .header-page {
-        width: 1920px;
-        height: 60px;
-        background-color: #ECEEF8;
-        position: relative;
-    }
-    
-    .header-logo {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        width: 93px;
-        height: 60px;
-    }
-    
-    .header-logo img {
-        width: 93px;
-        height: 30px;
-    }
-    
-    .header-menu {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: start;
-        height: 60px;
-    }
-    
-    .header-menu_items {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-    }
-    
-    .header-menu_items .header-menu_item a {
-        font-family: "Gordita";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        color: #18181B;
-        list-style: none;
-        margin-right: 40px;
-    }
-    
-    .header-menu_items .header-menu_item a:hover {
-        color: #3F51B5;
-    }
-    
-    .header-menu_button {
-        width: 140px;
-        height: 44px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-    }
-    
-    .header-menu_button .general-btn {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        gap: 8px;
-        border-radius: 4px;
-        font-family: "Gordita";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        color: #FFFFFF;
-        text-decoration: none;
-        background-color: #3F51B5;
-        padding: 11px 24px;
-        cursor: pointer;
-    }
-    
-    .header-menu_button .general-btn:hover {
-        background-color: #6876CA;
-    }
-    
-    .page-top {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        width: 1296px;
-        height: 623px;
-        margin: 0 285px 0 312px;
-    }
-    
-    .page-top .page-top_left {
-        width: 407px;
-        height: 623px;
-        margin: 90px 196px 0 0;
-    }
-    
-    .page-top .page-top_right {
-        width: 712px;
-        height: 623px;
-    }
-    
-    .page-top .page-top_right .page-top_slider {
-        width: 712px;
-        height: 623px;
-        overflow: hidden;
-        position: relative;
-    }
-    
-    .page-top .page-top_right .page-top_slider img {
-        width: 100%;
-        height: 100%;
-        border-radius: 8px;
-        -o-object-fit: cover;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-top: 28.87px;
-    }
-    
-    .page-top_title h1 {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 65px;
-        line-height: 93px;
-        color: #18181B;
-        -webkit-text-decoration: 4px underline #FF5722;
-        text-decoration: 4px underline #FF5722;
-        margin-bottom: 30px;
-    }
-    
-    .page-top_text {
-        width: 407px;
-        margin-bottom: 30px;
-    }
-    
-    .page-top_text p {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        color: #60606C;
-        line-height: 170%;
-    }
-    
-    .page-top_button {
-        width: 140px;
-        height: 48px;
-    }
-    
-    .page-top_button a {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        border-radius: 4px;
-        font-family: "Gordita";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        color: #FFFFFF;
-        text-decoration: none;
-        background-color: #3F51B5;
-        padding: 11px 24px;
-        cursor: pointer;
-    }
-    
-    .page-top_button a:hover {
-        background-color: #6876CA;
-    }
-    
-    .why-vr {
-        width: 100%;
-        height: 318px;
-        background-color: #6876CA;
-    }
-    
-    .why-vr_title h3 {
-        font-family: "Gordita";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        color: #FFFFFF;
-        line-height: 170%;
-        font-size: 28px;
-        padding-top: 63px;
-        margin-bottom: 30px;
-    }
-    
-    .why-vr_columns {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-    }
-    
-    .why-vr_column {
-        width: 296px;
-        min-height: 81px;
-        margin-right: 141px;
-    }
-    
-    .why-vr_column:last-child {
-        margin-right: 0;
-    }
-    
-    .why-vr_column span {
-        display: block;
-        width: 30px;
-        height: 3px;
-        text-align: left;
-        margin-bottom: 30px;
-        background-color: #FFFFFF;
-    }
-    
-    .why-vr_column p {
-        font-family: "Gordita";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        color: #FFFFFF;
-        line-height: 170%;
-        font-size: 16px;
-    }
-    
-    .solutions {
-        width: 1296px;
-        margin-top: 100px;
-    }
-    
-    .solutions-top {
-        width: 854px;
-        margin: 0 312px;
-        margin-bottom: 46px;
-    }
-    
-    .solutions-top_title {
-        margin-bottom: 20px;
-    }
-    
-    .solutions-top_title h3 {
-        font-family: "Gordita";
-        font-style: normal;
-        font-size: 14px;
-        font-weight: 500;
-        color: #60606C;
-        line-height: 170%;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-    }
-    
-    .solutions-top_subtitle {
-        margin-bottom: 20px;
-    }
-    
-    .solutions-top_subtitle h2 {
-        font-family: "Gordita";
-        font-size: 48px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 170%;
-        color: #18181B;
-    }
-    
-    .solutions-top_text {
-        width: 652px;
-    }
-    
-    .solutions-top_text p {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        color: #60606C;
-        line-height: 170%;
-    }
-    
-    .solutions-content {
-        width: 1296px;
-        margin: 0 312px;
-    }
-    
-    .content_block {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        width: 1296px;
-        height: 350px;
-        margin-bottom: 74px;
-    }
-    
-    .content-block_left {
-        width: 50%;
-        text-align: center;
-        margin-right: 100px;
-    }
-    
-    .content-block_left img {
-        max-width: 457px;
-        max-height: 329px;
-    }
-    
-    .content-block_right {
-        width: 50%;
-        text-align: left;
-    }
-    
-    .content-block_container {
-        width: 408px;
-    }
-    
-    .content-block_title {
-        margin-bottom: 20px;
-    }
-    
-    .content-block_title h3 {
-        font-family: "Gordita";
-        font-size: 28px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 170%;
-        color: #18181B;
-    }
-    
-    .content-block_text {
-        margin-bottom: 32px;
-    }
-    
-    .content-block_text p {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        color: #60606C;
-        line-height: 170%;
-    }
-    
-    .content-block_link a {
-        font-family: "Gordita";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        color: #18181B;
-    }
-    
-    .content-block_link img {
-        width: 18.33px;
-        height: 9.17px;
-        margin: 4px 10px;
-    }
-    
-    .tarif {
-        width: 1920px;
-    }
-    
-    .tarif-top {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        background-color: #6876CA;
-        height: 343px;
-    }
-    
-    .tarif-top span {
-        width: 924px;
-        height: 50px;
-        background-color: #FFFFFF;
-        border-radius: 35px 35px 0 0;
-        margin-left: 498px;
-    }
-    
-    .tarif-top_content {
-        -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-        flex: 1 1 auto;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        text-align: center;
-        width: 742px;
-        padding-top: 70px;
-        margin: 0px 589px;
-    }
-    
-    .tarif-title {
-        margin-bottom: 20px;
-    }
-    
-    .tarif-title h2 {
-        font-family: "Gordita";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        color: #FFFFFF;
-        line-height: 170%;
-        font-size: 48px;
-    }
-    
-    .tarif-text p {
-        font-family: "Gordita";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        color: #FFFFFF;
-        line-height: 170%;
-        font-size: 18px;
-    }
-    
-    .tarif-plans {
-        width: 1920px;
-        height: 570px;
-        margin-bottom: 150px;
-        position: relative;
-    }
-    
-    .tarif-plans_container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        max-width: 850px;
-        position: relative;
-        left: 538px;
-        z-index: 10;
-    }
-    
-    .tarif-plan_gradientbg {
-        position: relative;
-        left: 304px;
-        bottom: 400px;
-        z-index: 2;
-        width: 1262.56px;
-        height: 386px;
-        margin: 0;
-        -webkit-transform: rotate(-10deg);
-        transform: rotate(-10deg);
-        background: linear-gradient(242.33deg, #FFAB90 -7.67%, rgba(94, 102, 250, 0.1) 99.98%);
-        opacity: 0.5;
-        -webkit-filter: blur(400px);
-        filter: blur(400px);
-        border-radius: 200px;
-    }
-    
-    .tarif-plan {
-        width: 407px;
-        min-height: 550px;
-        background-color: #FFFFFF;
-        border-radius: 8px;
-        border: 1px solid #D9DDF2;
-    }
-    
-    .tarif-plan:first-child {
-        margin-right: 30px;
-    }
-    
-    .tarif-plan_container {
-        width: 343px;
-        margin: 32px;
-    }
-    
-    .tarif-plan_title {
-        margin-bottom: 10px;
-    }
-    
-    .tarif-plan_title #starter {
-        font-size: 24px;
-        color: #009688;
-    }
-    
-    .tarif-plan_title #business {
-        font-size: 24px;
-        color: #6876CA;
-    }
-    
-    .tarif-plan_description {
-        margin-bottom: 10px;
-    }
-    
-    .tarif-plan_description p {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        color: #60606C;
-        line-height: 170%;
-    }
-    
-    .tarif-plan_price {
-        margin-bottom: 10px;
-    }
-    
-    .tarif-plan_price span {
-        font-size: 32px;
-        color: #18181B;
-        font-weight: 500;
-    }
-    
-    .tarif-plan_term {
-        margin-bottom: 24px;
-    }
-    
-    .tarif-plan_term span {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        color: #60606C;
-        line-height: 170%;
-        font-size: 12px;
-    }
-    
-    .tarif-plan_button {
-        width: 100%;
-        height: 48px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        border-radius: 4px;
-        background-color: #3F51B5;
-        padding: 11px 24px;
-        cursor: pointer;
-        margin-bottom: 32px;
-    }
-    
-    .tarif-plan_button:hover {
-        background-color: #6876CA;
-    }
-    
-    .tarif-plan_button a {
-        font-family: "Gordita";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        color: #FFFFFF;
-        text-decoration: none;
-        line-height: 21px;
-        letter-spacing: 0.01em;
-    }
-    
-    .tarif-plan_button.btn-white {
-        background-color: #FFFFFF;
-        border: 1px solid #3F51B5;
-    }
-    
-    .tarif-plan_button.btn-white a {
-        color: #3F51B5;
-        line-height: 21px;
-        letter-spacing: 0.01em;
-    }
-    
-    .tarif-plan_about p {
-        font-family: "Gordita";
-        font-size: 16px;
-        font-weight: 500;
-        line-height: auto;
-        color: #60606C;
-        margin-bottom: 32px;
-    }
-    
-    .tarif-plan_benefits li {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        font-family: "Gordita";
-        color: #60606C;
-        font-size: 14px;
-        line-height: auto;
-        margin-bottom: 32px;
-    }
-    
-    .tarif-plan_benefits li .check-icon {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        width: 18px;
-        height: 18px;
-        border: 1px solid #D9DDF2;
-        border-radius: 50%;
-        margin-right: 9px;
-    }
-    
-    .tarif-plan_benefits li .check-icon img {
-        width: 6.5px;
-        height: 4.5px;
-    }
-    
-    .clients {
-        width: 1062px;
-        margin: 0 429px 150px 429px;
-    }
-    
-    .clients-title {
-        margin-bottom: 45px;
-    }
-    
-    .clients-title h4 {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        color: #60606C;
-        line-height: 170%;
-        color: #AEAEB7;
-        font-weight: 500;
-        text-align: center;
-    }
-    
-    .clients-items {
-        width: 1062px;
-        height: 72.37px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-    }
-    
-    .clients-item {
-        max-width: 190px;
-        margin-right: 162px;
-    }
-    
-    .clients-item:last-child {
-        margin-right: 0;
-    }
-    
-    .mob-app {
-        width: 100%;
-        height: 382px;
-        background-color: #0D1126;
-    }
-    
-    .mob-app_container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        margin: 99px 429px;
-        padding-top: 99px;
-    }
-    
-    .mob-app_left {
-        margin-right: 167px;
-    }
-    
-    .mob-app_left h4 {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        color: #60606C;
-        line-height: 170%;
-        font-size: 14px;
-        font-weight: 500;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-    }
-    
-    .mob-app_left h2 {
-        font-family: "Gordita";
-        font-size: 48px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: auto;
-        color: #FFFFFF;
-        font-size: 34px;
-        margin-bottom: 20px;
-    }
-    
-    .mob-app_left p {
-        font-family: "Gordita";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        color: #FFFFFF;
-        line-height: 170%;
-        font-size: 18px;
-        font-weight: 400;
-    }
-    
-    .mob-app_right {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-    }
-    
-    .mob-app_logo {
-        width: 180px;
-        height: 50px;
-        margin-right: 20px;
-    }
-    
-    .mob-app_logo:last-child {
-        margin-right: 0;
-    }
-    
-    .mob-app_logo img {
-        width: 100%;
-        height: 100%;
-    }
-    
-    .products {
-        width: 1920px;
-        min-height: 680px;
-        margin-bottom: 74px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-    }
-    
-    .products-title {
-        margin-bottom: 20px;
-    }
-    
-    .products-title h3 {
-        font-family: "Gordita";
-        font-style: normal;
-        font-size: 14px;
-        font-weight: 500;
-        color: #60606C;
-        line-height: 170%;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        text-align: center;
-    }
-    
-    .products-subtitle {
-        margin-bottom: 50px;
-    }
-    
-    .products-subtitle h2 {
-        font-family: "Gordita";
-        font-size: 48px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 170%;
-        color: #18181B;
-        text-align: center;
-    }
-    
-    .products-items {
-        width: 1920px;
-        height: 470px;
-        background-color: #FFFFFF;
-    }
-    
-    .products-items_container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        max-width: 1281px;
-        height: 407px;
-        position: relative;
-        z-index: 50;
-        bottom: 437px;
-        left: 320px;
-    }
-    
-    .products-items_bg {
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 1692px;
-        height: 470px;
-        position: relative;
-        overflow: hidden;
-        background-color: #FFFFFF;
-        margin-left: 103px;
-    }
-    
-    .products-items_bg img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    
-    .products-item {
-        width: 407px;
-        height: 404px;
-        margin-right: 30px;
-        background-color: #FFFFFF;
-        border-radius: 8px;
-        border: 1px solid #D9DDF2;
-    }
-    
-    .products-item:last-child {
-        margin-right: 0;
-    }
-    
-    .products-item .products-item_container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        margin: 47px 32px 0 32px;
-    }
-    
-    .products-item_logo {
-        width: 221px;
-        height: 69px;
-        margin-bottom: 24px;
-    }
-    
-    .products-item_logo img {
-        width: 100%;
-        height: 100%;
-    }
-    
-    .producs-item_title h5 {
-        font-family: "Gordita";
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 170%;
-        color: #18181B;
-        margin-bottom: 8px;
-    }
-    
-    .products-item_description {
-        margin-bottom: 24px;
-    }
-    
-    .products-item_description p {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        color: #60606C;
-        line-height: 170%;
-    }
-    
-    .products-item_period {
-        font-family: "Gordita";
-        font-size: 14px;
-        color: #18181B;
-        line-height: 170%;
-        text-transform: uppercase;
-        margin-bottom: 44px;
-    }
-    
-    .products-item_link a {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        font-family: "Gordita";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        color: #18181B;
-    }
-    
-    .products-item_link a img {
-        width: 18.33px;
-        height: 9.17px;
-        margin-left: 10px;
-    }
-    
-    .cta {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        width: 1920px;
-        height: 521px;
-        background: -webkit-gradient(linear, left top, left bottom, from(#ECEEF8), to(rgba(236, 238, 248, 0)));
-        background: linear-gradient(180deg, #ECEEF8 0%, rgba(236, 238, 248, 0) 100%);
-    }
-    
-    .cta-text {
-        text-align: center;
-    }
-    
-    .cta-text h2 {
-        font-family: "Gordita";
-        font-size: 48px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 170%;
-        color: #18181B;
-        margin-bottom: 20px;
-    }
-    
-    .cta-text p {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        color: #60606C;
-        line-height: 170%;
-        margin-bottom: 40px;
-    }
-    
-    .cta-buttons {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-    }
-    
-    .cta-button a {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        gap: 8px;
-        border-radius: 4px;
-        width: 140px;
-        height: 48px;
-        font-size: 15px;
-        font-weight: 500;
-        color: #3F51B5;
-        border: 1px solid #3F51B5;
-        border-radius: 4px;
-    }
-    
-    .cta-button:first-child a {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        gap: 8px;
-        border-radius: 4px;
-        width: 140px;
-        height: 48px;
-        margin-right: 20px;
-        font-family: "Gordita";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        color: #FFFFFF;
-        text-decoration: none;
-        background-color: #3F51B5;
-        border-radius: 4px;
-    }
-    
-    .cta-button:first-child a:hover {
-        background-color: #6876CA;
-    }
-    
-    .cta-button:first-child a img {
-        width: 18.33px;
-        height: 9.17px;
-        margin-left: 10px;
-    }
-    
-    .footer {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        width: 1280px;
-        margin: 0 320px;
-    }
-    
-    .footer-container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        width: 1280px;
-        border-top: 1px solid #D9DDF2;
-        margin-bottom: 55px;
-    }
-    
-    .footer-left {
-        min-width: 236px;
-        margin: 50px 201px 0 0;
-    }
-    
-    .footer-left_copyright {
-        font-family: "Gordita";
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        color: #18181B;
-        margin-bottom: 10px;
-    }
-    
-    .footer-left_links {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: start;
-        width: 236px;
-        height: 24px;
-    }
-    
-    .footer-left_links a {
-        font-family: "Gordita";
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        color: #18181B;
-    }
-    
-    .footer-left_links a:first-child {
-        padding-right: 8px;
-        margin-right: 8px;
-        border-right: 1px solid #18181B;
-    }
-    
-    .footer-right {
-        margin-top: 50px;
-    }
-    
-    .footer-menu_columns {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-    }
-    
-    .footer-menu_column:first-child {
-        margin-right: 146px;
-    }
-    
-    .footer-menu_column:last-child {
-        margin-left: 142px;
-    }
-    
-    .footer-menu_column-title {
-        margin-bottom: 8px;
-    }
-    
-    .footer-menu_column-title h6 {
-        font-family: "Gordita";
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 170%;
-        color: #18181B;
-    }
-    
-    .footer-menu_item {
-        font-family: "Gordita";
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        color: #18181B;
-        margin-bottom: 8px;
-    }
-    
-    .footer-menu_item a {
-        font-family: "Gordita";
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        color: #18181B;
-    }
-    
-    .about-vr {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        width: 1280px;
-        min-height: 554px;
-        margin: 0 320px;
-    }
-    
-    .about-vr_left {
-        width: 516px;
-        margin: 90px 30px 0 0;
-    }
-    
-    .about-vr_left h6 {
-        font-family: "Gordita";
-        font-style: normal;
-        font-size: 14px;
-        font-weight: 500;
-        color: #60606C;
-        line-height: 170%;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        margin-bottom: 24px;
-    }
-    
-    .about-vr_left h1 {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 65px;
-        line-height: 93px;
-        color: #18181B;
-    }
-    
-    .about-vr_middle {
-        width: 406px;
-        height: 554px;
-        position: relative;
-    }
-    
-    .about-vr_middle img {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        z-index: 20;
-    }
-    
-    .about-vr_middle span {
-        display: block;
-        position: absolute;
-        width: 641.77px;
-        height: 444.06px;
-        top: 200px;
-        right: -30px;
-        z-index: 5;
-        background: linear-gradient(240.46deg, #FFAB90 -0.47%, rgba(94, 102, 250, 0.1) 93.28%);
-        opacity: 0.5;
-        -webkit-filter: blur(180px);
-        filter: blur(180px);
-        border-radius: 20px;
-        -webkit-transform: rotate(28deg);
-        transform: rotate(28deg);
-    }
-    
-    .about-vr_right {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
-        justify-content: flex-end;
-        width: 298px;
-        margin-left: 31px;
-    }
-    
-    .about-vr_right h5 {
-        font-family: "Gordita";
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 170%;
-        color: #6876CA;
-        margin-bottom: 24px;
-    }
-    
-    .about-vr_right p {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        color: #60606C;
-        line-height: 170%;
-    }
-    
-    .mission {
-        width: 843px;
-        margin: 250px 320px 0 320px;
-    }
-    
-    .mission h6 {
-        font-family: "Gordita";
-        font-style: normal;
-        font-size: 14px;
-        font-weight: 500;
-        color: #60606C;
-        line-height: 170%;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        margin-bottom: 24px;
-    }
-    
-    .mission p {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 34px;
-        color: #18181B;
-        line-height: 170%;
-    }
-    
-    .values {
-        width: 1280px;
-        margin: 250px 320px 200px 320px;
-    }
-    
-    .values h6 {
-        font-family: "Gordita";
-        font-style: normal;
-        font-size: 14px;
-        font-weight: 500;
-        color: #60606C;
-        line-height: 170%;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-    }
-    
-    .values h2 {
-        font-family: "Gordita";
-        font-size: 48px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 170%;
-        color: #18181B;
-        width: 656px;
-        margin-bottom: 20px;
-    }
-    
-    .values p {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        color: #60606C;
-        line-height: 170%;
-        width: 534px;
-    }
-    
-    .values-block1 {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        width: 1280px;
-        margin-top: 100px;
-        min-height: 416px;
-    }
-    
-    .values-block1_left {
-        position: relative;
-        width: 640px;
-    }
-    
-    .values-block1_left img {
-        display: block;
-        width: 625px;
-        height: 416px;
-        position: relative;
-        bottom: 24px;
-        right: 0;
-        z-index: 10;
-    }
-    
-    .values-block1_left span {
-        display: block;
-        width: 836px;
-        height: 416px;
-        background: #ECEEF8;
-        position: absolute;
-        top: 0;
-        right: 125px;
-        z-index: 5;
-    }
-    
-    .values-block1_right {
-        width: 640px;
-    }
-    
-    .values-block1_right h3 {
-        font-family: "Gordita";
-        font-size: 28px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 170%;
-        color: #18181B;
-        margin: 0 0 20px 124px;
-    }
-    
-    .values-block1_right p {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        color: #60606C;
-        line-height: 170%;
-        width: 328px;
-        margin-left: 124px;
-    }
-    
-    .values-block2 {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        width: 1280px;
-        margin-top: 150px;
-        min-height: 416px;
-    }
-    
-    .values-block2_left {
-        width: 640px;
-    }
-    
-    .values-block2_left h3 {
-        font-family: "Gordita";
-        font-size: 28px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 170%;
-        color: #18181B;
-        margin-bottom: 20px;
-        width: 407px;
-    }
-    
-    .values-block2_left p {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        color: #60606C;
-        line-height: 170%;
-        width: 328px;
-    }
-    
-    .values-block2_right {
-        position: relative;
-        width: 640px;
-    }
-    
-    .values-block2_right img {
-        display: block;
-        width: 625px;
-        height: 416px;
-        position: relative;
-        bottom: 24px;
-        left: 0;
-        z-index: 10;
-    }
-    
-    .values-block2_right span {
-        display: block;
-        width: 836px;
-        height: 416px;
-        background: #ECEEF8;
-        position: absolute;
-        top: 0;
-        left: 120px;
-        z-index: 5;
-    }
-    
-    .why-top {
-        width: inherit;
-        height: 900px;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: relative;
-        overflow: hidden;
-        background-color: #FFFFFF;
-    }
-    
-    .why-top img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    
-    .why-top_container {
-        position: relative;
-        top: 0;
-        left: 0;
-    }
-    
-    .why-top_container h1 {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 65px;
-        line-height: 93px;
-        color: #18181B;
-        width: 920px;
-        margin: 0 0 40px 320px;
-        padding-top: 100px;
-    }
-    
-    .why-top_container p {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 34px;
-        color: #6876CA;
-        line-height: 170%;
-        width: 951px;
-        margin: 0 0 40px 320px;
-    }
-    
-    .why-top_container a {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        gap: 8px;
-        border-radius: 4px;
-        font-family: "Gordita";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        color: #FFFFFF;
-        text-decoration: none;
-        width: 122px;
-        height: 48px;
-        background: #3F51B5;
-        margin: 0 0 40px 320px;
-    }
-    
-    .why-top_container a:hover {
-        background: #6876CA;
-    }
-    
-    .benefits {
-        margin-left: 578px;
-        padding: 150px 0;
-        border-left: 1px solid #D9DDF2;
-    }
-    
-    .benefit-container {
-        width: 655px;
-        margin-bottom: 194px;
-        margin-left: 150px;
-    }
-    
-    .benefit-container:last-child {
-        margin-bottom: 0;
-    }
-    
-    .benefit-container h2 {
-        font-family: "Gordita";
-        font-size: 48px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 170%;
-        color: #18181B;
-        margin-bottom: 20px;
-        width: 655px;
-        position: relative;
-    }
-    
-    .benefit-container h2::before {
-        content: ".";
-        display: block;
-        width: 12px;
-        height: 12px;
-        color: #6876CA;
-        position: absolute;
-        top: -10px;
-        left: -157px;
-    }
-    
-    .benefit-container h2::after {
-        content: "";
-        display: block;
-        width: 58px;
-        height: 58px;
-        position: absolute;
-        top: 15px;
-        left: -179px;
-        border: 1px solid #3F51B5;
-        border-radius: 50%;
-    }
-    
-    .benefit-container p {
-        width: 516px;
-    }
-    
-    .benefit-description {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        color: #60606C;
-        line-height: 170%;
-        color: #18181B;
-        margin-bottom: 20px;
-    }
-    
-    .benefit-explanation {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        color: #60606C;
-        line-height: 170%;
-        font-weight: 500;
-    }
-    
-    .benefit-explanation a {
-        color: #6876CA;
-    }
-    
-    .contact-top {
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 1920px;
-        height: 858px;
-        position: relative;
-        overflow: hidden;
-        background-color: #FFFFFF;
-    }
-    
-    .contact-top img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    
-    .contact-top_container {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 1920px;
-        height: 858px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        margin: 126px 320px;
-    }
-    
-    .contact-top_content {
-        width: 485px;
-        height: 606px;
-        margin-right: 170px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-    }
-    
-    .contact-top_content h1 {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 65px;
-        line-height: 93px;
-        color: #18181B;
-        margin-bottom: 24px;
-    }
-    
-    .contact-top_content p {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        color: #60606C;
-        line-height: 170%;
-    }
-    
-    .contact-top_form {
-        width: 625px;
-        height: 606px;
-        background: #FFFFFF;
-        border: 1px solid #D9DDF2;
-        border-radius: 8px;
-    }
-    
-    .contact-top_form h4 {
-        font-family: "Gordita";
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 170%;
-        color: #18181B;
-        margin: 36px 170px 24px;
-    }
-    
-    .contact-top_form p {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        color: #FF5353;
-        line-height: 170%;
-        margin: 16px 48px 32px 48px;
-    }
-    
-    .contact-top_form p:last-child {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        color: #60606C;
-        line-height: 170%;
-        font-size: 12px;
-        text-align: center;
-    }
-    
-    .contact-form button {
-        width: 529px;
-        height: 44px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        gap: 8px;
-        border-radius: 4px;
-        font-family: "Gordita";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        color: #FFFFFF;
-        line-height: 170%;
-        background-color: #3F51B5;
-        margin: 0 48px 32px 48px;
-    }
-    
-    .contact-form button:hover {
-        background-color: #6876CA;
-    }
-    
-    .user-name {
-        position: relative;
-    }
-    
-    .user-name input {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        width: 529px;
-        height: 48px;
-        border: 1px solid #D9DDF2;
-        gap: 4px;
-        padding: 0 16px;
-        margin: 0 48px 20px;
-        font-family: "Gordita";
-        font-style: normal;
-        font-size: 14px;
-        color: #60606C;
-        line-height: 100%;
-    }
-    
-    .user-name span {
-        position: absolute;
-        top: 21px;
-        right: 64px;
-        font-size: 14px;
-        color: #60606C;
-        line-height: 100%;
-    }
-    
-    .user-company {
-        position: relative;
-    }
-    
-    .user-company input {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        width: 529px;
-        height: 48px;
-        border: 1px solid #D9DDF2;
-        gap: 4px;
-        padding: 0 16px;
-        margin: 0 48px 20px;
-        font-family: "Gordita";
-        font-style: normal;
-        font-size: 14px;
-        color: #60606C;
-        line-height: 100%;
-    }
-    
-    .user-company span {
-        position: absolute;
-        top: 21px;
-        right: 64px;
-        font-size: 14px;
-        color: #60606C;
-        line-height: 100%;
-    }
-    
-    .user-email {
-        position: relative;
-    }
-    
-    .user-email input {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        width: 529px;
-        height: 48px;
-        border: 1px solid #D9DDF2;
-        gap: 4px;
-        padding: 0 16px;
-        margin: 0 48px 20px;
-        font-family: "Gordita";
-        font-style: normal;
-        font-size: 14px;
-        color: #60606C;
-        line-height: 100%;
-    }
-    
-    .user-email span {
-        position: absolute;
-        top: 21px;
-        right: 64px;
-        font-size: 14px;
-        color: #60606C;
-        line-height: 100%;
-    }
-    
-    .user-phone {
-        position: relative;
-    }
-    
-    .user-phone input {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        width: 529px;
-        height: 48px;
-        border: 1px solid #D9DDF2;
-        gap: 4px;
-        padding: 0 16px;
-        margin: 0 48px 20px;
-        font-family: "Gordita";
-        font-style: normal;
-        font-size: 14px;
-        color: #60606C;
-        line-height: 100%;
-    }
-    
-    .user-phone span {
-        position: absolute;
-        top: 21px;
-        right: 64px;
-        font-size: 14px;
-        color: #60606C;
-        line-height: 100%;
-    }
-    
-    .message textarea {
-        width: 529px;
-        height: 104px;
-        border: 1px solid #D9DDF2;
-        padding: 16px 0 0 16px;
-        margin: 0 48px;
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        color: #60606C;
-        line-height: 170%;
-    }
-    
-    .contact-block {
-        max-width: 1920px;
-        height: 280px;
-        background-color: #6876CA;
-    }
-    
-    .contact-block_items {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        margin: 0 320px 93px;
-        padding-top: 93px;
-    }
-    
-    .contact-block_item {
-        width: 296px;
-        margin-right: 141px;
-    }
-    
-    .contact-block_item:last-child {
-        margin-right: 0;
-    }
-    
-    .contact-block_item span {
-        display: block;
-        width: 30px;
-        height: 3px;
-        background-color: #FFFFFF;
-        margin-bottom: 20px;
-    }
-    
-    .contact-block_item h5 {
-        font-family: "Gordita";
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 170%;
-        color: #18181B;
-        color: #FFFFFF;
-        margin-bottom: 16px;
-    }
-    
-    .contact-block_item p {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        color: #60606C;
-        line-height: 170%;
-        color: #FFFFFF;
-    }
-    
-    .header-page.ta-header {
-        background-color: #FFFFFF;
-        border-bottom: 1px solid #D9DDF2;
-    }
-    
-    .ta-top {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        margin: 0 320px;
-        height: 135px;
-    }
-    
-    .ta-top_left {
-        margin: 24px 0 31px;
-    }
-    
-    .ta-top_left h3 {
-        font-family: "Gordita";
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 170%;
-        color: #18181B;
-        margin-bottom: 8px;
-    }
-    
-    .ta-top_left p {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        color: #60606C;
-        line-height: 170%;
-    }
-    
-    .ta-top_right {
-        margin: 41px 0;
-    }
-    
-    .ta-top_buttons {
-        width: 406px;
-        height: 60px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        width: 406px;
-        height: 60px;
-        background-color: rgb(236, 238, 248);
-        border-radius: 8px;
-    }
-    
-    .text_button,
-    .web_button {
-        width: 197px;
-        height: 52px;
-        background-color: rgb(236, 238, 248);
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        gap: 8px;
-        border-radius: 4px;
-        font-family: "Gordita";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        color: #6876CA;
-        text-decoration: none;
-        font-family: "Gordita";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        color: #18181B;
-    }
-    
-    .text_button {
-        margin: 0 43px 0 6px;
-    }
-    
-    .web_button {
-        margin-right: 6px;
-    }
-    
-    .active_button {
-        width: 197px;
-        height: 52px;
-        background-color: #FFFFFF;
-    }
-    
-    .ta-window {
-        width: 1280px;
-        height: auto;
-        border-radius: 8px;
-        margin: 0 auto;
-    }
-    
-    .ta-window-btn {
-        padding-bottom: 24px;
-        margin: 24px 24px 0;
-    }
-    
-    .ta-window-btn button {
-        width: 1232px;
-        height: 44px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        gap: 8px;
-        border-radius: 4px;
-        font-family: "Gordita";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        color: #FFFFFF;
-        text-decoration: none;
-        background-color: #3F51B5;
-    }
-    
-    .ta-window button:hover {
-        background-color: #6876CA;
-    }
-    
-    .ta-window_top {
-        width: inherit;
-        height: 90px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        background-color: rgba(236, 238, 248, 0.5);
-    }
-    
-    .ta-window_top h5 {
-        font-family: "Gordita";
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 170%;
-        color: #18181B;
-        margin-left: 24px;
-    }
-    
-    #open-arrow,
-    #open-arrow2,
-    #arrow1,
-    #arrow2 {
-        display: block;
-        width: 20px;
-        height: 15px;
-        margin-right: 37.51px;
-    }
-    
-    .ta-window_top img {
-        display: block;
-        width: 16.97px;
-        height: 9.9px;
-    }
-    
-    .transform_arrow {
-        transform: rotate(180deg);
-        transition: all 0.2s ease;
-    }
-    
-    .ta-window_bottom {
-        opacity: 1;
-        visibility: visible;
-        transition: 0.55s opacity, 0.55s visibility;
-        background-color: rgba(236, 238, 248, 0.5);
-    }
-    
-    .close-input {
-        opacity: 0;
-        visibility: hidden;
-    }
-    
-    .ta-window_results {
-        width: auto;
-        height: 0;
-        border-radius: 8px;
-        opacity: 0;
-        visibility: hidden;
-        transition: 0.55s opacity, 0.55s visibility;
-        background-color: rgba(236, 238, 248, 0.5);
-    }
-    
-    .open-input {
-        opacity: 1;
-        visibility: visible;
-        height: auto;
-    }
-    
-    .ta-window_drag-drop {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        width: 1232px;
-        height: 134px;
-        border: 1px dashed #B3BBE5;
-        border-radius: 8px;
-        margin: 0 24px 16px;
-    }
-    
-    .ta-window_drag-drop span {
-        font-family: 'Gordita';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 170%;
-        color: #18181B;
-    }
-    
-    .ta-window_paste-text {
-        width: 1232px;
-        height: 475px;
-        background-color: #FFFFFF;
-        border-radius: 4px;
-        margin: 0 24px;
-    }
-    
-    .ta-window_paste-text p {
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        color: #60606C;
-        line-height: 170%;
-        margin: 16px;
-    }
-    
-    .ta-window_paste-text textarea {
-        font-family: 'Gordita';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 170%;
-        color: #60606C;
-        padding: 15px;
-    }
-    
-    .ta_file-upload {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    
-    #upload-container label {
-        font-family: "Gordita";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        color: #6876CA;
-        text-decoration: none;
-        font-weight: 400;
-        margin: 0 3px;
-    }
-    
-    #upload-container label:hover {
-        cursor: pointer;
-    }
-    
-    #upload-container div {
-        position: relative;
-        z-index: 10;
-    }
-    
-    #upload-container input[type=file] {
-        width: 0.1px;
-        height: 0.1px;
-        opacity: 0;
-        position: absolute;
-        z-index: -10;
-    }
-    
-    .ta-footer {
-        width: 1280px;
-        height: 85px;
-        margin: 0 320px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-    }
-    
-    .ta_footer-left {
-        font-family: "Gordita";
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        color: #18181B;
-    }
-    
-    .ta_footer-right a {
-        font-family: "Gordita";
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        color: #18181B;
-    }
-    
-    .ta_footer-right a:first-child {
-        padding-right: 8px;
-        margin-right: 8px;
-        border-right: 1px solid #18181B;
-    }
-    
-    .ta_green-cirle {
-        width: inherit;
-        height: 475px;
-        margin-bottom: 84px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        background-color: rgba(236, 238, 248, 0.5);
-    }
-    
-    .green-cirle {
-        width: 98px;
-        height: 98px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        border-radius: 50%;
-        border: 2px solid #76EAC0;
-    }
-    
-    .green-cirle img {
-        display: block;
-        width: 25.04px;
-        height: 19.03px;
-    }
-    
-    .ta-window2 {
-        width: 1280px;
-        height: auto;
-        background-color: #FFFFFF;
-        margin: 0 auto;
-    }
-    
-    .ta-window2_top {
-        width: inherit;
-        height: 90px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        background-color: rgba(236, 238, 248, 0.5);
-        border-radius: 8px;
-    }
-    
-    .ta-window2_top h5 {
-        font-family: "Gordita";
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 170%;
-        color: #18181B;
-        margin-left: 24px;
-    }
-    
-    .ta-window2_top img {
-        display: block;
-        width: 16.97px;
-        height: 9.9px;
-        margin-right: 37.51px;
-    }
-    /* analyze-rezults window part */
-    
-    .analyze-rezults {
-        max-width: 1280px;
-        margin: 0 auto;
-    }
-    
-    .ta-window2_toggle-buttons {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        margin: 24px 0 49px;
-    }
-    
-    .ta-window2_toggle-buttons button {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        gap: 8px;
-        border-radius: 4px;
-        font-family: "Gordita";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        color: #18181B;
-        width: 197px;
-        height: 44px;
-        margin-right: 4px;
-        background-color: #FFFFFF;
-        border: 1px solid #D9DDF2;
-    }
-    
-    .ta-window2_toggle-buttons button:active {
-        background-color: #3F51B5;
-        font-family: "Gordita";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        color: #FFFFFF;
-        text-decoration: none;
-    }
-    
-    .transform_arrow {
-        transform: rotate(180deg);
-        transition: all 0.2s ease;
-    }
-    
-    .ta-window2_bottom {
-        height: 0;
-        opacity: 0;
-        visibility: hidden;
-        transition: 0.55s opacity, 0.55s visibility;
-        background-color: rgba(236, 238, 248, 0.5);
-    }
-    
-    .open-input1 {
-        opacity: 1;
-        visibility: visible;
-        height: auto;
-    }
-    
-    .ta-window2_classification {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        margin-bottom: 52px;
-    }
-    
-    .ta-window2_classification h5 {
-        font-family: "Gordita";
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 170%;
-        color: #18181B;
-    }
-    
-    .ta-window2_classification p {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        min-width: 245px;
-        height: 28px;
-        padding-left: 8px;
-        background-color: rgba(236, 238, 248, 0.5);
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        color: #60606C;
-        line-height: 170%;
-        color: #18181B;
-    }
-    
-    .ta-window2_classification p span {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        width: 90px;
-        height: 14px;
-        background-color: #FFFFFF;
-        font-size: 10px;
-        margin-left: 9px;
-    }
-    
-    .ta-window2_summary h5 {
-        font-family: "Gordita";
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 170%;
-        color: #18181B;
-        margin-bottom: 8px;
-    }
-    
-    .ta-window2_summary p {
-        min-height: 104px;
-        padding: 16px 0;
-        font-family: "Gordita";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        color: #60606C;
-        line-height: 170%;
-        color: black;
-        border-top: 1px solid #18181B;
-        border-bottom: 1px solid #18181B;
-    }
-    
-    .ta-widow2_schedules-space img {
-        display: block;
-        width: 860px;
-        height: 279px;
-        margin: 80px 110px 142px;
-    }
-    
-    #window2 {
-        display: none;
-    }
-    
-    .wa-window {
-        max-width: 1280px;
-        min-height: 739px;
-        height: auto;
-        border-radius: 8px;
-        margin: 0 320px;
-        position: relative;
-    }
-    
-    .wa-window_results {
-        max-width: 1280px;
-        height: 90px;
-        border-radius: 8px;
-        margin: 0 auto;
-        position: relative;
-    }
-    
-    .wa-window_results_open {}
-    /* .wa-window_results {
-        width: 1280px;
-        height: auto;
-        border-radius: 8px;
-        position: relative;
-    }
-     */
-    
-    .wa-window_top {
-        width: inherit;
-        height: 90px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        background-color: rgba(236, 238, 248, 0.5);
-    }
-    
-    .wa-window_top h5 {
-        font-family: "Gordita";
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 170%;
-        color: #18181B;
-        margin-left: 24px;
-    }
-    
-    .wa-window_top img {
-        display: block;
-        width: 16.97px;
-        height: 9.9px;
-        margin-right: 37.51px;
-    }
-    
-    .wa-window_bottom {
-        padding-bottom: 24px;
-        opacity: 1;
-        visibility: visible;
-        transition: 0.55s opacity, 0.55s visibility;
-        background-color: rgba(236, 238, 248, 0.5);
-    }
-    
-    .close-input2 {
-        opacity: 0;
-        visibility: hidden;
-    }
-    
-    .wa-window_iput-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1232px;
-        height: 60px;
-        background: #FFFFFF;
-        border-radius: 4px;
-        margin: 0 24px;
-    }
-    
-    .wa-window_iput-row input {
-        max-width: 1122px;
-    }
-    
-    .wa-window_iput-row input[type='text'],
-    .wa-window_iput-row input::placeholder {
-        font-family: 'Gordita';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 21px;
-        color: #60606C;
-        margin-left: 16px;
-    }
-    
-    .wa-window_iput-row button {
-        width: 110px;
-        height: 44px;
-        margin: 24px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        gap: 8px;
-        border-radius: 4px;
-        font-family: "Gordita";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        color: #FFFFFF;
-        text-decoration: none;
-        background-color: #3F51B5;
-        margin-right: 8px;
-    }
-    
-    .disable-button {
-        background-color: #6876CA !important;
-        cursor: not-allowed !important;
-    }
-    
-    .override-da-green-cirle {
-        width: inherit;
-        height: 475px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(236, 238, 248, 0.5);
-    }
-    
-    .override-green-cirle {
-        width: 98px;
-        height: 98px;
-        border-radius: 50%;
-        border: 2px solid #76EAC0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .override-green-cirle img {
-        display: block;
-        width: 25.04px;
-        height: 19.03px;
-    }
-    
-    #chartholder {
-        display: block;
-        justify-content: center;
-    }
-    
-    .align-center {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .active-button {
-        background-color: #3F51B5 !important;
-        font-family: "Gordita" !important;
-        font-size: 15px !important;
-        font-style: normal !important;
-        font-weight: 500 !important;
-        color: #FFFFFF !important;
-        text-decoration: none !important;
-    }
-    
-    .iframe {
-        width: 100%;
-        height: 550px;
-    }
-    
-    .wa-window2_bottom {
-        padding-bottom: 24px;
-        height: 0;
-        opacity: 0;
-        visibility: hidden;
-        background-color: rgba(236, 238, 248, 0.5);
-    }
-    
-    .open-input2 {
-        opacity: 1;
-        visibility: visible;
-        height: auto;
-        transition: 0.55s opacity, 0.55s visibility;
-    }
+.page-wrapper {
+    max-width: 1920px;
+    width: 100%;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.burger-menu {
+    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #ECEEF8;
+    width: 320px;
+    height: 579px;
+    right: -100%;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    z-index: 70;
+}
+
+.burger-menu__items {
+    margin: 15px 0 0 41px;
+}
+
+.burger-menu_container {
+    margin-left: 30px;
+}
+
+.burger-menu__item {
+    margin-bottom: 32px;
+}
+
+.burger-menu__item a {
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #18181B;
+}
+
+.burger-menu__item a:hover {
+    color: #3F51B5;
+}
+
+.burger-menu-icon {
+    position: absolute;
+    top: 23px;
+    right: 35px;
+    width: 20px;
+    height: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-right: 35px;
+    display: none;
+}
+
+.burger-menu-icon span,
+.burger-menu-icon:after,
+.burger-menu-icon:before {
+    height: 2px;
+    width: 18px;
+    position: absolute;
+    background: #18181B;
+    margin: 0 auto;
+}
+
+.burger-menu-icon span {
+    top: 10px;
+}
+
+.burger-menu-icon:after,
+.burger-menu-icon:before {
+    content: "";
+}
+
+.burger-menu-icon:after {
+    bottom: 3px;
+    text-align: right;
+}
+
+.burger-menu-icon:before {
+    top: 5px;
+}
+
+.burger-menu-icon.open-menu span {
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.burger-menu-icon.open-menu:before {
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+    top: 13px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.burger-menu-icon.open-menu:after {
+    -webkit-transform: rotate(-40deg);
+    transform: rotate(-40deg);
+    bottom: 5px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.burger-menu.open-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    right: 0;
+}
+
+body.fixed-page {
+    overflow: hidden;
+}
+
+.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 1296px;
+    margin: 0 312px;
+}
+
+.container2 {
+    width: 1296px;
+    margin: 0 312px;
+}
+
+.header-page {
+    width: 1920px;
+    height: 60px;
+    background-color: #ECEEF8;
+    position: relative;
+}
+
+.header-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 93px;
+    height: 60px;
+}
+
+.header-logo img {
+    width: 93px;
+    height: 30px;
+}
+
+.header-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    height: 60px;
+}
+
+.header-menu_items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.header-menu_items .header-menu_item a {
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #18181B;
+    list-style: none;
+    margin-right: 40px;
+}
+
+.header-menu_items .header-menu_item a:hover {
+    color: #3F51B5;
+}
+
+.header-menu_button {
+    width: 140px;
+    height: 44px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.header-menu_button .general-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #3F51B5;
+    padding: 11px 24px;
+    cursor: pointer;
+}
+
+.header-menu_button .general-btn:hover {
+    background-color: #6876CA;
+}
+
+.page-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 1296px;
+    height: 623px;
+    margin: 0 285px 0 312px;
+}
+
+.page-top .page-top_left {
+    width: 407px;
+    height: 623px;
+    margin: 90px 196px 0 0;
+}
+
+.page-top .page-top_right {
+    width: 712px;
+    height: 623px;
+}
+
+.page-top .page-top_right .page-top_slider {
+    width: 712px;
+    height: 623px;
+    overflow: hidden;
+    position: relative;
+}
+
+.page-top .page-top_right .page-top_slider img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 28.87px;
+}
+
+.page-top_title h1 {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 65px;
+    line-height: 93px;
+    color: #18181B;
+    -webkit-text-decoration: 4px underline #FF5722;
+    text-decoration: 4px underline #FF5722;
+    margin-bottom: 30px;
+}
+
+.page-top_text {
+    width: 407px;
+    margin-bottom: 30px;
+}
+
+.page-top_text p {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #60606C;
+    line-height: 170%;
+}
+
+.page-top_button {
+    width: 140px;
+    height: 48px;
+}
+
+.page-top_button a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #3F51B5;
+    padding: 11px 24px;
+    cursor: pointer;
+}
+
+.page-top_button a:hover {
+    background-color: #6876CA;
+}
+
+.why-vr {
+    width: 100%;
+    height: 318px;
+    background-color: #6876CA;
+}
+
+.why-vr_title h3 {
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 170%;
+    font-size: 28px;
+    padding-top: 63px;
+    margin-bottom: 30px;
+}
+
+.why-vr_columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.why-vr_column {
+    width: 296px;
+    min-height: 81px;
+    margin-right: 141px;
+}
+
+.why-vr_column:last-child {
+    margin-right: 0;
+}
+
+.why-vr_column span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    text-align: left;
+    margin-bottom: 30px;
+    background-color: #FFFFFF;
+}
+
+.why-vr_column p {
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 170%;
+    font-size: 16px;
+}
+
+.solutions {
+    width: 1296px;
+    margin-top: 100px;
+}
+
+.solutions-top {
+    width: 854px;
+    margin: 0 312px;
+    margin-bottom: 46px;
+}
+
+.solutions-top_title {
+    margin-bottom: 20px;
+}
+
+.solutions-top_title h3 {
+    font-family: "Gordita";
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 500;
+    color: #60606C;
+    line-height: 170%;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.solutions-top_subtitle {
+    margin-bottom: 20px;
+}
+
+.solutions-top_subtitle h2 {
+    font-family: "Gordita";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170%;
+    color: #18181B;
+}
+
+.solutions-top_text {
+    width: 652px;
+}
+
+.solutions-top_text p {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #60606C;
+    line-height: 170%;
+}
+
+.solutions-content {
+    width: 1296px;
+    margin: 0 312px;
+}
+
+.content_block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 1296px;
+    height: 350px;
+    margin-bottom: 74px;
+}
+
+.content-block_left {
+    width: 50%;
+    text-align: center;
+    margin-right: 100px;
+}
+
+.content-block_left img {
+    max-width: 457px;
+    max-height: 329px;
+}
+
+.content-block_right {
+    width: 50%;
+    text-align: left;
+}
+
+.content-block_container {
+    width: 408px;
+}
+
+.content-block_title {
+    margin-bottom: 20px;
+}
+
+.content-block_title h3 {
+    font-family: "Gordita";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170%;
+    color: #18181B;
+}
+
+.content-block_text {
+    margin-bottom: 32px;
+}
+
+.content-block_text p {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #60606C;
+    line-height: 170%;
+}
+
+.content-block_link a {
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #18181B;
+}
+
+.content-block_link img {
+    width: 18.33px;
+    height: 9.17px;
+    margin: 4px 10px;
+}
+
+.tarif {
+    width: 1920px;
+}
+
+.tarif-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #6876CA;
+    height: 343px;
+}
+
+.tarif-top span {
+    width: 924px;
+    height: 50px;
+    background-color: #FFFFFF;
+    border-radius: 35px 35px 0 0;
+    margin-left: 498px;
+}
+
+.tarif-top_content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    text-align: center;
+    width: 742px;
+    padding-top: 70px;
+    margin: 0px 589px;
+}
+
+.tarif-title {
+    margin-bottom: 20px;
+}
+
+.tarif-title h2 {
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 170%;
+    font-size: 48px;
+}
+
+.tarif-text p {
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 170%;
+    font-size: 18px;
+}
+
+.tarif-plans {
+    width: 1920px;
+    height: 570px;
+    margin-bottom: 150px;
+    position: relative;
+}
+
+.tarif-plans_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 850px;
+    position: relative;
+    left: 538px;
+    z-index: 10;
+}
+
+.tarif-plan_gradientbg {
+    position: relative;
+    left: 304px;
+    bottom: 400px;
+    z-index: 2;
+    width: 1262.56px;
+    height: 386px;
+    margin: 0;
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+    background: linear-gradient(242.33deg, #FFAB90 -7.67%, rgba(94, 102, 250, 0.1) 99.98%);
+    opacity: 0.5;
+    -webkit-filter: blur(400px);
+    filter: blur(400px);
+    border-radius: 200px;
+}
+
+.tarif-plan {
+    width: 407px;
+    min-height: 550px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid #D9DDF2;
+}
+
+.tarif-plan:first-child {
+    margin-right: 30px;
+}
+
+.tarif-plan_container {
+    width: 343px;
+    margin: 32px;
+}
+
+.tarif-plan_title {
+    margin-bottom: 10px;
+}
+
+.tarif-plan_title #starter {
+    font-size: 24px;
+    color: #009688;
+}
+
+.tarif-plan_title #business {
+    font-size: 24px;
+    color: #6876CA;
+}
+
+.tarif-plan_description {
+    margin-bottom: 10px;
+}
+
+.tarif-plan_description p {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #60606C;
+    line-height: 170%;
+}
+
+.tarif-plan_price {
+    margin-bottom: 10px;
+}
+
+.tarif-plan_price span {
+    font-size: 32px;
+    color: #18181B;
+    font-weight: 500;
+}
+
+.tarif-plan_term {
+    margin-bottom: 24px;
+}
+
+.tarif-plan_term span {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #60606C;
+    line-height: 170%;
+    font-size: 12px;
+}
+
+.tarif-plan_button {
+    width: 100%;
+    height: 48px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    background-color: #3F51B5;
+    padding: 11px 24px;
+    cursor: pointer;
+    margin-bottom: 32px;
+}
+
+.tarif-plan_button:hover {
+    background-color: #6876CA;
+}
+
+.tarif-plan_button a {
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+}
+
+.tarif-plan_button.btn-white {
+    background-color: #FFFFFF;
+    border: 1px solid #3F51B5;
+}
+
+.tarif-plan_button.btn-white a {
+    color: #3F51B5;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+}
+
+.tarif-plan_about p {
+    font-family: "Gordita";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: auto;
+    color: #60606C;
+    margin-bottom: 32px;
+}
+
+.tarif-plan_benefits li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: "Gordita";
+    color: #60606C;
+    font-size: 14px;
+    line-height: auto;
+    margin-bottom: 32px;
+}
+
+.tarif-plan_benefits li .check-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #D9DDF2;
+    border-radius: 50%;
+    margin-right: 9px;
+}
+
+.tarif-plan_benefits li .check-icon img {
+    width: 6.5px;
+    height: 4.5px;
+}
+
+.clients {
+    width: 1062px;
+    margin: 0 429px 150px 429px;
+}
+
+.clients-title {
+    margin-bottom: 45px;
+}
+
+.clients-title h4 {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #60606C;
+    line-height: 170%;
+    color: #AEAEB7;
+    font-weight: 500;
+    text-align: center;
+}
+
+.clients-items {
+    width: 1062px;
+    height: 72.37px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.clients-item {
+    max-width: 190px;
+    margin-right: 162px;
+}
+
+.clients-item:last-child {
+    margin-right: 0;
+}
+
+.mob-app {
+    width: 100%;
+    height: 382px;
+    background-color: #0D1126;
+}
+
+.mob-app_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 99px 429px;
+    padding-top: 99px;
+}
+
+.mob-app_left {
+    margin-right: 167px;
+}
+
+.mob-app_left h4 {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #60606C;
+    line-height: 170%;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.mob-app_left h2 {
+    font-family: "Gordita";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: auto;
+    color: #FFFFFF;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.mob-app_left p {
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 170%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.mob-app_right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.mob-app_logo {
+    width: 180px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.mob-app_logo:last-child {
+    margin-right: 0;
+}
+
+.mob-app_logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.products {
+    width: 1920px;
+    min-height: 680px;
+    margin-bottom: 74px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.products-title {
+    margin-bottom: 20px;
+}
+
+.products-title h3 {
+    font-family: "Gordita";
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 500;
+    color: #60606C;
+    line-height: 170%;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.products-subtitle {
+    margin-bottom: 50px;
+}
+
+.products-subtitle h2 {
+    font-family: "Gordita";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170%;
+    color: #18181B;
+    text-align: center;
+}
+
+.products-items {
+    width: 1920px;
+    height: 470px;
+    background-color: #FFFFFF;
+}
+
+.products-items_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1281px;
+    height: 407px;
+    position: relative;
+    z-index: 50;
+    bottom: 437px;
+    left: 320px;
+}
+
+.products-items_bg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1692px;
+    height: 470px;
+    position: relative;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    margin-left: 103px;
+}
+
+.products-items_bg img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.products-item {
+    width: 407px;
+    height: 404px;
+    margin-right: 30px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid #D9DDF2;
+}
+
+.products-item:last-child {
+    margin-right: 0;
+}
+
+.products-item .products-item_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 47px 32px 0 32px;
+}
+
+.products-item_logo {
+    width: 221px;
+    height: 69px;
+    margin-bottom: 24px;
+}
+
+.products-item_logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.producs-item_title h5 {
+    font-family: "Gordita";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 170%;
+    color: #18181B;
+    margin-bottom: 8px;
+}
+
+.products-item_description {
+    margin-bottom: 24px;
+}
+
+.products-item_description p {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #60606C;
+    line-height: 170%;
+}
+
+.products-item_period {
+    font-family: "Gordita";
+    font-size: 14px;
+    color: #18181B;
+    line-height: 170%;
+    text-transform: uppercase;
+    margin-bottom: 44px;
+}
+
+.products-item_link a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #18181B;
+}
+
+.products-item_link a img {
+    width: 18.33px;
+    height: 9.17px;
+    margin-left: 10px;
+}
+
+.cta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 1920px;
+    height: 521px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ECEEF8), to(rgba(236, 238, 248, 0)));
+    background: linear-gradient(180deg, #ECEEF8 0%, rgba(236, 238, 248, 0) 100%);
+}
+
+.cta-text {
+    text-align: center;
+}
+
+.cta-text h2 {
+    font-family: "Gordita";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170%;
+    color: #18181B;
+    margin-bottom: 20px;
+}
+
+.cta-text p {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #60606C;
+    line-height: 170%;
+    margin-bottom: 40px;
+}
+
+.cta-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.cta-button a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    width: 140px;
+    height: 48px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #3F51B5;
+    border: 1px solid #3F51B5;
+    border-radius: 4px;
+}
+
+.cta-button:first-child a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    width: 140px;
+    height: 48px;
+    margin-right: 20px;
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #3F51B5;
+    border-radius: 4px;
+}
+
+.cta-button:first-child a:hover {
+    background-color: #6876CA;
+}
+
+.cta-button:first-child a img {
+    width: 18.33px;
+    height: 9.17px;
+    margin-left: 10px;
+}
+
+.footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 1280px;
+    margin: 0 320px;
+}
+
+.footer-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 1280px;
+    border-top: 1px solid #D9DDF2;
+    margin-bottom: 55px;
+}
+
+.footer-left {
+    min-width: 236px;
+    margin: 50px 201px 0 0;
+}
+
+.footer-left_copyright {
+    font-family: "Gordita";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    color: #18181B;
+    margin-bottom: 10px;
+}
+
+.footer-left_links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    width: 236px;
+    height: 24px;
+}
+
+.footer-left_links a {
+    font-family: "Gordita";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    color: #18181B;
+}
+
+.footer-left_links a:first-child {
+    padding-right: 8px;
+    margin-right: 8px;
+    border-right: 1px solid #18181B;
+}
+
+.footer-right {
+    margin-top: 50px;
+}
+
+.footer-menu_columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.footer-menu_column:first-child {
+    margin-right: 146px;
+}
+
+.footer-menu_column:last-child {
+    margin-left: 142px;
+}
+
+.footer-menu_column-title {
+    margin-bottom: 8px;
+}
+
+.footer-menu_column-title h6 {
+    font-family: "Gordita";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170%;
+    color: #18181B;
+}
+
+.footer-menu_item {
+    font-family: "Gordita";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    color: #18181B;
+    margin-bottom: 8px;
+}
+
+.footer-menu_item a {
+    font-family: "Gordita";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    color: #18181B;
+}
+
+.about-vr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 1280px;
+    min-height: 554px;
+    margin: 0 320px;
+}
+
+.about-vr_left {
+    width: 516px;
+    margin: 90px 30px 0 0;
+}
+
+.about-vr_left h6 {
+    font-family: "Gordita";
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 500;
+    color: #60606C;
+    line-height: 170%;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.about-vr_left h1 {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 65px;
+    line-height: 93px;
+    color: #18181B;
+}
+
+.about-vr_middle {
+    width: 406px;
+    height: 554px;
+    position: relative;
+}
+
+.about-vr_middle img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 20;
+}
+
+.about-vr_middle span {
+    display: block;
+    position: absolute;
+    width: 641.77px;
+    height: 444.06px;
+    top: 200px;
+    right: -30px;
+    z-index: 5;
+    background: linear-gradient(240.46deg, #FFAB90 -0.47%, rgba(94, 102, 250, 0.1) 93.28%);
+    opacity: 0.5;
+    -webkit-filter: blur(180px);
+    filter: blur(180px);
+    border-radius: 20px;
+    -webkit-transform: rotate(28deg);
+    transform: rotate(28deg);
+}
+
+.about-vr_right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    width: 298px;
+    margin-left: 31px;
+}
+
+.about-vr_right h5 {
+    font-family: "Gordita";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 170%;
+    color: #6876CA;
+    margin-bottom: 24px;
+}
+
+.about-vr_right p {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #60606C;
+    line-height: 170%;
+}
+
+.mission {
+    width: 843px;
+    margin: 250px 320px 0 320px;
+}
+
+.mission h6 {
+    font-family: "Gordita";
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 500;
+    color: #60606C;
+    line-height: 170%;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.mission p {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    color: #18181B;
+    line-height: 170%;
+}
+
+.values {
+    width: 1280px;
+    margin: 250px 320px 200px 320px;
+}
+
+.values h6 {
+    font-family: "Gordita";
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 500;
+    color: #60606C;
+    line-height: 170%;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.values h2 {
+    font-family: "Gordita";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170%;
+    color: #18181B;
+    width: 656px;
+    margin-bottom: 20px;
+}
+
+.values p {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #60606C;
+    line-height: 170%;
+    width: 534px;
+}
+
+.values-block1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 1280px;
+    margin-top: 100px;
+    min-height: 416px;
+}
+
+.values-block1_left {
+    position: relative;
+    width: 640px;
+}
+
+.values-block1_left img {
+    display: block;
+    width: 625px;
+    height: 416px;
+    position: relative;
+    bottom: 24px;
+    right: 0;
+    z-index: 10;
+}
+
+.values-block1_left span {
+    display: block;
+    width: 836px;
+    height: 416px;
+    background: #ECEEF8;
+    position: absolute;
+    top: 0;
+    right: 125px;
+    z-index: 5;
+}
+
+.values-block1_right {
+    width: 640px;
+}
+
+.values-block1_right h3 {
+    font-family: "Gordita";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170%;
+    color: #18181B;
+    margin: 0 0 20px 124px;
+}
+
+.values-block1_right p {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #60606C;
+    line-height: 170%;
+    width: 328px;
+    margin-left: 124px;
+}
+
+.values-block2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 1280px;
+    margin-top: 150px;
+    min-height: 416px;
+}
+
+.values-block2_left {
+    width: 640px;
+}
+
+.values-block2_left h3 {
+    font-family: "Gordita";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170%;
+    color: #18181B;
+    margin-bottom: 20px;
+    width: 407px;
+}
+
+.values-block2_left p {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #60606C;
+    line-height: 170%;
+    width: 328px;
+}
+
+.values-block2_right {
+    position: relative;
+    width: 640px;
+}
+
+.values-block2_right img {
+    display: block;
+    width: 625px;
+    height: 416px;
+    position: relative;
+    bottom: 24px;
+    left: 0;
+    z-index: 10;
+}
+
+.values-block2_right span {
+    display: block;
+    width: 836px;
+    height: 416px;
+    background: #ECEEF8;
+    position: absolute;
+    top: 0;
+    left: 120px;
+    z-index: 5;
+}
+
+.why-top {
+    width: inherit;
+    height: 900px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    background-color: #FFFFFF;
+}
+
+.why-top img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.why-top_container {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.why-top_container h1 {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 65px;
+    line-height: 93px;
+    color: #18181B;
+    width: 920px;
+    margin: 0 0 40px 320px;
+    padding-top: 100px;
+}
+
+.why-top_container p {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    color: #6876CA;
+    line-height: 170%;
+    width: 951px;
+    margin: 0 0 40px 320px;
+}
+
+.why-top_container a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+    width: 122px;
+    height: 48px;
+    background: #3F51B5;
+    margin: 0 0 40px 320px;
+}
+
+.why-top_container a:hover {
+    background: #6876CA;
+}
+
+.benefits {
+    margin-left: 578px;
+    padding: 150px 0;
+    border-left: 1px solid #D9DDF2;
+}
+
+.benefit-container {
+    width: 655px;
+    margin-bottom: 194px;
+    margin-left: 150px;
+}
+
+.benefit-container:last-child {
+    margin-bottom: 0;
+}
+
+.benefit-container h2 {
+    font-family: "Gordita";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170%;
+    color: #18181B;
+    margin-bottom: 20px;
+    width: 655px;
+    position: relative;
+}
+
+.benefit-container h2::before {
+    content: ".";
+    display: block;
+    width: 12px;
+    height: 12px;
+    color: #6876CA;
+    position: absolute;
+    top: -10px;
+    left: -157px;
+}
+
+.benefit-container h2::after {
+    content: "";
+    display: block;
+    width: 58px;
+    height: 58px;
+    position: absolute;
+    top: 15px;
+    left: -179px;
+    border: 1px solid #3F51B5;
+    border-radius: 50%;
+}
+
+.benefit-container p {
+    width: 516px;
+}
+
+.benefit-description {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #60606C;
+    line-height: 170%;
+    color: #18181B;
+    margin-bottom: 20px;
+}
+
+.benefit-explanation {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #60606C;
+    line-height: 170%;
+    font-weight: 500;
+}
+
+.benefit-explanation a {
+    color: #6876CA;
+}
+
+.contact-top {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1920px;
+    height: 858px;
+    position: relative;
+    overflow: hidden;
+    background-color: #FFFFFF;
+}
+
+.contact-top img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contact-top_container {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 858px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 126px 320px;
+}
+
+.contact-top_content {
+    width: 485px;
+    height: 606px;
+    margin-right: 170px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.contact-top_content h1 {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 65px;
+    line-height: 93px;
+    color: #18181B;
+    margin-bottom: 24px;
+}
+
+.contact-top_content p {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #60606C;
+    line-height: 170%;
+}
+
+.contact-top_form {
+    width: 625px;
+    height: 606px;
+    background: #FFFFFF;
+    border: 1px solid #D9DDF2;
+    border-radius: 8px;
+}
+
+.contact-top_form h4 {
+    font-family: "Gordita";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170%;
+    color: #18181B;
+    margin: 36px 170px 24px;
+}
+
+.contact-top_form p {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FF5353;
+    line-height: 170%;
+    margin: 16px 48px 32px 48px;
+}
+
+.contact-top_form p:last-child {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #60606C;
+    line-height: 170%;
+    font-size: 12px;
+    text-align: center;
+}
+
+.contact-form button {
+    width: 529px;
+    height: 44px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 170%;
+    background-color: #3F51B5;
+    margin: 0 48px 32px 48px;
+}
+
+.contact-form button:hover {
+    background-color: #6876CA;
+}
+
+.user-name {
+    position: relative;
+}
+
+.user-name input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 529px;
+    height: 48px;
+    border: 1px solid #D9DDF2;
+    gap: 4px;
+    padding: 0 16px;
+    margin: 0 48px 20px;
+    font-family: "Gordita";
+    font-style: normal;
+    font-size: 14px;
+    color: #60606C;
+    line-height: 100%;
+}
+
+.user-name span {
+    position: absolute;
+    top: 21px;
+    right: 64px;
+    font-size: 14px;
+    color: #60606C;
+    line-height: 100%;
+}
+
+.user-company {
+    position: relative;
+}
+
+.user-company input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 529px;
+    height: 48px;
+    border: 1px solid #D9DDF2;
+    gap: 4px;
+    padding: 0 16px;
+    margin: 0 48px 20px;
+    font-family: "Gordita";
+    font-style: normal;
+    font-size: 14px;
+    color: #60606C;
+    line-height: 100%;
+}
+
+.user-company span {
+    position: absolute;
+    top: 21px;
+    right: 64px;
+    font-size: 14px;
+    color: #60606C;
+    line-height: 100%;
+}
+
+.user-email {
+    position: relative;
+}
+
+.user-email input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 529px;
+    height: 48px;
+    border: 1px solid #D9DDF2;
+    gap: 4px;
+    padding: 0 16px;
+    margin: 0 48px 20px;
+    font-family: "Gordita";
+    font-style: normal;
+    font-size: 14px;
+    color: #60606C;
+    line-height: 100%;
+}
+
+.user-email span {
+    position: absolute;
+    top: 21px;
+    right: 64px;
+    font-size: 14px;
+    color: #60606C;
+    line-height: 100%;
+}
+
+.user-phone {
+    position: relative;
+}
+
+.user-phone input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 529px;
+    height: 48px;
+    border: 1px solid #D9DDF2;
+    gap: 4px;
+    padding: 0 16px;
+    margin: 0 48px 20px;
+    font-family: "Gordita";
+    font-style: normal;
+    font-size: 14px;
+    color: #60606C;
+    line-height: 100%;
+}
+
+.user-phone span {
+    position: absolute;
+    top: 21px;
+    right: 64px;
+    font-size: 14px;
+    color: #60606C;
+    line-height: 100%;
+}
+
+.message textarea {
+    width: 529px;
+    height: 104px;
+    border: 1px solid #D9DDF2;
+    padding: 16px 0 0 16px;
+    margin: 0 48px;
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #60606C;
+    line-height: 170%;
+}
+
+.contact-block {
+    max-width: 1920px;
+    height: 280px;
+    background-color: #6876CA;
+}
+
+.contact-block_items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 320px 93px;
+    padding-top: 93px;
+}
+
+.contact-block_item {
+    width: 296px;
+    margin-right: 141px;
+}
+
+.contact-block_item:last-child {
+    margin-right: 0;
+}
+
+.contact-block_item span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.contact-block_item h5 {
+    font-family: "Gordita";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 170%;
+    color: #18181B;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.contact-block_item p {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #60606C;
+    line-height: 170%;
+    color: #FFFFFF;
+}
+
+.header-page.ta-header {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #D9DDF2;
+}
+
+.ta-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 320px;
+    height: 135px;
+}
+
+.ta-top_left {
+    margin: 24px 0 31px;
+}
+
+.ta-top_left h3 {
+    font-family: "Gordita";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170%;
+    color: #18181B;
+    margin-bottom: 8px;
+}
+
+.ta-top_left p {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #60606C;
+    line-height: 170%;
+}
+
+.ta-top_right {
+    margin: 41px 0;
+}
+
+.ta-top_buttons {
+    width: 406px;
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    width: 406px;
+    height: 60px;
+    background-color: rgb(236, 238, 248);
+    border-radius: 8px;
+}
+
+.text_button,
+.web_button {
+    width: 197px;
+    height: 52px;
+    background-color: rgb(236, 238, 248);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #6876CA;
+    text-decoration: none;
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #18181B;
+}
+
+.text_button {
+    margin: 0 43px 0 6px;
+}
+
+.web_button {
+    margin-right: 6px;
+}
+
+.active_button {
+    width: 197px;
+    height: 52px;
+    background-color: #FFFFFF;
+}
+
+.ta-window {
+    width: 1280px;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+.ta-window-btn {
+    padding-bottom: 24px;
+    margin: 24px 24px 0;
+}
+
+.ta-window-btn button {
+    width: 1232px;
+    height: 44px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #3F51B5;
+}
+
+.ta-window button:hover {
+    background-color: #6876CA;
+}
+
+.ta-window_top {
+    width: inherit;
+    height: 90px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: rgba(236, 238, 248, 0.5);
+}
+
+.ta-window_top h5 {
+    font-family: "Gordita";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 170%;
+    color: #18181B;
+    margin-left: 24px;
+}
+
+#open-arrow,
+#open-arrow2,
+#arrow1,
+#arrow2 {
+    display: block;
+    width: 20px;
+    height: 15px;
+    margin-right: 37.51px;
+}
+
+.ta-window_top img {
+    display: block;
+    width: 16.97px;
+    height: 9.9px;
+}
+
+.transform_arrow {
+    transform: rotate(180deg);
+    transition: all 0.2s ease;
+}
+
+.ta-window_bottom {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.55s opacity, 0.55s visibility;
+    background-color: rgba(236, 238, 248, 0.5);
+}
+
+.close-input {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.ta-window_results {
+    width: auto;
+    height: 0;
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.55s opacity, 0.55s visibility;
+    background-color: rgba(236, 238, 248, 0.5);
+}
+
+.open-input {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+}
+
+.ta-window_drag-drop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 1232px;
+    height: 134px;
+    border: 1px dashed #B3BBE5;
+    border-radius: 8px;
+    margin: 0 24px 16px;
+}
+
+.ta-window_drag-drop span {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 170%;
+    color: #18181B;
+}
+
+.ta-window_paste-text {
+    width: 1232px;
+    height: 475px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    margin: 0 24px;
+}
+
+.ta-window_paste-text p {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #60606C;
+    line-height: 170%;
+    margin: 16px;
+}
+
+.ta-window_paste-text textarea {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 170%;
+    color: #60606C;
+    padding: 15px;
+}
+
+.ta_file-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#upload-container label {
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #6876CA;
+    text-decoration: none;
+    font-weight: 400;
+    margin: 0 3px;
+}
+
+#upload-container label:hover {
+    cursor: pointer;
+}
+
+#upload-container div {
+    position: relative;
+    z-index: 10;
+}
+
+#upload-container input[type=file] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    position: absolute;
+    z-index: -10;
+}
+
+.ta-footer {
+    width: 1280px;
+    height: 85px;
+    margin: 0 320px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.ta_footer-left {
+    font-family: "Gordita";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    color: #18181B;
+}
+
+.ta_footer-right a {
+    font-family: "Gordita";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    color: #18181B;
+}
+
+.ta_footer-right a:first-child {
+    padding-right: 8px;
+    margin-right: 8px;
+    border-right: 1px solid #18181B;
+}
+
+.ta_green-cirle {
+    width: inherit;
+    height: 475px;
+    margin-bottom: 84px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: rgba(236, 238, 248, 0.5);
+}
+
+.green-cirle {
+    width: 98px;
+    height: 98px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid #76EAC0;
+}
+
+.green-cirle img {
+    display: block;
+    width: 25.04px;
+    height: 19.03px;
+}
+
+.ta-window2 {
+    width: 1280px;
+    height: auto;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+}
+
+.ta-window2_top {
+    width: inherit;
+    height: 90px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: rgba(236, 238, 248, 0.5);
+    border-radius: 8px;
+}
+
+.ta-window2_top h5 {
+    font-family: "Gordita";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 170%;
+    color: #18181B;
+    margin-left: 24px;
+}
+
+.ta-window2_top img {
+    display: block;
+    width: 16.97px;
+    height: 9.9px;
+    margin-right: 37.51px;
+}
+
+
+/* analyze-rezults window part */
+
+.analyze-rezults {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.ta-window2_toggle-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 24px 0 49px;
+}
+
+.ta-window2_toggle-buttons button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #18181B;
+    width: 197px;
+    height: 44px;
+    margin-right: 4px;
+    background-color: #FFFFFF;
+    border: 1px solid #D9DDF2;
+}
+
+.ta-window2_toggle-buttons button:active {
+    background-color: #3F51B5;
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.transform_arrow {
+    transform: rotate(180deg);
+    transition: all 0.2s ease;
+}
+
+.ta-window2_bottom {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.55s opacity, 0.55s visibility;
+    background-color: rgba(236, 238, 248, 0.5);
+}
+
+.open-input1 {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+}
+
+.ta-window2_classification {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 52px;
+}
+
+.ta-window2_classification h5 {
+    font-family: "Gordita";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 170%;
+    color: #18181B;
+}
+
+.ta-window2_classification p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    min-width: 245px;
+    height: 28px;
+    padding-left: 8px;
+    background-color: rgba(236, 238, 248, 0.5);
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #60606C;
+    line-height: 170%;
+    color: #18181B;
+}
+
+.ta-window2_classification p span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    min-width: 90px;
+    height: 18px;
+    background-color: #FFFFFF;
+    font-size: 10px;
+    margin: 0 9px;
+    padding: 3px;
+}
+
+.ta-window2_summary h5 {
+    font-family: "Gordita";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 170%;
+    color: #18181B;
+    margin-bottom: 8px;
+}
+
+.ta-window2_summary p {
+    min-height: 104px;
+    padding: 16px 0;
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #60606C;
+    line-height: 170%;
+    color: black;
+    border-top: 1px solid #18181B;
+    border-bottom: 1px solid #18181B;
+}
+
+.ta-widow2_schedules-space img {
+    display: block;
+    width: 860px;
+    height: 279px;
+    margin: 80px 110px 142px;
+}
+
+#window2 {
+    display: none;
+}
+
+.wa-window {
+    max-width: 1280px;
+    min-height: 739px;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 320px;
+    position: relative;
+}
+
+.wa-window_results {
+    max-width: 1280px;
+    height: 90px;
+    border-radius: 8px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.wa-window_results_open {
+    height: auto;
+}
+
+.wa-window_top {
+    width: inherit;
+    height: 90px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: rgba(236, 238, 248, 0.5);
+}
+
+.wa-window_top h5 {
+    font-family: "Gordita";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 170%;
+    color: #18181B;
+    margin-left: 24px;
+}
+
+.wa-window_top img {
+    display: block;
+    width: 16.97px;
+    height: 9.9px;
+    margin-right: 37.51px;
+}
+
+.wa-window_bottom {
+    padding-bottom: 24px;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.55s opacity, 0.55s visibility;
+    background-color: rgba(236, 238, 248, 0.5);
+}
+
+.close-input2 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.wa-window_iput-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1232px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    margin: 0 24px;
+}
+
+.wa-window_iput-row input {
+    max-width: 1122px;
+}
+
+.wa-window_iput-row input[type='text'],
+.wa-window_iput-row input::placeholder {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    color: #60606C;
+    margin-left: 16px;
+}
+
+.wa-window_iput-row button {
+    width: 110px;
+    height: 44px;
+    margin: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #3F51B5;
+    margin-right: 8px;
+}
+
+.disable-button {
+    background-color: #6876CA !important;
+    cursor: not-allowed !important;
+}
+
+.override-da-green-cirle {
+    width: inherit;
+    height: 475px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(236, 238, 248, 0.5);
+}
+
+.override-green-cirle {
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+    border: 2px solid #76EAC0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.override-green-cirle img {
+    display: block;
+    width: 25.04px;
+    height: 19.03px;
+}
+
+#chartholder {
+    display: block;
+    justify-content: center;
+}
+
+.align-center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.active-button {
+    background-color: #3F51B5 !important;
+    font-family: "Gordita" !important;
+    font-size: 15px !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+}
+
+.iframe {
+    width: 100%;
+    height: 550px;
+}
+
+.wa-window2_bottom {
+    padding-bottom: 24px;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(236, 238, 248, 0.5);
+}
+
+.open-input2 {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    transition: 0.55s opacity, 0.55s visibility;
+}
+
+
+/* *************************registration of user************* */
+
+.page-wrapper_registration {
+    width: 1920px;
+    height: 1010px;
+    position: relative;
+    overflow: hidden;
+    background-color: #FFFFFF;
+}
+
+.page-wrapper_registration #background-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.registration {
+    margin-bottom: 38px;
+}
+
+.registration-block {
+    position: relative;
+    z-index: 50;
+    width: 625px;
+    height: 877px;
+    background: #FFFFFF;
+    border: 1px solid #D9DDF2;
+    border-radius: 8px;
+    margin: 30px auto 38px auto;
+}
+
+.registration-block a {
+    color: #3F51B5;
+    text-decoration: none;
+}
+
+.registration-block_top {
+    text-align: center;
+    margin: 36px 199px 24px;
+}
+
+.registration-block_top h4 {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 170%;
+    text-align: center;
+    color: #18181B;
+    margin-bottom: 16px;
+}
+
+.registration-block_top p {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 180%;
+    text-align: center;
+    color: #93939F;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    /* gap: 24px; */
+    width: inherit;
+    height: 711px;
+}
+
+.registration_user-name,
+.registration_user-email,
+.registration_password,
+.registration_confirm-password {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 529px;
+    margin: 0 48px 21px 48px;
+}
+
+.registration_user-phone {
+    display: flex;
+    align-items: center;
+    width: 529px;
+    margin: 0 48px 21px 48px;
+}
+
+.registration_user-name input,
+.registration_user-email input,
+.registration_password input,
+.registration_confirm-password input {
+    width: 529px;
+    height: 48px;
+    padding: 0 16px;
+    border: 1px solid #D9DDF2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.registration_user-phone input {
+    width: 529px;
+    height: 48px;
+    border: 1px solid #D9DDF2;
+    padding: 0 16px;
+}
+
+.registration_user-name span,
+.registration_user-email span {
+    position: absolute;
+    right: 24px;
+    color: #60606C;
+}
+
+.registration_password span,
+.registration_confirm-password span {
+    position: absolute;
+    right: 16px;
+}
+
+.registration_password img,
+.registration_confirm-password img {
+    width: 24px;
+    height: 24px;
+}
+
+.registration-form input::placeholder {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #60606C;
+}
+
+.registration-plan {
+    display: flex;
+    flex-direction: column;
+    margin: 0 48px;
+}
+
+h6.registration-plan_title {
+    font-family: 'Gordita';
+    font-style: bold;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 180%;
+    text-align: left;
+    color: #18181B;
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+.registration-plan_conteiner {
+    display: flex;
+}
+
+.registration-plan_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 171px;
+    height: 182px;
+    border: 1px solid #E4E4E7;
+    margin-right: 8px;
+}
+
+.registration-plan_column:last-child {
+    margin-right: 0;
+}
+
+.registration-plan_column-container {
+    width: 139px;
+    height: 148px;
+    margin: 17px 16px;
+}
+
+.registration-plan_status {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 180%;
+    margin-bottom: 4px;
+}
+
+#bronze {
+    color: #A07E3A;
+}
+
+#silver {
+    color: #93939F;
+}
+
+#gold {
+    color: #DFB522;
+}
+
+.registration-plan_price {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 170%;
+    color: #18181B;
+    margin-bottom: 16px;
+}
+
+.registration-plan_description ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.registration-plan_description li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 170%;
+    color: #93939F;
+}
+
+.registration-plan_description img {
+    width: 9.5px;
+    height: 6.75px;
+    margin-right: 8.12px;
+}
+
+.registration-form_check {
+    display: flex;
+    width: 529px;
+    margin: 31px 48px;
+}
+
+.custom-checkbox {}
+
+.registration-form_check label {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #60606C;
+}
+
+.registration-form button {
+    width: 529px;
+    height: 44px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 170%;
+    background-color: #3F51B5;
+    margin: 0 48px 16px 48px;
+}
+
+.registration-form button:hover {
+    background-color: #6876CA;
+}
+
+.registration-form_paragraph {
+    display: flex;
+    justify-content: center;
+    width: 529px;
+    margin: 0 48px;
+}
+
+.registration-form_paragraph p {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 170%;
+    text-align: center;
+    color: #60606C;
+}
+
+.registration-footer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 40;
+}
+
+.registration-footer_conteiner {
+    width: 624px;
+    padding-top: 20px;
+    margin: 0 auto;
+    border-top: 1px solid #D9DDF2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.registration-footer_left p {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 170%;
+    color: #18181B;
+}
+
+.registration-footer_right {
+    display: flex;
+    align-items: center;
+}
+
+.registration-footer_right span {
+    display: block;
+    height: 13px;
+    width: 1px;
+    background: #18181B;
+    margin: 0 4px;
+}
+
+.registration-footer_right a {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 170%;
+    color: #18181B;
+    text-decoration: none;
+}
+
+
+/* sign-in form */
+
+.signin {
+    margin-bottom: 38px;
+}
+
+.signin-block {
+    position: relative;
+    /* left: 0;
+top: 0; */
+    z-index: 50;
+    width: 625px;
+    height: 455px;
+    background: #FFFFFF;
+    border: 1px solid #D9DDF2;
+    border-radius: 8px;
+    margin: 30px auto 38px auto;
+}
+
+.signin-block_top {
+    text-align: center;
+    margin: 36px 199px 24px;
+}
+
+.signin-block_top h4 {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 170%;
+    text-align: center;
+    color: #18181B;
+    margin-bottom: 16px;
+}
+
+.signin-block_top p {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 180%;
+    text-align: center;
+    color: #93939F;
+}
+
+.signin-block_top a {
+    color: #3F51B5;
+}
+
+.signin-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    /* gap: 24px; */
+    width: inherit;
+    height: 711px;
+}
+
+.signin_user-email,
+.signin_password {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 529px;
+    height: 48px;
+    margin: 0 48px 21px 48px;
+}
+
+.signin_user-email input,
+.signin_password input {
+    width: 529px;
+    height: 48px;
+    padding: 0 16px;
+    border: 1px solid #D9DDF2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.signin_password img {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 12px;
+    right: 16px;
+}
+
+.signin_form input::placeholder {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #60606C;
+}
+
+.signin-form_remember-pass {
+    margin: 0 48px;
+}
+
+.signin-form_remember-pass p {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 180%;
+    text-align: center;
+    color: #3F51B5;
+}
+
+.signin-form_check {
+    display: flex;
+    width: 529px;
+    margin: 31px 48px;
+}
+
+.custom-checkbox {
+    width: 17px;
+    height: 17px;
+    border: 1px solid #E4E4E7;
+    margin-right: 12px;
+}
+
+.signin-form_check label {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #60606C;
+}
+
+.signin-form button {
+    width: 529px;
+    height: 44px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 170%;
+    background-color: #3F51B5;
+    margin: 0 48px 16px 48px;
+}
+
+.signin-form button:hover {
+    background-color: #6876CA;
+}
+
+.success-page {
+    margin-bottom: 549px;
+}
+
+.success-page_block {
+    width: 625px;
+    height: 366px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 50;
+    background: #FFFFFF;
+    border: 1px solid #D9DDF2;
+    border-radius: 8px;
+    margin: 30px auto 38px auto;
+}
+
+.success-page_block img {
+    width: 120px;
+    height: 120px;
+    margin: 36px 0 24px
+}
+
+.success-page_block h4 {
+    width: 362px;
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 170%;
+    text-align: center;
+    color: #18181B;
+    margin-bottom: 24px;
+}
+
+.success-page_block button {
+    width: 529px;
+    height: 44px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    font-family: "Gordita";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 170%;
+    background-color: #3F51B5;
+    margin: 0 48px 16px 48px;
+}
+
+.success-page_block button:hover {
+    background-color: #6876CA;
+}
+
+
+/*********** account info ************/
+
+.header-page_account {
+    width: inherit;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-account_logo {
+    width: 124px;
+    height: 30px;
+    margin: 0 1125px 0 321px;
+}
+
+.header-account_logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page-content {
+    position: relative;
+    width: inherit;
+    height: 1020px;
+    background-color: #ECEEF8;
+}
+
+.header-account_exit {
+    width: 24px;
+    height: 24px;
+}
+
+.header-account_exit img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.line_bg1 {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 40;
+    width: inherit;
+    height: 140px;
+    background: #6876CA;
+}
+
+.account {
+    position: absolute;
+    top: 41px;
+    left: 320px;
+    z-index: 50;
+    display: flex;
+}
+
+.account-user {
+    width: 407px;
+    height: 231px;
+    background: #FFFFFF;
+    border: 1px solid #D9DDF2;
+    border-radius: 8px;
+    margin-right: 30px;
+}
+
+.account-user_top {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 24px 16px 24px;
+}
+
+.account-user-name {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 170%;
+    color: #18181B;
+}
+
+.account-user_status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 99px;
+    height: 32px;
+    background: #DFB522;
+    border-radius: 16px;
+}
+
+.account-user_status span {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 180%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.account-user_email,
+.account-user_phone {
+    height: 25px;
+    margin: 0 0 8px 24px;
+    display: flex;
+    align-items: center;
+}
+
+.account-user_phone {
+    margin-bottom: 24px;
+}
+
+.account-user_email img {
+    width: 16.67px;
+    height: 13.33px;
+    margin-right: 9.67px;
+}
+
+.account-user_phone span,
+.account-user_email span {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 170%;
+    text-align: center;
+    color: #93939F;
+}
+
+.account-user_phone img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10.5px;
+}
+
+.account-user_buttons {
+    display: flex;
+    margin: 0 24px 24px 24px;
+}
+
+.acc-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border: 1px solid #ECEEF8;
+    border-radius: 6px;
+}
+
+.acc-btn a {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #18181B;
+}
+
+.account_edit {
+    width: 138px;
+    height: 44px;
+    margin-right: 12px;
+}
+
+.account_chnage-pass {
+    width: 190px;
+    height: 44px;
+}
+
+.account-info {
+    width: 843px;
+    height: 642px;
+    background: #FFFFFF;
+    border: 1px solid #D9DDF2;
+    border-radius: 8px;
+}
+
+.account-info_toggle {
+    width: inherit;
+    height: 67px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.membership-btn,
+.payment-btn {
+    width: 162px;
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 180%;
+    text-align: center;
+    color: #18181B;
+    background: #FFFFFF;
+}
+
+.toggle_active-btn {
+    color: #3F51B5;
+}
+
+.grey-border {
+    width: inherit;
+    height: 1px;
+    background: #D9D9D9;
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.blue-bord1,
+.blue-bord2 {
+    width: 162px;
+    height: 2px;
+    background: #3F51B5;
+}
+
+.blue-bord2 {
+    display: none;
+}
+
+.account-membership {
+    width: inherit;
+    height: 574px;
+}
+
+.account-membership_top {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 36px 16px 36px;
+}
+
+.account-membership_top h4 {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 170%;
+    color: #18181B;
+}
+
+.account-membership_top-btns {
+    display: flex;
+}
+
+.payment_reactivate-btn {
+    width: 159px;
+    height: 43px;
+    color: #76EAC0;
+    border: 1px solid #76EAC0;
+    border-radius: 6px;
+    margin-right: 8px;
+}
+
+.payment_reactivate-btn img {
+    width: 14.73px;
+    height: 11.19px;
+    margin-right: 10px;
+}
+
+.payment_change-plan {
+    width: 173px;
+    height: 43px;
+}
+
+.payment_change-plan img {
+    width: 11.1px;
+    height: 12.55px;
+    margin-right: 11.9px;
+}
+
+.acount_actual-status {
+    margin: 0 0 24px 36px;
+}
+
+.acount_actual-status span {
+    width: 100px;
+    display: block;
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 170%;
+    color: #93939F;
+}
+
+.account-status {
+    display: flex;
+    margin-bottom: 17px;
+}
+
+.account-status_mark {
+    width: 78px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 12px;
+    gap: 10px;
+    width: 78px;
+    height: 26px;
+    background: #FFDD67;
+    border-radius: 20px;
+}
+
+.account-status_mark span {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 170%;
+    color: #38383F;
+}
+
+.account_plan-type,
+.account-expiration {
+    display: flex;
+    margin-bottom: 17px;
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 170%;
+    color: #38383F;
+}
+
+.account-payment_history {}
+
+.payment-titles {}
+
+.payment-invoice {}
+
+.payment_plan-type {}
+
+.payment-method {}
+
+.payment-amount {}
+
+.payment-date {}
+
+.payment_invoice-load {}
+
+.payment-info {}
+
+.payment-pagination {}
+
+.all-pages {}
+
+.page-number {}
+
+.account-payment {}
+
+.payment-method_info {}
+
+.payment-method_info-left {}
+
+.payment-method_info-button {}

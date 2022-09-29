@@ -10,9 +10,10 @@ openArrow1.onclick = function() {
 };
 let openArrow2 = document.getElementById('arrow2');
 let hiddenInput2 = document.getElementById('hidden-input2');
+let window2 = document.getElementById("window2");
 
 openArrow2.onclick = function() {
     openArrow2.classList.toggle('transform_arrow');
     hiddenInput2.classList.toggle('open-input2');
-    document.getElementById("window2").style.height = 'auto';
+    window2.classList.toggle('wa-window_results_open');
 };
