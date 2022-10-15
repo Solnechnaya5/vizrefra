@@ -15,6 +15,12 @@
     <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
 
     <!-- Create a div where the graph will take place -->
+    <style>
+        #my_dataviz {
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
 </head>
 
 <body onload="worldCloud()">
@@ -26,9 +32,11 @@
 <script>
     function worldCloud() {
         const myWords = JSON.parse(localStorage.getItem('raw')).entities;
+        const element = document.getElementById('my_dataviz')
+        const size = element.getBoundingClientRect()
         const fontScale = 250 //font size
-        const userWidth = 1000,
-            userHeight = 700; // User-defined width and height
+        const userWidth = 1000 //size.width,
+            userHeight = 500 //size.height; // User-defined width and height
         const fontPadding = 3; // Padding between words
         const rotateMin = 0,
             rotateMax = 0; // Rotation range

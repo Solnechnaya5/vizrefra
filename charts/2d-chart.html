@@ -36,10 +36,49 @@
         width: auto;
         border-radius: 10px;
       }
+      .position-relative {
+        position: relative;
+      }
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btn svg {
+        width: 20px;
+        height: 20px;
+      }
+      .bth-position {
+        display: flex;
+      }
+      .bth-position > * {
+        margin-left: 7px;
+      }
     </style>
   </head>
   <body onload="loadChart()">
-    <div id="mychart" style="display: flex; justify-content: center;"></div>
+    <div class="position-relative" style="display: flex; justify-content: center; flex-direction: column; align-items: center">
+      <div class="bth-position">
+        <button class="btn" title="zoom in" id="zoomIN">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+          </svg>
+        </button>
+        <button class="btn" title="zoom out" id="zoonOut">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+          </svg>
+        </button>
+        <button class="btn" title="open chart" onclick="openChart()">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path d="M10 12.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" />
+            <path fill-rule="evenodd" d="M.664 10.59a1.651 1.651 0 010-1.186A10.004 10.004 0 0110 3c4.257 0 7.893 2.66 9.336 6.41.147.381.146.804 0 1.186A10.004 10.004 0 0110 17c-4.257 0-7.893-2.66-9.336-6.41zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
+      <div id="mychart" style="display: flex; justify-content: center;"></div>
+    </div>
+
     <script>
       function loadChart() {
         const data = JSON.parse(localStorage.getItem('refine')).entities;
@@ -114,13 +153,29 @@
 
         const yAxis = d3.axisLeft(yScale).tickSize(-width);
 
+        const svgZoom = d3.zoom().scaleExtent([0.5, 1.1]).on("zoom", () => {
+          d3.select('.graph')
+            .attr('transform', d3.event.transform)
+        })
+
         const svg = d3
           .select("#mychart")
           .append("svg")
           .attr("width", width + margin.left + margin.right)
           .attr("height", height + margin.top + margin.bottom)
           .append("g")
+          .classed('graph', true)
+          .call(svgZoom)
+          .append("g")
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        d3.select('#zoomIN').on('click', () => {
+          svgZoom.scaleBy(svg.transition().duration(750), 1.2);
+        })
+
+        d3.select('#zoonOut').on('click', () => {
+          svgZoom.scaleBy(svg.transition().duration(750), 0.8);
+        })
 
         // Add a background rect for mousemove.
         svg
@@ -186,6 +241,10 @@
             .attr("cy", (d) => yScale(y(d)))
             .attr("r", (d) => radiusScale(radius(d)));
         }
+      }
+
+      function openChart() {
+        window.open(window.location, '_blank');
       }
     </script>
 
