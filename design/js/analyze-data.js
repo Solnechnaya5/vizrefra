@@ -18,6 +18,7 @@ $(document).ready(() => {
   document.getElementById('#iframe5').setAttribute("src", clientUrl + 'charts/entityRecognition.html');
   document.getElementById('#iframe6').setAttribute("src", clientUrl + 'charts/3d-chart.html');
   document.getElementById('#iframe7').setAttribute("src", clientUrl + 'charts/force-directed.html')
+  document.getElementById("#iframe-popup").setAttribute("src", clientUrl + "charts/worldcloud.html");
 
   document.getElementById("#summary").textContent = JSON.parse(localStorage.getItem("summarize")).summary;
 
@@ -39,6 +40,10 @@ function changeTab(elementId) {
     visibleSection = elementId;
     localStorage.setItem('tabName', visibleSection)
     hideNonVisibleDivs(visibleSection)
+    if(elementId === '#weighted-graph') {
+      // force load weighted graph
+      document.getElementById("#iframe7").contentWindow.loadForChart()
+    }
   }
 }
 
