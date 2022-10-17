@@ -21,7 +21,7 @@
             width: 200px;
             right: 100%;
         }
-        
+
         .chart-tooltip::before {
             content: '';
             display: block;
@@ -34,7 +34,7 @@
             left: -8px;
             top: 7px;
         }
-        
+
         .header-font-position-one {
             position: absolute;
             width: 455px;
@@ -42,7 +42,7 @@
             left: 121px;
             top: 104px;
         }
-        
+
         .header-font-one {
             font-family: 'Lexend';
             font-style: normal;
@@ -52,7 +52,7 @@
             align-items: center;
             color: #000;
         }
-        
+
         .header-font-position-two {
             position: absolute;
             width: 244px;
@@ -60,7 +60,7 @@
             left: 121px;
             top: 263px;
         }
-        
+
         .header-font-two {
             font-family: 'Inter';
             font-style: normal;
@@ -68,32 +68,56 @@
             line-height: 100%;
             color: #000;
         }
-        
-        .position-relative {
-            position: relative;
-        }
-        
+
+
         .svg-position {
             position: absolute;
             left: 87px;
             top: 370px;
         }
+        .position-relative {
+            position: relative;
+        }
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn svg {
+            width: 20px;
+            height: 20px;
+        }
+        .bth-position {
+            display: flex;
+        }
+        .bth-position > * {
+            margin-left: 7px;
+        }
     </style>
     <script src="https://d3js.org/d3.v4.min.js"></script>
 
     <body onload="loadBarChart()">
-        <div class="position-relative" style="display: flex; justify-content: center;">
-            <!-- <div class="header-font-position-one">
-        <p class="header-font-one">Font for Charts</p>
-      </div>
-      <div class="header-font-position-two">
-        <p class="header-font-two">
-          <span>Inter</span>
-          <span style="color: #b4b4bc">Font Family</span>
-        </p>
-      </div> -->
-            <!-- class="svg-position" -->
-            <svg width="1000" height="500"></svg>
+        <div class="position-relative" style="display: flex; justify-content: center; flex-direction: column; align-items: center">
+            <div class="bth-position">
+                <button class="btn" title="zoom in" id="zoomIN">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                        <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                    </svg>
+                </button>
+                <button class="btn" title="zoom out" id="zoonOut">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <button class="btn" title="open chart" onclick="openChart()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                        <path d="M10 12.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" />
+                        <path fill-rule="evenodd" d="M.664 10.59a1.651 1.651 0 010-1.186A10.004 10.004 0 0110 3c4.257 0 7.893 2.66 9.336 6.41.147.381.146.804 0 1.186A10.004 10.004 0 0110 17c-4.257 0-7.893-2.66-9.336-6.41zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+            <div id="graph"></div>
+            <!-- <svg width="1000" height="500"></svg> -->
         </div>
         <script>
             function loadBarChart() {
@@ -106,7 +130,19 @@
                 const width = 1000 - 2 * margin;
                 const height = 500 - 2 * margin;
 
-                const svg = d3.select('svg');
+                const zoom = d3.zoom().scaleExtent([0.5, 1.1]).on("zoom", () => {
+                    d3.select('.graph')
+                        .attr('transform', d3.event.transform)
+                })
+
+                const svg = d3.select('#graph')
+                            .append('svg')
+                            .attr('width', 1000)
+                            .attr('height', 500)
+                            .call(zoom)
+                            .append('g')
+                            .classed('graph', true);
+
                 const chart = svg.append('g')
                     .attr("transform",
                         "translate(" + margin + "," + margin + ")");
@@ -184,6 +220,19 @@
                     .attr("y", (d) => yScale(d.salience))
                     .attr("height", (d) => height - yScale(d.salience))
                     .delay((d, i) => (i * 100))
+
+
+                d3.select('#zoomIN').on('click', () => {
+                    zoom.scaleBy(svg.transition().duration(750), 1.2);
+                })
+
+                d3.select('#zoonOut').on('click', () => {
+                    zoom.scaleBy(svg.transition().duration(750), 0.8);
+                })
+            }
+
+            function openChart() {
+                window.open(window.location, '_blank');
             }
         </script>
     </body>
