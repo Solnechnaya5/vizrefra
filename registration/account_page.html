@@ -30,7 +30,7 @@
             <div class="page-content">
                 <span class="line_bg1"></span>
                 <section class="account">
-                    <div class="account-user">
+                    <!-- <div class="account-user">
                         <div class="account-user_top">
                             <div class="account-user-name">
                                 <h4>John Smith</h4>
@@ -56,17 +56,14 @@
                             </div>
                         </div>
 
-                    </div>
+                    </div> -->
                     <div class="account-info">
                         <div class="account-info_toggle">
-                            <button class="membership-btn toggle_active-btn">Membership</button>
-                            <button class="payment-btn">Payment Method</button>
+                            <button id="membership-btn" class="membership-btn toggle_active-btn">Membership</button>
+                            <button id="payment-btn" class="payment-btn">Payment Method</button>
                         </div>
-                        <span class="grey-border"> 
-                            <span class="blue-bord1"></span>
-                        <span class="blue-bord2"></span>
-                        </span>
-                        <section class="account-membership">
+
+                        <!-- <section class="account-membership" id="membership">
                             <div class="account-membership_top">
                                 <h4>Current</h4>
                                 <div class="account-membership_top-btns">
@@ -81,13 +78,19 @@
                                 </div>
 
                             </div>
-                            <div class="acount_actual-status ">
-                                <div class="account-status "><span>Status</span>
-                                    <div class="account-status_mark-stop"><span>Stopped</span></div>
+                            <div class="account_actual-status">
+                                <div class="account_actual-status_column1 ">
+                                    <div class="account_actual-status_item">Status</div>
+                                    <div class="account_actual-status_item">Plan Type</div>
+                                    <div class="account_actual-status_item">Expiration</div>
                                 </div>
-                                <div class="account_plan-type "><span>Plan Type</span> Gold</div>
-                                <div class="account-expiration "><span>Expiration</span>May 14, 2022</div>
+                                <div class="account_actual-status_column2">
+                                    <div class="account-status_mark-stop account_actual-status_item">Stopped</div>
+                                    <div class="account_actual-status_item ">Gold</div>
+                                    <div class="account_actual-status_item">May 14, 2022</div>
+                                </div>
                             </div>
+
                             <div class="account-payment_history ">
                                 <h4>History</h4>
                                 <section>
@@ -104,9 +107,9 @@
                                         <div class="payment_plan-type ">
                                             <div class="account-status_mark-gold"><span>Gold</span></div>
                                         </div>
-                                        <div class="payment-method ">Credit Card Mastercard *4545</div>
-                                        <div class="payment-amount ">$300.00</div>
-                                        <div class="payment-date ">03/15/2022</div>
+                                        <div class="payment-status">Credit Card Mastercard *4545</div>
+                                        <div class="payment-amount">$300.00</div>
+                                        <div class="payment-date">03/15/2022</div>
                                         <div class="payment_invoice-load "><img src="/design/img/icons/download.png " alt="pic "></div>
                                     </div>
                                     <div class="payment-info ">
@@ -135,57 +138,59 @@
                                     <div class="page-number">1</div>
                                 </div>
                             </div>
-                        </section>
-                        <section class="payment-method_1">
-                            <h4>Payment Method</h4>
-                            <div class="payment-method_info ">
-                                <div class="payment-method_info-left ">
-                                    <p>Credit card</p>
-                                    <p>1414 **** **** 4545</p>
-                                </div>
-                                <div class="payment-method_info-button acc-btn ">
-                                    <a href="# "><img src="/design/img/icons/pencil.png " alt="icon "> Update
-                                    </a>
+                        </section> -->
+                        <section class="payment-method_general" id="payment">
+                            <div class="payment-method_1">
+                                <h4>Payment Method</h4>
+                                <div class="payment-method_info ">
+                                    <div class="payment-method_info-left ">
+                                        <p>Credit card</p>
+                                        <p>1414 **** **** 4545</p>
+                                    </div>
+                                    <div class="payment-method_info-button acc-btn ">
+                                        <a href="# "><img src="/design/img/icons/pencil.png " alt="icon "> Update
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </section>
-                        <section class="payment-method_2">
-                            <h4>Payment Method</h4>
-                            <div class="payment-card">
-                                <h6>Edit Card</h6>
-                                <div class="payment-card_old-info">
-                                    <p>John Smith</p>
-                                    <p>Mastercard **** 4545</p>
-                                    <p>08/22</p>
+                            <div class="payment-method_2">
+                                <h4>Payment Method</h4>
+                                <div class="payment-card">
+                                    <h6>Edit Card</h6>
+                                    <div class="payment-card_old-info">
+                                        <p>John Smith</p>
+                                        <p>Mastercard **** 4545</p>
+                                        <p>08/22</p>
+                                    </div>
+                                    <form class="payment-card_new-info">
+                                        <div class="payment-card_block">
+                                            <div class="payment_card-number">
+                                                <label for="edit-card">Edit Card</label>
+                                                <input type="text" name="Edit Card" id="edit-card" placeholder="---- ---- ---- ----">
+                                            </div>
+                                            <div class="payment_csv">
+                                                <label for="CSV">CSV</label>
+                                                <input type="text" name="CSV" id="cvs" placeholder="---">
+                                            </div>
+                                            <div class="payment_zip">
+                                                <input type="text" name="zip" id="" placeholder="Card ZIP or Postal Code">
+                                            </div>
+                                            <div class="payment_owner-name">
+                                                <input type="text" name="name" id="" placeholder="Name on Card">
+                                            </div>
+                                            <div class="payment_expiration-date">
+                                                <label for="expiration-date">Expiration Date</label>
+                                                <input type="text" name="Expiration Date" id="expiration-date" placeholder="MM/YY">
+                                            </div>
+
+
+                                        </div>
+                                        <div class="payment-card_btns">
+                                            <button class="payment_cancel-btn acc-btn">Cancel</button>
+                                            <button class="payment_save-btn">Save</button>
+                                        </div>
+                                    </form>
                                 </div>
-                                <form class="payment-card_new-info">
-                                    <div class="payment-card_block">
-                                        <div class="payment_card-number">
-                                            <label for="edit-card">Edit Card</label>
-                                            <input type="text" name="Edit Card" id="edit-card" placeholder="---- ---- ---- ----">
-                                        </div>
-                                        <div class="payment_csv">
-                                            <label for="CSV">CSV</label>
-                                            <input type="text" name="CSV" id="cvs" placeholder="---">
-                                        </div>
-                                        <div class="payment_zip">
-                                            <input type="text" name="zip" id="" placeholder="Card ZIP or Postal Code">
-                                        </div>
-                                        <div class="payment_owner-name">
-                                            <input type="text" name="name" id="" placeholder="Name on Card">
-                                        </div>
-                                        <div class="payment_expiration-date">
-                                            <label for="expiration-date">Expiration Date</label>
-                                            <input type="text" name="Expiration Date" id="expiration-date" placeholder="MM/YY">
-                                        </div>
-
-
-                                    </div>
-                                    <div class="payment-card_btns">
-                                        <button class="payment_cancel-btn acc-btn">Cancel</button>
-                                        <button class="payment_save-btn">Save</button>
-                                    </div>
-                                </form>
                             </div>
                         </section>
                     </div>
@@ -208,7 +213,7 @@
     </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js "></script>
-    <script src="./design/js/burger-menu.js "></script>
+    <script src="../design/js/toggle_membership.js"></script>
 </body>
 
 </html>
