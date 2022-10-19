@@ -2412,7 +2412,7 @@ body.fixed-page {
 .ta-window_bottom {
     opacity: 1;
     visibility: visible;
-    transition: 0.55s opacity, 0.55s visibility;
+    transition: 0.55s opacity, 0.55s;
     background-color: rgba(236, 238, 248, 0.5);
 }
 

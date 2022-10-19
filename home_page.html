@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./design/fonts/fonts.css">
     <link rel="stylesheet" href="./design/css/style-media.css">
     <link rel="stylesheet" href="./design/css/media-calc.css">
+    <link rel="stylesheet" href="./design/css/simple-adaptive-slider.css">
     <title>Home page deo58</title>
 
 </head>
@@ -74,8 +75,26 @@
                     </div>
                 </div>
                 <div class="page-top_right">
-                    <div class="page-top_slider">
-                        <img src="/design/img/main-screen.png" alt="slider">
+                    <div class="slider">
+                        <div class="slider__wrapper">
+                            <div class="slider__items">
+                                <div class="slider__item">
+                                    <div class="slider_img">
+                                        <img src="./design/img/slider/main_screen.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="slider__item">
+                                    <div class="slider_img">
+                                        <img src="./design/img/slider/slider2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="slider__item">
+                                    <div class="slider_img">
+                                        <img src="./design/img/slider/slider3.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -451,6 +470,17 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="./design/js/burger-menu.js"></script>
+    <script src="./design/js/simple-adaptive-slider.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var slider = new SimpleAdaptiveSlider('.slider', {
+                autoplay: true,
+                interval: 6000,
+                swipe: true,
+                loop: true,
+            });
+        });
+    </script>
 </body>
 
 </html>
