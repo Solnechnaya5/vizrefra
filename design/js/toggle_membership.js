@@ -27,3 +27,15 @@ buttonPayment.onclick = function() {
 
     }
 };
+// show payment form for edition
+let openCardButton = document.getElementById('open-card');
+let closeCardButton = document.getElementById('close-card');
+
+openCardButton.onclick = function() {
+    document.getElementById('card1').style.display = 'none';
+    document.getElementById('card2').style.display = 'block';
+}
+closeCardButton.onclick = function() {
+    document.getElementById('card2').style.display = 'none';
+    document.getElementById('card1').style.display = 'block';
+}

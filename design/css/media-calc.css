@@ -280,9 +280,6 @@
         .page-top .page-top_left {
             margin-right: calc(15px + (50 - 15)*((100vw - 320px) / (1520 - 320)));
         }
-        .page-top_slider img {
-            margin-top: 28.87px;
-        }
         .tarif-top span {
             width: 924px;
             margin-left: calc(15px + (460 - 15)*((100vw - 320px) / (1920 - 320)));
@@ -313,14 +310,6 @@
     }
     
     @media only screen and (max-width: 1320px) {
-        .page-top .page-top_right {
-            width: calc(500px + (712 - 500)*((100vw - 320px) / (1320 - 320)));
-            height: 623px;
-        }
-        .page-top .page-top_right .page-top_slider {
-            width: calc(500px + (712 - 500)*((100vw - 320px) / (1320 - 320)));
-            height: 623px;
-        }
         /* .tarif-plans {
          min-height: 1000px;
      }
@@ -350,25 +339,22 @@
     @media only screen and (max-width: 1152px) {
         .page-top {
             flex-direction: column;
-            margin-left: calc(15px + (400 - 15)*((100vw - 320px) / (1920 - 320)));
-            height: calc(558px + (1246 - 558)*((100vw - 320px) / (1152 - 320)));
+            margin-left: calc(1px + (400 - 1)*((100vw - 320px) / (1920 - 320)));
+            height: calc(700px + (1000 - 700)*((100vw - 320px) / (1152 - 320)));
         }
         .page-top .page-top_left {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-right: 0;
             width: calc(309px + (712 - 309)*((100vw - 320px) / (1152 - 320)));
             height: 350px;
+            margin-right: 0;
+            margin-bottom: 40px;
         }
-        .page-top .page-top_right {
-            width: calc(309px + (712 - 309)*((100vw - 320px) / (1152 - 320)));
-            height: calc(259px + (623 - 259)*((100vw - 320px) / (1152 - 320)));
-        }
-        .page-top .page-top_right .page-top_slider {
-            width: calc(309px + (712 - 309)*((100vw - 320px) / (1152 - 320)));
-            height: calc(259px + (623 - 259)*((100vw - 320px) / (1152 - 320)));
+        .page-top_right {
+            width: calc(320px + (753 - 320)*((100vw - 320px) / (1152 - 320)));
+            /* height: calc(259px + (623 - 259)*((100vw - 320px) / (1152 - 320))); */
         }
         .mob-app_right {
             flex-direction: column;

@@ -30,7 +30,7 @@
             <div class="page-content">
                 <span class="line_bg1"></span>
                 <section class="account">
-                    <!-- <div class="account-user">
+                    <div class="account-user">
                         <div class="account-user_top">
                             <div class="account-user-name">
                                 <h4>John Smith</h4>
@@ -48,22 +48,71 @@
                             <span>+1 132 456-4545</span>
                         </div>
                         <div class="account-user_buttons">
-                            <div class="account_edit acc-btn">
-                                <a href="#"><img src="/design/img/icons/pencil.png" alt="icon">Edit Profile</a>
+                            <div class=" acc-btn">
+                                <a class="popup-trigger account_edit" data-target="#popup1"><img src="/design/img/icons/pencil.png" alt="icon">Edit Profile</a>
                             </div>
                             <div class="account_chnage-pass acc-btn">
-                                <a href="#"><img src="/design/img/icons/lock.png" alt="icon">Change Password</a>
+                                <a class="popup-trigger" data-target="#popup2"><img src="/design/img/icons/lock.png" alt="icon">Change Password</a>
                             </div>
                         </div>
+                        <div id="popup1" class="popup">
+                            <form action="" class="change-pass">
+                                <h4>Change Password</h4>
+                                <p>After changing your password, you must loig in again.</p>
+                                <fieldset>
+                                    <input type="text" placeholder="Current Password">
+                                    <input type="text" placeholder="New Password">
+                                    <input type="text" placeholder="Confirm New Password">
+                                    <div class="change-pass_buttons">
+                                        <input type="cancel" class="close-window btn-white2 popup-btn-close" value="Cancel">
+                                        <input type="submit" value="Save" class="blue-btn">
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div id="popup2" class="popup">
+                            <form action="" class="edit-profile">
 
-                    </div> -->
+                                <h4>Edit Profile</h4>
+                                <fieldset>
+                                    <div class="user-names">
+                                        <div class="user-firs-name">
+                                            <label for="user-firs-name">First Name</label>
+                                            <input type="text" name="user-firs-name" placeholder="John">
+                                        </div>
+                                        <div class="user-last-name">
+                                            <label for="user-last-name">Last Name</label>
+                                            <input type="text" name="user-last-name" placeholder="Smith">
+                                        </div>
+                                    </div>
+                                    <div class="user-mail">
+                                        <label for="user-email">Email</label>
+                                        <input type="text" name="user-email" placeholder="john.s@example.com">
+                                    </div>
+                                    <div class="user-phone2">
+                                        <label for="user-phone">Phone Number</label>
+                                        <input type="text" name="user-phone" placeholder="+1 123 123-4545">
+                                    </div>
+                                    <div class="edit-password">
+                                        <p>Password</p>
+                                        <button class="white-btn2"><img src="/design/img/icons/pencil.png" alt="">Change</button>
+                                    </div>
+                                    <div class="edit-profile_buttons">
+                                        <input type="cancel" class="close-window white-btn2 popup-btn-close" value="Cancel">
+                                        <input type="submit" value="Save" class="blue-btn">
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+
+                    </div>
                     <div class="account-info">
                         <div class="account-info_toggle">
                             <button id="membership-btn" class="membership-btn toggle_active-btn">Membership</button>
                             <button id="payment-btn" class="payment-btn">Payment Method</button>
                         </div>
 
-                        <!-- <section class="account-membership" id="membership">
+                        <section class="account-membership" id="membership">
                             <div class="account-membership_top">
                                 <h4>Current</h4>
                                 <div class="account-membership_top-btns">
@@ -138,60 +187,64 @@
                                     <div class="page-number">1</div>
                                 </div>
                             </div>
-                        </section> -->
+                        </section>
                         <section class="payment-method_general" id="payment">
-                            <div class="payment-method_1">
-                                <h4>Payment Method</h4>
-                                <div class="payment-method_info ">
-                                    <div class="payment-method_info-left ">
-                                        <p>Credit card</p>
-                                        <p>1414 **** **** 4545</p>
-                                    </div>
-                                    <div class="payment-method_info-button acc-btn ">
-                                        <a href="# "><img src="/design/img/icons/pencil.png " alt="icon "> Update
-                                        </a>
+                            <h4>Payment Method</h4>
+                            <div class="payment-method_frame">
+                                <div class="payment-method_1" id="card1">
+                                    <div class="payment-method_info ">
+                                        <div class="payment-method_info-left ">
+                                            <p>Credit card</p>
+                                            <p>1414 **** **** 4545</p>
+                                        </div>
+                                        <div class="payment-method_info-button acc-btn ">
+                                            <a href="#" id="open-card"><img src="/design/img/icons/pencil.png " alt="icon "> Update
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="payment-method_2">
-                                <h4>Payment Method</h4>
-                                <div class="payment-card">
-                                    <h6>Edit Card</h6>
-                                    <div class="payment-card_old-info">
-                                        <p>John Smith</p>
-                                        <p>Mastercard **** 4545</p>
-                                        <p>08/22</p>
+
+                                <div class="payment-method_2" id="card2">
+                                    <div class="payment-card">
+                                        <h6>Edit Card</h6>
+                                        <div class="payment-card_old-info">
+                                            <p>John Smith</p>
+                                            <p>Mastercard **** 4545</p>
+                                            <p>08/22</p>
+                                        </div>
+                                        <form class="payment-card_new-info">
+                                            <div class="payment-card_block">
+                                                <div class="payment_card-number">
+                                                    <label for="edit-card">Edit Card</label>
+                                                    <input type="text" name="Edit Card" id="edit-card" placeholder="---- ---- ---- ----">
+                                                </div>
+                                                <div class="payment_csv">
+                                                    <label for="CSV">CSV</label>
+                                                    <input type="text" name="CSV" id="cvs" placeholder="---">
+                                                </div>
+                                                <div class="payment_zip">
+                                                    <input type="text" name="zip" id="" placeholder="Card ZIP or Postal Code">
+                                                </div>
+                                                <div class="payment_owner-name">
+                                                    <input type="text" name="name" id="" placeholder="Name on Card">
+                                                </div>
+                                                <div class="payment_expiration-date">
+                                                    <label for="expiration-date">Expiration Date</label>
+                                                    <input type="text" name="Expiration Date" id="expiration-date" placeholder="MM/YY">
+                                                </div>
+
+
+                                            </div>
+                                            <div class="payment-card_btns">
+                                                <button id="close-card" type="reset" class="payment_cancel-btn acc-btn">Cancel</button>
+                                                <button class="payment_save-btn">Save</button>
+                                            </div>
+                                        </form>
                                     </div>
-                                    <form class="payment-card_new-info">
-                                        <div class="payment-card_block">
-                                            <div class="payment_card-number">
-                                                <label for="edit-card">Edit Card</label>
-                                                <input type="text" name="Edit Card" id="edit-card" placeholder="---- ---- ---- ----">
-                                            </div>
-                                            <div class="payment_csv">
-                                                <label for="CSV">CSV</label>
-                                                <input type="text" name="CSV" id="cvs" placeholder="---">
-                                            </div>
-                                            <div class="payment_zip">
-                                                <input type="text" name="zip" id="" placeholder="Card ZIP or Postal Code">
-                                            </div>
-                                            <div class="payment_owner-name">
-                                                <input type="text" name="name" id="" placeholder="Name on Card">
-                                            </div>
-                                            <div class="payment_expiration-date">
-                                                <label for="expiration-date">Expiration Date</label>
-                                                <input type="text" name="Expiration Date" id="expiration-date" placeholder="MM/YY">
-                                            </div>
-
-
-                                        </div>
-                                        <div class="payment-card_btns">
-                                            <button class="payment_cancel-btn acc-btn">Cancel</button>
-                                            <button class="payment_save-btn">Save</button>
-                                        </div>
-                                    </form>
                                 </div>
+
                             </div>
+
                         </section>
                     </div>
                 </section>
@@ -214,6 +267,7 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js "></script>
     <script src="../design/js/toggle_membership.js"></script>
+    <script src="/design/js/popups.js"></script>
 </body>
 
 </html>

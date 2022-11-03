@@ -86,7 +86,7 @@ function SimpleAdaptiveSlider(selector, config) {
         this._$itemList[count].style.transform = transformValue;
     }
     // добавляем индикаторы к слайдеру
-    this._addIndicators();
+    // this._addIndicators();
     // обновляем экстремальные значения переменных
     this._refreshExtremeValues();
     // помечаем активные элементы
@@ -113,19 +113,19 @@ SimpleAdaptiveSlider.prototype._setActiveClass = function() {
             $item.classList.remove(ITEM_CLASS_ACTIVE);
         }
     }
-    // indicators
-    var $indicators = this._$root.querySelectorAll('.' + INDICATOR_ITEM_CLASS);
-    if ($indicators.length) {
-        for (i = 0, length = $indicators.length; i < length; i++) {
-            $item = $indicators[i];
-            index = parseInt($item.dataset.slideTo);
-            if (this._currentIndex === index) {
-                $item.classList.add(INDICATOR_ITEM_CLASS_ACTIVE);
-            } else {
-                $item.classList.remove(INDICATOR_ITEM_CLASS_ACTIVE);
-            }
-        }
-    }
+    // // indicators
+    // var $indicators = this._$root.querySelectorAll('.' + INDICATOR_ITEM_CLASS);
+    // if ($indicators.length) {
+    //     for (i = 0, length = $indicators.length; i < length; i++) {
+    //         $item = $indicators[i];
+    //         index = parseInt($item.dataset.slideTo);
+    //         if (this._currentIndex === index) {
+    //             $item.classList.add(INDICATOR_ITEM_CLASS_ACTIVE);
+    //         } else {
+    //             $item.classList.remove(INDICATOR_ITEM_CLASS_ACTIVE);
+    //         }
+    //     }
+    // }
     // controls
     var $controls = this._$root.querySelectorAll(CONTROL_SELECTOR);
     if (!$controls.length) {
@@ -211,21 +211,21 @@ SimpleAdaptiveSlider.prototype._autoplay = function(action) {
     }
 };
 
-// добавление индикаторов
-SimpleAdaptiveSlider.prototype._addIndicators = function() {
-    if (this._$root.querySelector('.' + INDICATOR_WRAPPER_CLASS)) {
-        return;
-    }
-    var $wrapper = document.createElement(INDICATOR_WRAPPER_ELEMENT);
-    $wrapper.className = INDICATOR_WRAPPER_CLASS;
-    for (var i = 0, length = this._$itemList.length; i < length; i++) {
-        var $item = document.createElement(INDICATOR_ITEM_ELEMENT);
-        $item.className = INDICATOR_ITEM_CLASS;
-        $item.dataset.slideTo = i;
-        $wrapper.appendChild($item);
-    }
-    this._$root.appendChild($wrapper);
-};
+// // добавление индикаторов
+// SimpleAdaptiveSlider.prototype._addIndicators = function() {
+//     if (this._$root.querySelector('.' + INDICATOR_WRAPPER_CLASS)) {
+//         return;
+//     }
+//     var $wrapper = document.createElement(INDICATOR_WRAPPER_ELEMENT);
+//     $wrapper.className = INDICATOR_WRAPPER_CLASS;
+//     for (var i = 0, length = this._$itemList.length; i < length; i++) {
+//         var $item = document.createElement(INDICATOR_ITEM_ELEMENT);
+//         $item.className = INDICATOR_ITEM_CLASS;
+//         $item.dataset.slideTo = i;
+//         $wrapper.appendChild($item);
+//     }
+//     this._$root.appendChild($wrapper);
+// };
 
 // refresh extreme values
 SimpleAdaptiveSlider.prototype._refreshExtremeValues = function() {
