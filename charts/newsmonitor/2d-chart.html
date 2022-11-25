@@ -50,14 +50,19 @@
       }
       .bth-position {
         display: flex;
+        padding-bottom: 15px;
       }
       .bth-position > * {
         margin-left: 7px;
       }
+      #mychart {
+        width: 100%;
+        height: calc(100vh - 100px);
+      }
     </style>
   </head>
   <body onload="loadChart()">
-    <div class="position-relative" style="display: flex; justify-content: center; flex-direction: column; align-items: center">
+    <div class="position-relative">
       <div class="bth-position">
         <button class="btn" title="zoom in" id="zoomIN">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
@@ -75,7 +80,7 @@
 
     <script>
       function loadChart() {
-        const data = JSON.parse(localStorage.getItem('refine')).entities;
+        const data = JSON.parse(localStorage.getItem('typeresponse')).entities;
 
         const colors = [
           "#f0f921",
@@ -100,8 +105,8 @@
 
         // const color = d3.scale.category20().range(colors);
         const margin = { top: 5.5, right: 19.5, bottom: 12.5, left: 39.5 };
-        const width = 1000,
-          height = 500 - margin.top - margin.bottom;
+        // const width = 1000,
+        //   height = 500 - margin.top - margin.bottom;
 
         const distortionSpeed = 2.5; // speed of distortion
 
@@ -117,6 +122,11 @@
         const xScaleMinNumber = d3.min(xAxisRange), xScaleMaxNumber = d3.max(xAxisRange);
         const circleRange = 40;
         const backgroundColor = "rgb(229, 236, 246)";
+
+        const chartElement = document.getElementById('mychart')
+        const divSize = chartElement.getBoundingClientRect()
+        const width = divSize.width - 100,
+          height = divSize.height;
 
         // Various scales and distortions.
         const xScale = d3
@@ -137,7 +147,6 @@
         const colorScale = d3
           .scaleOrdinal(d3.schemeCategory10)
           .domain(colorScaleRegion)
-          .range(colors);
 
         // The x & y axes.
         const xAxis = d3
@@ -162,6 +171,7 @@
           .call(svgZoom)
           .append("g")
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
 
         d3.select('#zoomIN').on('click', () => {
           svgZoom.scaleBy(svg.transition().duration(750), 1.2);
@@ -205,35 +215,52 @@
           const dot = outerCircle.append("circle")
           .attr("class", "dot")
           .style("fill", (d, i) => colorScale(color(d)))
+          .style('cursor', 'pointer')
           .call(position)
           .on("mousemove", (d) => {
             tooltip.transition().duration(200).style('opacity', 0.9);
             tooltip.html(d.entity)
             .style('left', `${d3.event.layerX + 20}px`)
             .style('top', `${(d3.event.layerY)}px`)
-            .style('width', 'fit-content');
+            .style('width', 'fit-content')
             tooltip.style('background-color', colorScale(color(d)));
           })
           .on("mouseout", (d) => tooltip.transition().duration(200).style('opacity', 0))
+          .on("click", (d) => {
+            window.open(d.url, '_blank');
+          })
           .sort((a, b) => radius(b) - radius(a));
 
         // Add label above circle
         outerCircle.append('text')
           .attr('x', (d) => xScale(x(d)))
-          .attr('y', (d) => yScale(y(d)) - radiusScale(radius(d)) - 10)
+          .attr('y', (d) => yScale(y(d)) - radiusScale(radius(d)) - 3)
           .style('font-size', '14px')
           .attr('text-anchor', 'middle')
           .style('font-family', 'sans-serif')
           .style('fill', '#000')
           .sort((a, b) => radius(b) - radius(a))
-          .text((d) => d.entity)
+          .text((d) => {
+            if (d.entity.length > 30) {
+              return d.entity.slice(0, 30) + '...'
+            } else {
+              return d.entity
+            }
+          })
 
         // Positions the dots based on data.
         function position(dot) {
           dot
             .attr("cx", (d) => xScale(x(d)))
             .attr("cy", (d) => yScale(y(d)))
-            .attr("r", (d) => radiusScale(radius(d)));
+            .attr("r", (d) => {
+              const radiusSize = radiusScale(radius(d));
+              if (radiusSize === 0) {
+                return 5;
+              } else {
+                return radiusSize;
+              }
+            });
         }
       }
     </script>

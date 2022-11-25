@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./design/fonts/fonts.css">
     <link rel="stylesheet" href="./design/css/style-media.css">
     <link rel="stylesheet" href="./design/css/modal.css">
+    <link rel="stylesheet" href="./design/css/custom.css">
     <title>Text analyze 4</title>
     <style>
         .align-center {
@@ -94,6 +95,12 @@
             </nav>
         </header>
         <main>
+            <section class="ta-top" style="margin-top: 40px; height: 0px !important;">
+                <div class="abtn">
+                    <button id="btn-twitter">Twitter</button>
+                    <button id="btn-google">Google</button>
+                </div>
+            </section>
             <section class="ta-top">
                 <div class="ta-top_left">
                     <h3>Analyze Text with VizRefra</h3>
@@ -103,7 +110,6 @@
                     <div class="ta-top_buttons">
                         <button id="text_btn" class="text_button active_button ta-top_button">Plain Text</button>
                         <button id="web_btn" class="web_button ta-top_button">Hyperlink (URL)</button>
-
                     </div>
                 </div>
             </section>
@@ -234,7 +240,7 @@
                         <span><iframe src="" title="" id="#iframe1" scrolling="no" width="500" height="300"></iframe></span>
                         <span><iframe src="" title="" id="#iframe2" scrolling="no" width="500" height="300"></iframe></span>
                         <div style="padding: 20px;">
-                            <button class="popuo-window" id="myModal" onclick="CustomAlert.show('This is our alert dialog. Press \'Ok\' to close this.')">
+                            <button class="popuo-window" id="myModal" onclick="CustomAlert.show('#iframe2')">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                 </svg>
@@ -243,18 +249,46 @@
                     </div>
                     <div class="align-center" id="#2d-chart" style="display: none;">
                         <iframe src="" title="" id="#iframe3" class="iframe"></iframe>
+                        <div style="padding: 20px;">
+                            <button class="popuo-window" id="myModal" onclick="CustomAlert.show('#iframe3')">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                     <div class="align-center" id="#top-entities" style="display: none;">
                         <iframe src="" title="" id="#iframe4" class="iframe" scrolling="noscroll"></iframe>
+                        <div style="padding: 20px;">
+                            <button class="popuo-window" id="myModal" onclick="CustomAlert.show('#iframe4')">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                     <div class="align-center" id="#entity-recognition" style="display: none;">
                         <iframe src="" title="" id="#iframe5" class="iframe"></iframe>
                     </div>
                     <div class="align-center" id="#3d-map" style="display: none;">
                         <iframe frameborder="0" scrolling="no" src="" title="" id="#iframe6" class="iframe" style="width: 600px;"></iframe>
+                        <div style="padding: 20px;">
+                            <button class="popuo-window" id="myModal" onclick="CustomAlert.show('#iframe6')">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                     <div class="align-center" id="#weighted-graph" style="display: none;">
                         <iframe src="" title="" id="#iframe7" class="iframe"></iframe>
+                        <div style="padding: 20px;">
+                            <button class="popuo-window" id="myModal" onclick="CustomAlert.show('#iframe7')">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -288,5 +322,15 @@
     <script src="./design/js/close-input.js"></script>
     <script src="./design/js/toggle-buttons.js"></script>
     <script src="./design/js/modal.js"></script>
+    <script>
+        $('#btn-twitter').on('click', function() {
+            localStorage.setItem('type', 'twitter');
+            window.open(window.location.origin + '/text_analyze_news.html', "_self");
+        });
+        $('#btn-google').on('click', function() {
+            localStorage.setItem('type', 'google');
+            window.open(window.location.origin + '/text_analyze_news.html', "_self");
+        });
+    </script>
 </body>
 </html>

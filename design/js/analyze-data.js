@@ -21,7 +21,7 @@ $(document).ready(() => {
   document.getElementById("#iframe-popup").setAttribute("src", clientUrl + "charts/worldcloud.html");
 
   document.getElementById("#summary").textContent = JSON.parse(localStorage.getItem("summarize")).summary;
-
+  localStorage.removeItem("type");
   const classification = JSON.parse(localStorage.getItem("predict"));
   const classificationData = `${classification.label}<span>${classification.confidence.toFixed(2)}% confidence</span>`;
   document.getElementById("#classification1").innerHTML = classificationData;

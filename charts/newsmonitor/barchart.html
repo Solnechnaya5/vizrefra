@@ -68,8 +68,6 @@
             line-height: 100%;
             color: #000;
         }
-
-
         .svg-position {
             position: absolute;
             left: 87px;
@@ -77,65 +75,37 @@
         }
         .position-relative {
             position: relative;
-        }
-        .btn {
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-        .btn svg {
-            width: 20px;
-            height: 20px;
-        }
-        .bth-position {
-            display: flex;
-        }
-        .bth-position > * {
-            margin-left: 7px;
+            height: 100vh;
         }
     </style>
     <script src="https://d3js.org/d3.v4.min.js"></script>
 
     <body onload="loadBarChart()">
-        <div class="position-relative" style="display: flex; justify-content: center; flex-direction: column; align-items: center">
-            <div class="bth-position">
-                <button class="btn" title="zoom in" id="zoomIN">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                        <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
-                    </svg>
-                </button>
-                <button class="btn" title="zoom out" id="zoonOut">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
-                    </svg>
-                </button>
-            </div>
+        <div class="position-relative">
             <div id="graph"></div>
-            <!-- <svg width="1000" height="500"></svg> -->
         </div>
         <script>
             function loadBarChart() {
                 let data = JSON.parse(localStorage.getItem('raw')).entities
                 const ordered = _.orderBy(data, ['salience'], ['desc'])
-                const sample = _.take(ordered, 20) // taking first 20 data
+                const sample = _.take(ordered, 10) // taking first 20 data
 
                 const TotalRange = Math.max(...sample.map(o => o.salience))
                 const margin = 60;
                 const width = 1000 - 2 * margin;
                 const height = 500 - 2 * margin;
 
-                const zoom = d3.zoom().scaleExtent([0.5, 1.1]).on("zoom", () => {
-                    d3.select('.graph')
-                        .attr('transform', d3.event.transform)
-                })
 
                 const svg = d3.select('#graph')
-                            .append('svg')
-                            .attr('width', 1000)
-                            .attr('height', 500)
-                            .call(zoom)
-                            .append('g')
-                            .classed('graph', true);
+                    .append('svg')
+                    .attr('width', 600)
+                    .attr('height', 350)
+                    .append('g')
+                    .classed('graph', true)
+                    .attr("transform","scale(0.6)");
 
                 const chart = svg.append('g')
                     .attr("transform",
@@ -214,15 +184,6 @@
                     .attr("y", (d) => yScale(d.salience))
                     .attr("height", (d) => height - yScale(d.salience))
                     .delay((d, i) => (i * 100))
-
-
-                d3.select('#zoomIN').on('click', () => {
-                    zoom.scaleBy(svg.transition().duration(750), 1.2);
-                })
-
-                d3.select('#zoonOut').on('click', () => {
-                    zoom.scaleBy(svg.transition().duration(750), 0.8);
-                })
             }
         </script>
     </body>

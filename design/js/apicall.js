@@ -53,9 +53,9 @@ function previewFile(e) {
 
   if(selectedFile.type && selectedFile.type  === 'text/plain') {
     readTextFile(selectedFile)
-  } else {{
+  } else {
     swal("Error!!", "Only Support plain file, Tap/Click Try Again ", "error");
-  }}
+  }
 
   // document.querySelector('input[type=file]').files
 }
@@ -110,6 +110,7 @@ async function getApiResponseAndStore(query, isPlanText = false) {
       query: query,
       salience: 0.0019,
       limit: 20,
+      "ignore_overlap": false,
     }
     const response = await apiCall(url, apiData);
     if (response) {
