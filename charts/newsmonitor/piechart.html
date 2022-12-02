@@ -77,7 +77,23 @@
     <!--https://stackoverflow.com/questions/37595515/updating-pie-chart-with-labels-d3-->
     <script>
         function init() {
-            const data = JSON.parse(localStorage.getItem("analyse"));
+            const chartData = JSON.parse(localStorage.getItem("typeresponse")).entities;
+            const type = localStorage.getItem("type");
+            const nagativeData = chartData.filter((item) => item.sentiment === "Negative").length;
+            const positiveData = chartData.filter((item) => item.sentiment === "Positive").length;
+            const neutralData = chartData.filter((item) => item.sentiment === "Neutral").length;
+            let data;
+            if (type === 'twitter') {
+                data = JSON.parse(localStorage.getItem("analyse"));
+            } else {
+                data = {
+                    stats: {
+                        Negative: nagativeData,
+                        Neutral: neutralData,
+                        Positive: positiveData
+                    }
+                }
+            }
             let offset = 10; // h
             var svg = d3.select("svg"),
                 width = svg.attr("width"),
