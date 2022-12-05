@@ -89,11 +89,11 @@
         </div>
         <script>
             function loadBarChart() {
-                let data = JSON.parse(localStorage.getItem('raw')).entities
-                const ordered = _.orderBy(data, ['salience'], ['desc'])
+                let data = JSON.parse(localStorage.getItem('typeresponse')).entities
+                const ordered = _.orderBy(data, ['size'], ['desc'])
                 const sample = _.take(ordered, 10) // taking first 20 data
 
-                const TotalRange = Math.max(...sample.map(o => o.salience))
+                const TotalRange = Math.max(...sample.map(o => o.size))
                 const margin = 60;
                 const width = 1000 - 2 * margin;
                 const height = 500 - 2 * margin;
@@ -166,7 +166,7 @@
                     .on('mouseover', (d) => {
                         tooltip.transition().duration(200).style('opacity', 0.9);
                         tooltip.html(`Entity= ${d.entity}<br>
-                          Salience=${d.salience}`)
+                          Size=${d.size}`)
                             .style('left', `${d3.event.layerX + 10}px`)
                             .style('top', `${(d3.event.layerY)}px`)
                             .style('width', 'fit-content');
@@ -181,8 +181,8 @@
                 chart.selectAll(".bar")
                     .transition()
                     .duration(800)
-                    .attr("y", (d) => yScale(d.salience))
-                    .attr("height", (d) => height - yScale(d.salience))
+                    .attr("y", (d) => yScale(d.size))
+                    .attr("height", (d) => height - yScale(d.size))
                     .delay((d, i) => (i * 100))
             }
         </script>
