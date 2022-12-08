@@ -214,7 +214,20 @@
 
           const dot = outerCircle.append("circle")
           .attr("class", "dot")
-          .style("fill", (d, i) => colorScale(color(d)))
+          .style("fill", (d, i) => {
+            let _color = colorScale(color(d))
+            // used in google api as we dont have sentiment key in twitter api
+            if(d.sentiment) {
+              if(d.sentiment === 'Negative') {
+                _color = '#E33A34'
+              } else if(d.sentiment === 'Neutral') {
+                _color = "#439B4E";
+              } else {
+                _color = "#347AEB";
+              }
+            }
+            return _color
+          })
           .style('cursor', 'pointer')
           .call(position)
           .on("mousemove", (d) => {
@@ -223,7 +236,21 @@
             .style('left', `${d3.event.layerX + 20}px`)
             .style('top', `${(d3.event.layerY)}px`)
             .style('width', 'fit-content')
-            tooltip.style('background-color', colorScale(color(d)));
+            // tooltip.style('background-color', colorScale(color(d)));
+            tooltip.style('background-color', () => {
+              let _color = colorScale(color(d));
+              // used in google api as we dont have sentiment key in twitter api
+              if(d.sentiment) {
+                if(d.sentiment === 'Negative') {
+                  _color = '#E33A34'
+                } else if(d.sentiment === 'Neutral') {
+                  _color = "#439B4E";
+                } else {
+                  _color = "#347AEB";
+                }
+              }
+              return _color
+            });
           })
           .on("mouseout", (d) => tooltip.transition().duration(200).style('opacity', 0))
           .on("click", (d) => {
