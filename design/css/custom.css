@@ -1,108 +1,71 @@
-.abtn {
-  display: flex;
-}
-
-.abtn button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 8px;
-  border-radius: 4px;
-  font-family: "Gordita";
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 500;
-  color: #FFFFFF;
-  width: 197px;
-  height: 44px;
-  margin-right: 4px;
-  background-color: #3F51B5;
-  border: 1px solid #D9DDF2;
-}
-
-.abtn button:hover {
-  background-color: #3F51B5;
-  font-family: "Gordita";
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 500;
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
 .section-one {
-  background: #eee;
-  height: 550px;
-  width: 100%;
+    background: #eee;
+    height: 550px;
+    width: 100%;
 }
 
 .section-two {
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 0px;
-  display: flex;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    display: flex;
 }
 
 .main-section {
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 0px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 0px;
 }
 
 .section-two-childs {
-  height: 300px;
-  width: 50%;
-  background: #eee;
+    height: 300px;
+    width: 50%;
+    background: #eee;
 }
 
 .ml-1 {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 .w-full {
-  width: 100%;
+    width: 100%;
 }
 
 .main-flex {
-  padding-top: 20px;
-  padding-bottom: 5px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .height-inherit {
-  height: inherit !important;
+    height: inherit !important;
 }
 
 .news-text {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 #loading {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 3px solid rgba(255,255,255,.3);
-  border-radius: 50%;
-  border-top-color: #fff;
-  animation: spin 1s ease-in-out infinite;
-  -webkit-animation: spin 1s ease-in-out infinite;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, .3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
 }
 
 @keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
 }
+
 @-webkit-keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
 }
