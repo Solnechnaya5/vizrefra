@@ -107,12 +107,12 @@ async function getApiResponseAndStore(query, isPlanText = false) {
     const data = apiCalled[i];
     const url = host + data.api;
     // ignore overlapping data by setting value to true
-    let ignoreOverlp = data.key === 'refine' ? true : false;
+    let ignoreOverlap = data.key === 'refine' ? true : false;
     const apiData = {
       query: query,
       salience: 0.0019,
       limit: 20,
-      "ignore_overlap": ignoreOverlp,
+      "ignore_overlap": ignoreOverlap,
     }
     const response = await apiCall(url, apiData);
     if (response) {
