@@ -168,7 +168,7 @@
           changedGroupValue = targetCounter;
         });
         links.shift();
-
+        document.getElementById('chart1').innerHTML = null;
         const chartElement = document.getElementById('chart1')
         const divSize = chartElement.getBoundingClientRect()
         const width = divSize.width,
