@@ -43,6 +43,13 @@ function changeTab(elementId) {
     if(elementId === '#weighted-graph') {
       // force load weighted graph
       document.getElementById("#iframe7").contentWindow.loadForChart()
+    } else if(elementId === '#3d-map') {
+      // Force initialize 3d Map (due to issue with firefox browser)
+      // Note: increase timeout if required if not working
+      setTimeout(() => {
+        document.getElementById('#iframe6').contentWindow.document.getElementById("chartholder").innerHTML = ""
+        document.getElementById('#iframe6').contentWindow.initializeMap()
+      }, 500)
     }
   }
 }

@@ -56,7 +56,7 @@
   </style>
 </head>
 
-<body>
+<body onload="loadChartOnReload()">
   <div class="position-relative" >
     <div class="bth-position">
       <button class="btn" title="zoom in" onclick="zoomIn()">
@@ -74,6 +74,13 @@
   </div>
 
   <script>
+    let scale = 1
+    function loadChartOnReload() {
+      setTimeout(() =>{
+        initializeMap()
+      }, 500)
+    }
+
     function loadChart(data) {
       // Select chartholder
       var chartHolder = d3.select("#chartholder");
@@ -88,48 +95,62 @@
       // Generate chart
       chartHolder.datum(data).call(myChart);
     }
-    let data = JSON.parse(localStorage.getItem('refine')).entities;
 
-    var points = data.map((d) => {
-      return {
-        key: d.entity,
-        values: [
-        {key: "x", value: d.x},
-        {key: "y", value: d.y},
-        {key: "z", value: d.height},
-        {key: "size", value: d.size * 1000},
-        {key: "salience", value: d.salience}
-        ]
-      }
-    })
+    async function generateData() {
 
-    var entityData = {
-      key: 'Entity',
-      values: points
-    };
+      return new Promise((resolve, reject) => {
+        let data = JSON.parse(localStorage.getItem('refine')).entities;
 
-    loadChart(entityData);
+        var points = data.map((d) => {
+          return {
+            key: d.entity,
+            values: [
+            {key: "x", value: d.x},
+            {key: "y", value: d.y},
+            {key: "z", value: d.height},
+            {key: "size", value: d.size * 1000},
+            {key: "salience", value: d.salience}
+            ]
+          }
+        })
+
+
+        var entityData = {
+          key: 'Entity',
+          values: points
+        };
+        console.log(2)
+        resolve(entityData)
+      })
+    }
+
+    // main function
+     async function initializeMap() {
+      let entityData = await generateData()
+
+      loadChart(entityData);
     x3dom.reload();
 
-    var tooltip = d3.select("body").append("div")
-    .attr("class", "chart-tooltip")
-    .style("opacity", 0);
+      var tooltip = d3.select("body").append("div")
+      .attr("class", "chart-tooltip")
+      .style("opacity", 0);
 
-    //  Display tooltip on hover
-    let allShapes = d3.selectAll('.d3X3dBubbles shape')
+      //  Display tooltip on hover
+      let allShapes = d3.selectAll('.d3X3dBubbles shape')
 
-    allShapes.on('mouseover', (d) => {
-      tooltip.transition().duration(200).style("opacity", .9);
-      tooltip.html(d.key)
-      .style("left", (d3.event.layerX) + "px")
-      .style("top", (d3.event.layerY) + "px")
-      .style('width', 'fit-content');
-    })
-    allShapes.on("mouseout", function(d) {
-      tooltip.transition().duration(500).style("opacity", 0);
-    });
+      allShapes.on('mouseover', (d) => {
+        tooltip.transition().duration(200).style("opacity", .9);
+        tooltip.html(d.key)
+        .style("left", (d3.event.layerX) + "px")
+        .style("top", (d3.event.layerY) + "px")
+        .style('width', 'fit-content');
+      })
+      allShapes.on("mouseout", function(d) {
+        tooltip.transition().duration(500).style("opacity", 0);
+      });
 
-    let scale = 1
+      let scale = 1
+    }
     function zoomIn() {
       const canvasClass = document.querySelector('.x3dom-canvas')
       if (canvasClass) {
