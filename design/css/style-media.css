@@ -7,121 +7,19 @@
 }
 
 @media only screen and (max-width: 1320px) {
-    .contact-top_container{
-        flex-direction: column;
-        align-items: center;
-        margin-right: 0;
-        margin-left: 0;
-    }
-    .contact-top_content {
-        width: calc(320px + (485 - 320)*((100vw - 320px) / (1320 - 320)));
-        height: 606px;
-        margin:0 0 30px 0;
-        text-align: center;
-      }
-      .contact-top{
-        height: 1100px;
-      }
-      .contact-top_form {
-        width: calc(320px + (625 - 320)*((100vw - 320px) / (1320 - 320)));
-        height: 606px;
-    }
-    
-    .contact-top_form h4 {
-        margin-right: calc(20px + (170 - 20)*((100vw - 320px) / (1320 - 320)));
-        margin-left: calc(20px + (170 - 20)*((100vw - 320px) / (1320 - 320)));
-    
-    }
-    
-    .contact-top_form p {
-        margin-right: calc(20px + (48 - 20)*((100vw - 320px) / (1320 - 320)));
-        margin-left: calc(20px + (48 - 20)*((100vw - 320px) / (1320 - 320)));
-    }
-    .contact-form button,
-    .user-name input,
-    .user-name input,
-    .user-email input,
-    .user-phone input,
-    .message textarea {
-        width: calc(280px + (528 - 280)*((100vw - 320px) / (1320 - 320)));
-        margin-right: calc(20px + (48 - 20)*((100vw - 320px) / (1320 - 320)));
-        margin-left: calc(20px + (48 - 20)*((100vw - 320px) / (1320 - 320)));
-    }
-    
-    .user-name span ,
-    .user-company span,
-    .user-email span ,
-    .user-phone span {
-        top: 21px;
-        right: 64px;
-    }
+  
 }
 
 @media (max-width: 1280px) {}
 
 @media only screen and (max-width: 1024px) {
-    .about-vr{
-        flex-direction: column;
-        align-items: center;
-    }
-    .about-vr_middle img{
-        transform: rotate(-90deg);
-    }
+   
 }
 
-@media only screen and (max-width: 960px) {
-    .about-vr_left {
-        width: calc(280px + (516 - 280)*((100vw - 320px) / (960 - 320)));
-        margin-top: calc(50px + (90 - 50)*((100vw - 320px) / (960 - 320)));
-        margin-right: calc(20px + (30 - 10)*((100vw - 320px) / (960 - 320)));
-      }
-    .about-vr_right {
-        width: calc(280px + (400 - 280)*((100vw - 320px) / (960 - 320)));
-        margin-left: 0;
-    }
-    .mission{
-        width: calc(280px + (750 - 280)*((100vw - 320px) / (960 - 320)));
-        margin: 50px auto 0;
-    }
-    .mission p{
-        font-size: calc(28px + (34 - 28)*((100vw - 320px) / (960 - 320)));;
-    }
-    .values{
-        text-align: center;
-    }
-    .values p {
-        width: calc(280px + (534 - 280)*((100vw - 320px) / (960 - 320)));
-        text-align: center;
-        margin: 0 auto;
-    }
-    .values-block1,
-    .values-block2{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .values-block1_right,
-    .values-block2_left{
-        margin-top: 30px;
-    }
-    .values-block2_left{
-       order: 1;
-    }
-    .values-block1_left img,
-    .values-block2_right img{
-    width: calc(280px + (625 - 280)*((100vw - 320px) / (960 - 320)));}
-}
+@media only screen and (max-width: 960px) {}
 
 @media only screen and (max-width: 800px) {
-    .header-menu {
-        display: none;
-    }
-    .burger-menu-icon {
-        display: block;
-    }
-    .container {
-        margin-left: 20px;
-    }
+  
 }
 
 @media only screen and (max-width: 768px) {}
