@@ -64,7 +64,28 @@
   </body>
   <script>
     const entityData = JSON.parse(localStorage.getItem('raw')).tags
-    const string = localStorage.getItem('original_text')
+    let string = localStorage.getItem('original_text')
+    // convert unicode to string
+    // function unescape(string) {
+    //   return new DOMParser().parseFromString(string,'text/html').querySelector('html').textContent;
+    // }
+    // const clear_text = unescape(string)
+    // const someText = clear_text.replace(/(\r\n|\n|\r)/gm, " ");
+    // string = someText.replace(/[-,_]/g, '');
+
+    function clean(text) {
+      const lines = text.replace(/[^\x00-\x7F]/g, "").split('\n');
+      const cleaned = [];
+      for (let i = 0; i < lines.length; i++) {
+        if(lines[i] != "") {
+          const newStr = lines[i].trim().replace(/[-_]+/g, "");
+          cleaned.push(newStr);
+        }
+      }
+      return cleaned.join(" ");
+    }
+
+    string = clean(string)
 
     const fontSize = 20;
     const fontFamily = "sans-serif";
