@@ -620,6 +620,10 @@
             width: 850px;
             left: calc(15px + (420 - 15)*((100vw - 320px) / (1920 - 320)));
         }
+        /* about vr */
+        .about-vr_left h1{
+            line-height: 150%;
+        }
     }
     
     @media only screen and (max-width: 1320px) {
@@ -710,7 +714,6 @@
 .signin-block_top p {
     line-height: 150%;
 }
-
 .signin_user-email,
 .signin_password,
 .signin_user-email input,

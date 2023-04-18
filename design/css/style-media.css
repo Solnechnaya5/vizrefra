@@ -3,9 +3,7 @@
 
 }
 @media only screen and (max-width: 1440px) {
-    .about-vr_left h1{
-        line-height: 150%;
-    }
+  
 }
 
 @media only screen and (max-width: 1320px) {
@@ -39,8 +37,6 @@
         margin-right: calc(20px + (48 - 20)*((100vw - 320px) / (1320 - 320)));
         margin-left: calc(20px + (48 - 20)*((100vw - 320px) / (1320 - 320)));
     }
-    
-    
     .contact-form button,
     .user-name input,
     .user-name input,
