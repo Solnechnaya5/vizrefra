@@ -277,8 +277,15 @@ body.fixed-page {
     background-color: #6876CA;
 }
 
-
-.page-top {
+.page-top_first-screen{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+    height: auto;
+    }
+    .page-top {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -300,11 +307,13 @@ body.fixed-page {
     overflow: hidden;
     position: relative;
     }
-    .page-top_video{
+    #video-first{
+        width: 700px;
+        height: auto;
     margin-top: 50px;
     }
-    
-    .page-top_title h1 {
+
+.page-top_title h1 {
     font-family: "Gordita";
     font-style: normal;
     font-weight: 500;
@@ -312,14 +321,14 @@ body.fixed-page {
     line-height: 58px;
     color: #18181B;
     margin-bottom: 30px;
-    }
-    
-    .page-top_text {
+}
+
+.page-top_text {
     width: 500px;
     margin-bottom: 30px;
-    }
-    
-    .page-top .page-top_left li {
+}
+
+.page-top .page-top_left li {
     font-family: "Gordita";
     font-style: normal;
     font-weight: 400;
@@ -328,11 +337,34 @@ body.fixed-page {
     line-height: 170%;
     list-style: disc;
     margin-left: 25px;
-    }
-    .page-top_links{
-    margin: 50px 0;
-    }
-    .page-top_links-title h2{
+}
+.page-top_yellow-frame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1100px;
+    margin: 100px 0;
+    border: 4px solid #FF9800;
+    border-radius: 8px;
+}
+.page-top_yellow-frame p{
+    font-family: "Gordita";
+    font-size: 42px; 
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170%;
+    color: #18181B;
+    text-align: center;
+    padding:8px
+}
+.page-top_yellow-frame span{
+    color: #F44336;
+}
+.page-top_links {
+    margin-bottom: 50px;
+}
+
+.page-top_links-title h2 {
     font-family: "Gordita";
     font-size: 48px;
     font-style: normal;
@@ -341,50 +373,77 @@ body.fixed-page {
     color: #18181B;
     text-align: center;
     margin-bottom: 50px;
-    
-    }
-    .page-top_links-items{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        max-width: 1920px;
-        height: auto;
-    }
-    .page-top_links-items li{
-        margin-right: 15px;
-    }
-    .page-top_links-items li:first-child{
-        margin-left: 15px;
-    }
-    
-    .page-top_links-items a{
-        width: 150px;
-        height: 50px;
-        border: 3px solid #FF9800;
-        border-radius: 4px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        padding: 10px;
-        font-family: 'Gordita';
+
+}
+
+.page-top_links-items {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1350px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.page-top_links-item {
+    width: 250px;
+    height: 50px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background-color: #C9C9CF;
+    border: 1px solid #C9C9CF;
+    border-radius: 8px;
+    margin: 0 10px 20px 10px;
+}
+.page-top_links-item:has(.page-top_link-img){
+height: 250px;
+}
+.page-top_links-item:hover{
+    background-color: #E4E4E7;
+}
+.page-top_links-item.bigger{
+    height: 250px;
+}
+
+.page-top_links-item a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.page-top_links-item span {
+    font-family: 'Gordita';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 150%;
     color: #18181B;
     text-align: center;
-    }
-    .page-top_links-items a:hover{
-        border-color: #60606C;
-    }
-    .page-top_button {
+}
+
+.page-top_link-img{
+    display: block;
+width: 100%;
+height: 250px;
+object-fit: cover;
+position: absolute;
+top: 0;
+left: 0;
+border-color: transparent;
+}
+
+.page-top_button {
     width: 200px;
     height: 48px;
-    margin-top:20px;
-    }
-    
-    .page-top_button a {
+    margin-top: 20px;
+}
+
+.page-top_button a {
     width: 200px;
     height: 48px;
     display: -webkit-box;
@@ -414,18 +473,28 @@ body.fixed-page {
     text-decoration: none;
     background-color: #3F51B5;
     cursor: pointer;
-    }
-    
-    .page-top_button a:hover {
-    background-color: #6876CA;
-    }
-    
-.why-vr {
-    width: 100%;
-    height: 318px;
+}
+
+.page-top_button a:hover {
     background-color: #6876CA;
 }
 
+.why-vr {
+    width: 100%;
+    height: 600px;
+    background-color: #6876CA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#video-second {
+    width: 700px;
+    height: auto;
+    position: relative;
+    z-index: 50;
+}
+/* 
 .why-vr_title h3 {
     font-family: "Gordita";
     font-size: 15px;
@@ -471,7 +540,7 @@ body.fixed-page {
     color: #FFFFFF;
     line-height: 170%;
     font-size: 16px;
-}
+} */
 
 .solutions {
     width: 1296px;
@@ -1821,6 +1890,7 @@ body.fixed-page {
     width: 655px;
     margin-bottom: 194px;
     margin-left: 150px;
+    position: relative;
 }
 
 .benefit-container:last-child {
@@ -1836,37 +1906,39 @@ body.fixed-page {
     color: #18181B;
     margin-bottom: 20px;
     width: 655px;
-    position: relative;
+    
 }
 
-.benefit-container h2::before {
-    content: ".";
+.benefit-container::before {
+    content: "";
     display: block;
     width: 12px;
     height: 12px;
-    color: #6876CA;
+  background-color: #6876CA;
+   border-radius: 50%;
     position: absolute;
     top: -10px;
     left: -157px;
 }
 
-.benefit-container h2::after {
+.benefit-container::after {
     content: "";
     display: block;
     width: 58px;
     height: 58px;
     position: absolute;
-    top: 15px;
+    top: 17px;
     left: -179px;
     border: 1px solid #3F51B5;
     border-radius: 50%;
 }
 
-.benefit-container p {
+.benefits-content {
     width: 516px;
+     
 }
 
-.benefit-description {
+.benefits-content li {
     font-family: "Gordita";
     font-style: normal;
     font-weight: 400;
@@ -1875,6 +1947,7 @@ body.fixed-page {
     line-height: 170%;
     color: #18181B;
     margin-bottom: 20px;
+    list-style:disc;
 }
 
 .benefit-explanation {
@@ -1887,7 +1960,7 @@ body.fixed-page {
     font-weight: 500;
 }
 
-.benefit-explanation a {
+.benefit a {
     color: #6876CA;
 }
 
@@ -2190,8 +2263,8 @@ body.fixed-page {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 0 320px 93px;
-    padding-top: 93px;
+    margin: 0 320px;
+    padding: 93px 0;
 }
 
 .contact-block_item {
@@ -3191,7 +3264,7 @@ body.fixed-page {
 
 .page-wrapper_registration {
     width: 1920px;
-    height: 980px;
+    min-height: 1050px;
     position: relative;
     overflow: hidden;
     background-color: #FFFFFF;
@@ -3210,6 +3283,10 @@ body.fixed-page {
 
 .registration {
     margin-bottom: 38px;
+display: flex;
+justify-content: center;
+width: 1920px;
+    margin-bottom: 38px;
 }
 
 .registration-block {
@@ -3220,7 +3297,7 @@ body.fixed-page {
     background: #FFFFFF;
     border: 1px solid #D9DDF2;
     border-radius: 8px;
-    margin: 30px auto 38px auto;
+    margin: 30px 0 38px 0;
 }
 
 .registration-block a {
@@ -3257,7 +3334,7 @@ body.fixed-page {
 .registration-form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 0px;
     /* gap: 24px; */
     width: inherit;
@@ -3267,21 +3344,14 @@ body.fixed-page {
 .registration_user-name,
 .registration_user-email,
 .registration_password,
-.registration_confirm-password {
+.registration_confirm-password,
+.registration_user-phone {
     display: flex;
     align-items: center;
     position: relative;
     width: 529px;
-    margin: 0 48px 21px 48px;
+    margin-bottom: 21px;
 }
-
-.registration_user-phone {
-    display: flex;
-    align-items: center;
-    width: 529px;
-    margin: 0 48px 21px 48px;
-}
-
 .registration_user-name input,
 .registration_user-email input,
 .registration_password input,
@@ -3290,9 +3360,6 @@ body.fixed-page {
     height: 48px;
     padding: 0 16px;
     border: 1px solid #D9DDF2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: relative;
 }
 
@@ -3304,17 +3371,16 @@ body.fixed-page {
 }
 
 .registration_user-name span,
-.registration_user-email span {
+.registration_user-email span,
+.registration_password span,
+.registration_confirm-password span,
+.registration_user-phone span {
+
     position: absolute;
-    right: 24px;
+    right: 64px;
     color: #60606C;
 }
 
-.registration_password span,
-.registration_confirm-password span {
-    position: absolute;
-    right: 16px;
-}
 
 .registration_password img,
 .registration_confirm-password img {
@@ -3500,6 +3566,7 @@ h6.registration-plan_title {
 
 .registration-footer {
     display: flex;
+
     justify-content: center;
     position: relative;
     z-index: 40;
@@ -3556,15 +3623,16 @@ h6.registration-plan_title {
 
 .signin-block {
     position: relative;
-    /* left: 0;
-top: 0; */
     z-index: 50;
     width: 625px;
-    height: 455px;
+    height: auto;
     background: #FFFFFF;
     border: 1px solid #D9DDF2;
     border-radius: 8px;
     margin: 30px auto 38px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .signin-block_top {
@@ -3598,23 +3666,19 @@ top: 0; */
 }
 
 .signin-form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+ flex-direction: column;
     padding: 0px;
     /* gap: 24px; */
     width: inherit;
-    height: 711px;
+    height: auto;
 }
 
 .signin_user-email,
 .signin_password {
-    display: flex;
-    align-items: center;
-    position: relative;
     width: 529px;
     height: 48px;
-    margin: 0 48px 21px 48px;
+    margin: 31px 48px;
 }
 
 .signin_user-email input,
@@ -3646,7 +3710,7 @@ top: 0; */
     color: #60606C;
 }
 
-.signin-form_remember-pass {
+.signin-form_remember-pass p{
     margin: 0 48px;
 }
 
@@ -3656,7 +3720,7 @@ top: 0; */
     font-weight: 500;
     font-size: 14px;
     line-height: 180%;
-    text-align: center;
+    text-align: left;
     color: #3F51B5;
 }
 
@@ -3666,7 +3730,7 @@ top: 0; */
     margin: 31px 48px;
 }
 
-.custom-checkbox {
+.signin-form_check .custom-checkbox {
     width: 17px;
     height: 17px;
     border: 1px solid #E4E4E7;
@@ -3682,7 +3746,7 @@ top: 0; */
     color: #60606C;
 }
 
-.signin-form input {
+.signin-form-submit  {
     width: 529px;
     height: 44px;
     display: -webkit-box;
@@ -3694,11 +3758,10 @@ top: 0; */
     border-radius: 4px;
     font-family: "Gordita";
     font-size: 15px;
+    color:#FFFFFF;
     font-style: normal;
-    font-weight: 500;
-    color: #FFFFFF;
-    line-height: 170%;
-    background-color: #3F51B5;
+    font-weight: 500;  line-height: 170%;
+    background-color: #6876CA;
     margin: 0 48px 16px 48px;
 }
 
