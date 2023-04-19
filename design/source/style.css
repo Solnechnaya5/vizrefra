@@ -1906,7 +1906,6 @@ border-color: transparent;
     color: #18181B;
     margin-bottom: 20px;
     width: 655px;
-    
 }
 
 .benefit-container::before {
@@ -2338,7 +2337,7 @@ border-color: transparent;
     color: #FFFFFF;
     width: 140px;
     height: 40px;
-    margin-right: 25px;
+    margin: 0 25px 15px 0;
     background-color: #3F51B5;
 }
 
@@ -2355,7 +2354,7 @@ border-color: transparent;
 .abtn_a {
     width: 140px;
     height: 40px;
-    margin-right: 25px;
+    margin: 0 25px 15px 0 ;
 }
 
 .abtn_a:first-child {
@@ -2393,7 +2392,9 @@ border-color: transparent;
     max-width: 1280px;
     height: auto;
     display: flex;
+    flex-wrap: wrap ;
     margin: 40px auto;
+    
 }
 
 .ta-top {
@@ -3007,7 +3008,10 @@ border-color: transparent;
     margin: 0 9px;
     padding: 3px;
 }
-
+.ta-window2_summary{
+    width: auto;
+    margin: 0 20px;
+}
 .ta-window2_summary h5 {
     font-family: "Gordita";
     font-size: 18px;
@@ -3126,6 +3130,7 @@ border-color: transparent;
 
 .wa-window_iput-row input {
     max-width: 1122px;
+    min-width: 240px;
 }
 
 .wa-window_iput-row input[type='text'],
