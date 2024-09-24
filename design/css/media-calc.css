@@ -20,37 +20,42 @@
         }
 
         /* ***********************************main page********************************** */
-        .page-top {
-            width: calc(290px + (1296 - 290)*((100vw - 320px) / (1920 - 320)));
-            margin-right: calc(15px + (285 - 15)*((100vw - 320px) / (1920 - 320)));
-            margin-left: calc(15px + (312 - 15)*((100vw - 320px) / (1920 - 320)));
+        .page-top  {
+            width: calc(290px + (1720 - 290)*((100vw - 320px) / (1920 - 320)));
+            margin-right: calc(15px + (100 - 15)*((100vw - 320px) / (1920 - 320)));
+            margin-left: calc(15px + (100 - 15)*((100vw - 320px) / (1920 - 320)));
         }
+        
+        .page-top_left{
+           width: calc(290px + (835 - 290)*((100vw - 320px) / (1920 - 320)));
+            margin-right: calc(15px + (50 - 15)*((100vw - 320px) / (1920 - 320)));
 
-        .page-top .page-top_left {
-            width: calc(290px + (407 - 290)*((100vw - 320px) / (1920 - 320)));
-            height: 623px;
-            margin-top: calc(16px + (90 - 16)*((100vw - 320px) / (1920 - 320)));
-            margin-right: calc(15px + (196 - 15)*((100vw - 320px) / (1920 - 320)));
         }
-
-        .page-top_title h1 {
-            font-size: calc(48px + (65 - 48)*((100vw - 320px) / (1920 - 320)));
-            line-height: calc(81.6px + (93 - 81.6)*((100vw - 320px) / (1920 - 320)));
-        }
-
-        .page-top_text {
-            width: calc(290px + (407 - 290)*((100vw - 320px) / (1920 - 320)));
-            margin-bottom: calc(20px + (30 - 20)*((100vw - 320px) / (1920 - 320)));
-        }
-
-        .page-top_text p {
-            font-size: calc(16px + (18 - 16)*((100vw - 320px) / (1920 - 320)));
-        }
-
-        .page-top_button {
-            width: 140px;
-            height: 48px;
-        }
+            .ta-window.small_wind,
+            .ta-window_top.small_wind,
+            .ta-window_bottom.small_wind,
+            .wa-window.small_wind,
+            .wa-window_top.small-input{
+                width: calc(290px + (835 - 290)*((100vw - 320px) / (1920 - 320)));
+            }
+            .ta-window_drag-drop.small_wind,
+            .ta-window-btn.small_wind button,
+            .wa-window_iput-row.small_wind{
+                width: calc(290px + (780 - 290)*((100vw - 320px) / (1920 - 320)));
+            }
+            .ta-window_paste-text.small_wind{
+                width: calc(290px + (780 - 290)*((100vw - 320px) / (1920 - 320)));
+            }
+            
+            .page-top_right {
+                width: calc(290px + (835 - 290)*((100vw - 320px) / (1920 - 320)));
+            }
+            #video-first{
+                width: calc(290px + (835 - 290)*((100vw - 320px) / (1920 - 320)));
+                height: auto;
+            margin: 0 auto;
+            }
+        
 
         .products {
             width: calc(320px + (1920 - 320)*((100vw - 320px) / (1920 - 320)));
@@ -718,14 +723,14 @@
     }
 
     @media only screen and (max-width: 1520px) {
-        .page-top {
+        /* .page-top {
             margin-right: 0;
             max-width: 1100px;
         }
 
         .page-top .page-top_left {
             margin-right: calc(15px + (50 - 15)*((100vw - 320px) / (1520 - 320)));
-        }
+        } */
 
         .tarif-top span {
             width: 924px;
@@ -778,6 +783,38 @@
     }
 
     @media only screen and (max-width: 1320px) {
+        .page-top{
+            flex-direction: column;
+            align-items: center;
+        }
+        .page-top_left{
+            width: calc(320px + (835 - 320)*((100vw - 320px) / (1320 - 320)));
+             margin-right:0;
+ 
+         }
+             .ta-window.small_wind,
+             .ta-window_top.small_wind,
+             .ta-window_bottom.small_wind,
+             .wa-window.small_wind,
+            .wa-window_top.small-input{
+                 width: calc(320px + (835 - 320)*((100vw - 320px) / (1320 - 320)));
+             }
+             .ta-window_drag-drop.small_wind,
+             .ta-window-btn.small_wind button,
+             .wa-window_iput-row.small_wind{
+                 width: calc(290px + (780 - 290)*((100vw - 320px) / (1320 - 320)));
+             }
+             .ta-window_paste-text.small_wind{
+                 width: calc(290px + (780 - 290)*((100vw - 320px) / (1320 - 320)));
+             }
+             .page-top_right {
+                 width: calc(320px + (835 - 320)*((100vw - 320px) / (1320 - 320)));
+             }
+             #video-first{
+                 width: calc(290px + (835 - 290)*((100vw - 320px) / (1320 - 320)));
+                 height: auto;
+             margin-top: 0;
+             }
 
         .tarif-plans_container {
             max-width: 850px;
@@ -969,28 +1006,7 @@
     }
 
     @media only screen and (max-width: 1152px) {
-        .page-top {
-            flex-direction: column;
-            margin-left: calc(1px + (400 - 1)*((100vw - 320px) / (1152 - 320)));
-            height: calc(700px + (1000 - 700)*((100vw - 320px) / (1152 - 320)));
-        }
-
-        .page-top .page-top_left {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            width: calc(309px + (712 - 309)*((100vw - 320px) / (1152 - 320)));
-            height: 350px;
-            margin-right: 0;
-            margin-bottom: 40px;
-        }
-
-        .page-top_right {
-            width: calc(320px + (753 - 320)*((100vw - 320px) / (1152 - 320)));
-            /* height: calc(259px + (623 - 259)*((100vw - 320px) / (1152 - 320))); */
-        }
-
+       
         .mob-app_right {
             flex-direction: column;
             width: 180px;
@@ -1018,10 +1034,7 @@ margin-bottom: 20px;
 
 
     @media only screen and (max-width: 1024px) {
-        .page-top_left {
-            margin-right: 0;
-        }
-
+        
         .tarif-top_content {
             margin-left: calc(15px + (295 - 15)*((100vw - 320px) / (1024 - 320)));
             padding-top: calc(50px + (70 - 50)*((100vw - 320px) / (1024 - 320)));
@@ -1232,6 +1245,23 @@ margin-bottom: 20px;
     }
 
     @media only screen and (max-width: 600px) {
+        .page-top{
+            width: 100%;
+            margin: 0;
+        }
+        .ta-window_drag-drop.small_wind{
+            height: auto;
+        }
+        .ta-window_paste-text.small_wind{
+            margin: 0 auto;
+        }
+        .wa-window.small_wind{
+            height: 300px;
+        }
+        .wa-window_iput-row.small_wind{
+            flex-direction: column;
+            height: auto;
+        }
         .products-items_container {
             width: 280px;
         }

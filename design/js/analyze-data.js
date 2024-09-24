@@ -17,7 +17,9 @@ $(document).ready(() => {
   document.getElementById('#iframe4').setAttribute("src", clientUrl + 'charts/barchart.html');
   document.getElementById('#iframe5').setAttribute("src", clientUrl + 'charts/entityRecognition.html');
   document.getElementById('#iframe6').setAttribute("src", clientUrl + 'charts/3d-chart.html');
-  document.getElementById('#iframe7').setAttribute("src", clientUrl + 'charts/force-directed.html')
+  document.getElementById('#iframe7').setAttribute("src", clientUrl + 'charts/force-directed.html');
+  document.getElementById('#iframe8').setAttribute("src", clientUrl + 'charts/text-reading.html');
+  document.getElementById('#iframe9').setAttribute("src", clientUrl + 'charts/chat-gpt.html');
   document.getElementById("#iframe-popup").setAttribute("src", clientUrl + "charts/worldcloud.html");
 
   document.getElementById("#summary").textContent = JSON.parse(localStorage.getItem("summarize")).summary;
@@ -49,14 +51,14 @@ function changeTab(elementId) {
       setTimeout(() => {
         document.getElementById('#iframe6').contentWindow.document.getElementById("chartholder").innerHTML = ""
         document.getElementById('#iframe6').contentWindow.initializeMap()
-      }, 500)
+      }, 600)
     }
   }
 }
 
 function hideNonVisibleDivs(visibleDivId) {
-  const divs = ['#text-understanding', '#2d-chart', '#top-entities', '#entity-recognition', '#3d-map', '#weighted-graph']
-  const buttons = ["#button1","#button2","#button3","#button4","#button5", "#button6"]
+  const divs = ['#text-understanding', '#2d-chart', '#entity-recognition', '#3d-map','#text-readding', '#chat-gpt', '#weighted-graph']
+  const buttons = ["#button1","#button2","#button3","#button4","#button5", "#button6","#button7"]
   var i
   for(i = 0; i < divs.length; i++) {
     const divId = divs[i];

@@ -289,31 +289,53 @@ body.fixed-page {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 1350px;
+    width: 1720px;
     height: auto;
-    margin: 0 250px 0 320px;
+    margin: 0 100px;
     }
     
-    .page-top_left {
-    width: 500px;
+    .page-top_left{
+    width: 835px;
     height: auto;
-    margin: 90px 153px 0 0;
+    margin: 45px 50px 0 0;
+}
+    .ta-window.small_wind,
+    .ta-window_top.small_wind,
+    .ta-window_bottom.small_wind,
+    .wa-window.small_wind,
+    .wa-window_top.small-input{
+        width: 835px;
     }
+    .wa-window.small_wind{
+        margin: 0;
+    }
+    .ta-window_drag-drop.small_wind,
+    .ta-window-btn.small_wind button,
     
+    .wa-window_iput-row.small_wind{
+        width: 780px;
+        height: 45px;
+    }
+    .ta-window_paste-text.small_wind{
+        width: 780px;
+        height: 350px;
+    }
+    .ta-top_right.small_wind{
+margin: 0 0 40px;
+    }
     .page-top_right {
-    width: 753px;
+    width: 835px;
     height: auto;
     margin-top: 45px;
-    overflow: hidden;
-    position: relative;
+    display: flex;
     }
     #video-first{
-        width: 700px;
+        width: 835px;
         height: auto;
-    margin-top: 50px;
+    margin-top: 100px;
     }
 
-.page-top_title h1 {
+/* .page-top_title h1 {
     font-family: "Gordita";
     font-style: normal;
     font-weight: 500;
@@ -337,7 +359,7 @@ body.fixed-page {
     line-height: 170%;
     list-style: disc;
     margin-left: 25px;
-}
+} */
 .page-top_yellow-frame{
     display: flex;
     justify-content: center;
@@ -3049,7 +3071,6 @@ border-color: transparent;
 
 .wa-window {
     max-width: 1280px;
-    min-height: 739px;
     height: auto;
     border-radius: 8px;
     margin: 0 320px;
@@ -4808,3 +4829,30 @@ input.blue-btn {
 }
 
 .wrapper-popup {}
+.access-msg{
+    width: 450px;
+    height: 300px;
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 180%;
+    color: #18181B;
+    margin: 50px auto;
+}
+.access-msg a{
+    color: #3F51B5;
+}
+.access-msg a:hover{
+    color:#6876CA;
+}
+.red-star{
+display:none;
+
+}
+.red-star.show-star{
+display: block;
+}
+.button-chart.white-button{
+background: #FFFFFF;
+}

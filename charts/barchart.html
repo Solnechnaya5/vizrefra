@@ -121,7 +121,7 @@
 
                 const TotalRange = Math.max(...sample.map(o => o.salience))
                 const margin = 60;
-                const width = 1000 - 2 * margin;
+                const width = 800 - 2 * margin;
                 const height = 500 - 2 * margin;
 
                 const zoom = d3.zoom().scaleExtent([0.5, 1.1]).on("zoom", () => {
@@ -131,7 +131,7 @@
 
                 const svg = d3.select('#graph')
                             .append('svg')
-                            .attr('width', 1000)
+                            .attr('width', 800)
                             .attr('height', 500)
                             .call(zoom)
                             .append('g')
